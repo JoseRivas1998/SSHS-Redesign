@@ -5,7 +5,7 @@
 			<div class="list-group">
 				<a href="/students/studentinfo.php" class="list-group-item">Student Info</a>
 				<a href="/library/" class="list-group-item">Library</a>
-				<a href="" class="list-group-item">Seniors Only</a>
+				<a href="/students/seniorsonly.php" class="list-group-item">Seniors Only</a>
 				<a href="" class="list-group-item">Counseling</a>
 				<a href="" class="list-group-item">Leadership</a>
 				<a href="" class="list-group-item">Discipline Policy</a>
