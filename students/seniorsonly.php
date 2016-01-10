@@ -33,7 +33,7 @@
 				?>
 				<div class="col-sm-9 col-xs-12">
 					<div class="col-xs-12">
-						<div class="section-title">Senriors Only</div>
+						<div class="section-title">Seniors Only</div>
 					</div>
 					<div class="col-xs-12">
 						<div class="list-group">
