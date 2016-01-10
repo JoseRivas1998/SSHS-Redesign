@@ -19,7 +19,9 @@
 		.mapCol {
 			text-align: center;
 		}
-
+		.head {
+			font-size: 24px;
+		}
 		.subList > ul > li {
 			list-style-type: none;
 		}
@@ -43,39 +45,38 @@
 			<div class="row">
 				<div class="col-xs-12" id="sitemap">
 					<div class="section-title">Sitemap</div>
-					<div class="col-xs-6 mapCol">
-						<h3><a href="/students/">Students</a></h3>
-						<ul class="mapContent">
-							<li><a href="/students/studentinfo.php">Student Info</a></li>
-							<li><a href="/students/tap.php">Tap</a></li>
-							<!-- <li><a href="/students/">Library</a></li>
-							<li><a href="/students/">Seniors Only</a></li>
-							<li><a href="/students/">Counseling</a></li>
-							<li><a href="/students/">Leadership</a></li>
-							<li><a href="/students/">Discipline Policy</a></li> -->
-						</ul>
-						<h3>Staff</h3>
-						<ul class="mapContent">
-							<li><a href="/staff/teachers/">Teachers</a></li>
-							<li><a href="/staff/administrators">Administrators</a></li>
-							<li><a href="/staff/supportStaff">Support Staff</a></li>
-						</ul>
-						<h3>Community</h3>
-						<ul class="mapContent">
-							<li><a href="/community/partnersineducation">Partners in Education</a></li>
-						</ul>
-						<h3>Miscellaneous</h3>
-						<ul class="mapContent">
-							<li><a href="/clubs/">Clubs</a></li>
-							<li><a href="/webmasters/">Webmasters</a></li>
-						</ul>
+					<div class="col-xs-12 col-sm-6 mapCol">
+						<div class="list-group">
+							<a class="list-group-item head" href="/students/">Students</a>
+							<a href="/students/studentinfo.php" class="list-group-item">Student Info</a>
+							<a href="/library/" class="list-group-item">Library</a>
+							<a href="" class="list-group-item">Seniors Only</a>
+							<a href="" class="list-group-item">Counseling</a>
+							<a href="" class="list-group-item">Leadership</a>
+							<a href="" class="list-group-item">Discipline Policy</a>
+						</div>
+						<div class="list-group">
+							<a href="" class="list-group-item head">Staff</a>
+							<a href="/staff/teachers/" class="list-group-item">Teachers</a>
+							<a href="/staff/administrators" class="list-group-item">Administrators</a>
+							<a href="/staff/supportStaff" class="list-group-item">Support Staff</a>
+						</div>
+						<div class="list-group">
+							<a href="" class="list-group-item head">Community</a>
+							<a href="/community/partnersineducation" class="list-group-item">Partners in Education</a>
+						</div>
+						<div class="list-group">
+							<a class="list-group-item head">Miscellaneous</a>
+							<a href="/clubs/" class="list-group-item">Clubs</a>
+							<a href="/webmasters/" class="list-group-item">Webmasters</a>
+						</div>
 					</div>
-					<div class="col-xs-6 mapCol">
-						<h3>Resources</h3>
-						<ul class="mapContent">
-							<li><a href="/resources/content/speakerseries/">Academic Speaker Series</a></li>
-							<li><a href="/resources/content/performing/">Upcoming Performances &amp; Tickets</a></li>
-						</ul>
+					<div class="col-xs-12 col-sm-6 mapCol">
+						<div class="list-group">
+							<a class="list-group-item head">Resources</a>
+							<a href="/resources/content/speakerseries/" class="list-group-item">Academic Speaker Series</a>
+							<a href="/resources/content/performing/" class="list-group-item">Upcoming Performances &amp; Tickets</a>
+						</div>
 					</div>
 				</div>
 			</div>

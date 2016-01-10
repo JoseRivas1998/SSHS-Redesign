@@ -2,8 +2,7 @@ console.log("JS Loaded");
 $(document).ready(function() {
 	var id = $(location).attr('pathname');
 	console.log(id);
-	console.log(id);
-    $(document.getElementById(id)).addClass("active");
+  $(document.getElementById(id)).addClass("active");
 });
 // ADD SLIDEDOWN ANIMATION TO DROPDOWN //
 $('.dropdown').on('show.bs.dropdown', function(e){
