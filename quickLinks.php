@@ -10,7 +10,7 @@
 				<a href="" class="list-group-item"><i class="fa fa-font fa-fw"></i> <span class="list-text">Aeries info: parent setup, new year forms</span></a>
 				<a href="https://awps.simivalleyusd.org/aeries.net/" class="list-group-item" target="_blank"><i class="fa fa-font fa-fw"></i> <span class="list-text">Aeries Website</span></a>
 				<a href="/staff/teachers/" class="list-group-item"><i class="fa fa-users fa-fw"></i> <span class="list-text">Teachers Page</span></a>
-				<a href="" class="list-group-item"><i class="fa fa-book fa-fw"></i> <span class="list-text">Library</span></a>
+				<a href="/library/" class="list-group-item"><i class="fa fa-book fa-fw"></i> <span class="list-text">Library</span></a>
 				<a href="" class="list-group-item"><i class="fa fa-tv fa-fw"></i> <span class="list-text">KSSH News</span></a>
 				<a href="" class="list-group-item"><i class="fa fa-bell fa-fw"></i> <span class="list-text">Bell Schedule</span></a>
 				<a href="" class="list-group-item"><i class="fa fa-money fa-fw"></i> <span class="list-text">Student Store</span></a>
