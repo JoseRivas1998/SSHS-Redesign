@@ -23,8 +23,8 @@
 					<li id="/students/"><a href="/students/">Students</a></li>
 					<li role="separator" class="divider"></li>
 					<li id="/students/studentinfo.php"><a href="/students/studentinfo.php">Student Info</a></li>
-					<li><a href="/">Library</a></li>
-					<li><a href="/">Seniors Only</a></li>
+					<li id="/library/"><a href="/library/">Library</a></li>
+					<li id="/students/seniorsonly.php"><a href="/students/seniorsonly.php">Seniors Only</a></li>
 					<li><a href="/">Counseling</a></li>
 					<li><a href="/">Leadership</a></li>
 					<li><a href="/">Discipline Policy</a></li>

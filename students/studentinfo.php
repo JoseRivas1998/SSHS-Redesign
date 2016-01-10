@@ -38,23 +38,23 @@
 				<div class="col-sm-9 col-xs-12" id="studentInfo">
 					<div class="section-title">Student Info</div>
 					<div class="col-xs-6">
-						<ul>
-							<li><a href="https://awps.simivalleyusd.org/aeries.net/" target="_blank">Aeries Website</a></li>
-							<li><a href="">Student Parking Permit</a></li>
-							<li><a href="">Community Resources</a></li>
-							<li><a href="">Bell Schedule</a></li>
-							<li><a href="">School &amp; Academy Structure</a></li>
-							<li><a href="/students/tap.php">TAP</a></li>
-						</ul>
+						<div class="list-group">
+							<a href="https://awps.simivalleyusd.org/aeries.net/" target="_blank" class="list-group-item">Aeries Website</a>
+							<a href="" class="list-group-item">Student Parking Permit</a>
+							<a href="" class="list-group-item">Community Resources</a>
+							<a href="" class="list-group-item">Bell Schedule</a>
+							<a href="" class="list-group-item">School &amp; Academy Structure</a>
+							<a href="/students/tap.php" class="list-group-item">TAP</a>
+						</div>
 					</div>
 					<div class="col-xs-6">
-						<ul>
-							<li><a href="">CTE Information</a></li>
-							<li><a href="/clubs/">Clubs</a></li>
-							<li><a href="http://webstores.activenetwork.com/school-software/santa_susana_high_sc/" target="_blank">Student Store</a></li>
-							<li><a href="">AP/Honors Summer Work</a></li>
-							<li><a href="">Verbal Advantage</a></li>
-						</ul>
+						<div class="list-group">
+							<a href="" class="list-group-item">CTE Information</a>
+							<a href="/clubs/" class="list-group-item">Clubs</a>
+							<a href="http://webstores.activenetwork.com/school-software/santa_susana_high_sc/" target="_blank" class="list-group-item">Student Store</a>
+							<a href="" class="list-group-item">AP/Honors Summer Work</a>
+							<a href="" class="list-group-item">Verbal Advantage</a>
+						</div>
 					</div>
 				</div>
 			</div>
