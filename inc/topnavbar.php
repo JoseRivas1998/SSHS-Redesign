@@ -35,7 +35,7 @@
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parents <span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="/">Parents</a></li>
+					<li id="/parents/"><a href="/parents/">Parents</a></li>
 					<li role="separator" class="divider"></li>
 					<li><a href="/">Parent Info</a></li>
 					<li><a href="/">Choose SSHS</a></li>
