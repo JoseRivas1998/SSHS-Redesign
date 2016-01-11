@@ -14,10 +14,10 @@
 				<a href="library/" class="list-group-item"><i class="fa fa-book fa-fw"></i> <span class="list-text">Library</span></a>
 				<a href="" class="list-group-item"><i class="fa fa-tv fa-fw"></i> <span class="list-text">KSSH News</span></a>
 				<a href="resources/content/bellschedule.php" class="list-group-item"><i class="fa fa-bell fa-fw"></i> <span class="list-text">Bell Schedule</span></a>
-				<a href="" class="list-group-item"><i class="fa fa-money fa-fw"></i> <span class="list-text">Student Store</span></a>
-				<a href="" class="list-group-item"><i class="fa fa-graduation-cap fa-fw"></i> <span class="list-text">Counseling</span></a>
-				<a href="" class="list-group-item"><i class="fa fa-university fa-fw"></i> <span class="list-text">College and Career Center</span></a>
-				<a href="/clubs/" class="list-group-item"><i class="fa fa-users fa-fw"></i> <span class="list-text">Clubs</span></a></a>
+				<a href="http://webstores.activenetwork.com/school-software/santa_susana_high_sc/" target="_blank" class="list-group-item"><i class="fa fa-money fa-fw"></i> <span class="list-text">Student Store</span></a>
+				<a href="counseling/" class="list-group-item"><i class="fa fa-graduation-cap fa-fw"></i> <span class="list-text">Counseling</span></a>
+				<a href="counseling/ccc.php" class="list-group-item"><i class="fa fa-university fa-fw"></i> <span class="list-text">College and Career Center</span></a>
+				<a href="clubs/" class="list-group-item"><i class="fa fa-users fa-fw"></i> <span class="list-text">Clubs</span></a></a>
 				<a href="http://connection.naviance.com/santash" class="list-group-item" target="_blank"><i class="fa fa-user fa-fw"></i> <span class="list-text">Naviance Log-In</span></a>
 			</div>
 		</div>
