@@ -51,9 +51,10 @@
 							<a href="/students/studentinfo.php" class="list-group-item">Student Info</a>
 							<a href="/library/" class="list-group-item">Library</a>
 							<a href="/students/seniorsonly.php" class="list-group-item">Seniors Only</a>
-							<a href="" class="list-group-item">Counseling</a>
-							<a href="" class="list-group-item">Leadership</a>
-							<a href="" class="list-group-item">Discipline Policy</a>
+							<a href="/counseling" class="list-group-item">Counseling</a>
+							<a href="/counseling/ccc.php" class="list-group-item">College and Career Center (CCC)</a>
+							<a href="/students/leadership.php" class="list-group-item">Leadership</a>
+							<a href="/resources/downloads/SVUSDDiscipline.pdf" class="list-group-item">Discipline Policy</a>
 						</div>
 						<div class="list-group">
 							<a href="" class="list-group-item head">Staff</a>
@@ -76,6 +77,7 @@
 							<a class="list-group-item head">Resources</a>
 							<a href="/resources/content/speakerseries/" class="list-group-item">Academic Speaker Series</a>
 							<a href="/resources/content/performing/" class="list-group-item">Upcoming Performances &amp; Tickets</a>
+							<a href="/resources/content/bellschedule.php" class="list-group-item">Bell Schedule</a>
 						</div>
 					</div>
 				</div>

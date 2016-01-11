@@ -42,7 +42,7 @@
 							<a href="https://awps.simivalleyusd.org/aeries.net/" target="_blank" class="list-group-item">Aeries Website</a>
 							<a href="" class="list-group-item">Student Parking Permit</a>
 							<a href="" class="list-group-item">Community Resources</a>
-							<a href="" class="list-group-item">Bell Schedule</a>
+							<a href="/resources/content/bellschedule.php" class="list-group-item">Bell Schedule</a>
 							<a href="" class="list-group-item">School &amp; Academy Structure</a>
 							<a href="/students/tap.php" class="list-group-item">TAP</a>
 						</div>

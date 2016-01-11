@@ -333,7 +333,7 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 .section-title {
     margin: 0 auto 0 auto;
     padding: 5px 8px 5px 8px;
-    font-size: 24px;
+    font-size: 34px;
     display: table;
     font-family: 'Philosopher', sans-serif;
 }
