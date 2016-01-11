@@ -53,8 +53,8 @@
 							<a href="/students/seniorsonly.php" class="list-group-item">Seniors Only</a>
 							<a href="/counseling" class="list-group-item">Counseling</a>
 							<a href="/counseling/ccc.php" class="list-group-item">College and Career Center (CCC)</a>
-							<a href="" class="list-group-item">Leadership</a>
-							<a href="" class="list-group-item">Discipline Policy</a>
+							<a href="/students/leadership.php" class="list-group-item">Leadership</a>
+							<a href="/resources/downloads/SVUSDDiscipline.pdf" class="list-group-item">Discipline Policy</a>
 						</div>
 						<div class="list-group">
 							<a href="" class="list-group-item head">Staff</a>

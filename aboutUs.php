@@ -7,7 +7,7 @@
 			<div class="about-text">Hours: 7am-4:30pm M-F</div>
 			<img src="/img/layout/goldribbonlogo-icon.png" alt="" class="img-responsive" />
 			<div class="list-group">
-				<a href="" class="list-group-item"><i class="fa fa-university fa-fw"></i> <span class="list-text">School and Academy Structure</span></a>
+				<a href="resources/content/schoolandacademy/" class="list-group-item"><i class="fa fa-university fa-fw"></i> <span class="list-text">School and Academy Structure</span></a>
 				<a href="" class="list-group-item"><i class="fa fa-thumbs-o-up fa-fw"></i> <span class="list-text">School of Choice</span></a>
 				<a href="resources/downloads/2013-14SARCEnglish.pdf" target="_blank" class="list-group-item"><i class="fa fa-certificate fa-fw"></i> <span class="list-text">School Accountability Report Card</span></a>
 				<a href="resources/content/wasc/WASC-midterm-20122015.pdf" target="_blank" class="list-group-item"><i class="fa fa-file-text-o fa-fw"></i> <span class="list-text">WASC Mid-Term 2012-2015 Report</span></a>
