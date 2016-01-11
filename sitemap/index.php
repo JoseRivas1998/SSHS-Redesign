@@ -76,6 +76,7 @@
 							<a class="list-group-item head">Resources</a>
 							<a href="/resources/content/speakerseries/" class="list-group-item">Academic Speaker Series</a>
 							<a href="/resources/content/performing/" class="list-group-item">Upcoming Performances &amp; Tickets</a>
+							<a href="/resources/content/bellschedule.php" class="list-group-item">Bell Schedule</a>
 						</div>
 					</div>
 				</div>
