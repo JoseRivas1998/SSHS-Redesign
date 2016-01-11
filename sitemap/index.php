@@ -63,6 +63,9 @@
 							<a href="/staff/supportStaff" class="list-group-item">Support Staff</a>
 						</div>
 						<div class="list-group">
+							<a href="/parents/" class="list-group-item head">Parents</a>
+						</div>	
+						<div class="list-group">
 							<a href="" class="list-group-item head">Community</a>
 							<a href="/community/partnersineducation" class="list-group-item">Partners in Education</a>
 						</div>
