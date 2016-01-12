@@ -8,7 +8,7 @@
     $path .= "/inc/head.php";
     include($path);
     ?>
-	<title>Santa Susana High School</title>
+	<title>Parents | Santa Susana High School</title>
 </head>
 
 <body>
@@ -32,14 +32,14 @@
 							<div class="section-title">General Info</div>
 						</div>
 						<div class="col-xs-5">
-							<img src="parenthelpinghomework.png" alt="Parent Helping Homework" class="img-responsive">
+							<img src="img/parenthelpinghomework.png" alt="Parent Helping Homework" class="img-responsive">
 						</div>
 						<div class="col-xs-7">
 							<p>
-								Welcome to the Student Info Page
+								Welcome to the Parent Info Page.
 							</p>
 							<p>
-								Here you can find Student Information for all students, the Library, all of the resources for Seniors, and links to Counseling, Leadership, and the district's Discipline Policy.
+								Here you can find all of the Parent Information that you may need, as well as Why Choose Santa Susana High School, A School of Choice. Also, all of the Documents you may require, the Troubadour Express bi-monthly newsletter, and the district's Discipline Policy can be found to the left.
 							</p>
 						</div>
 					</div>
