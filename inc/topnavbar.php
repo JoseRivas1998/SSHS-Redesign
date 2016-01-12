@@ -48,12 +48,12 @@
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staff <span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Staff</a></li>
+					<li id="/staff/"><a href="/staff/">Staff</a></li>
 					<li role="separator" class="divider"></li>
 					<li id="/staff/teachers/"><a href="/staff/teachers/">Teachers</a></li>
 					<li id="/staff/administrators/"><a href="/staff/administrators/">Administrators</a></li>
 					<li id="/staff/supportstaff/"><a href="/staff/supportstaff/">Support Staff</a></li>
-					<li><a href="/">Links for Teachers</a></li>
+					<li id="/staff/linksforteachers/"><a href="/staff/linksforteachers/">Links for Teachers</a></li>
 				</ul>
 			</li>
 

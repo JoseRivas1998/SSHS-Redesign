@@ -57,10 +57,11 @@
 							<a href="/resources/downloads/SVUSDDiscipline.pdf" class="list-group-item">Discipline Policy</a>
 						</div>
 						<div class="list-group">
-							<a href="" class="list-group-item head">Staff</a>
+							<a href="/staff/" class="list-group-item head">Staff</a>
 							<a href="/staff/teachers/" class="list-group-item">Teachers</a>
 							<a href="/staff/administrators" class="list-group-item">Administrators</a>
 							<a href="/staff/supportStaff" class="list-group-item">Support Staff</a>
+							<a href="/staff/linksforteachers/" class="list-group-item">Links for Teachers</a>
 						</div>
 						<div class="list-group">
 							<a href="/parents/" class="list-group-item head">Parents</a>
