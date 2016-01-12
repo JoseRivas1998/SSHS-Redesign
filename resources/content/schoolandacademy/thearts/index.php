@@ -180,11 +180,11 @@
 							<div class="panel-body">
 								<div class="col-xs-6 acadSec">
 									Suggested Course of Study
-									<a href="http://www.santasusana.org/resources/content/schoolandacademy/thearts/AcademyofPerformingArtsEmphasisVocalMusic.pdf" target="_blank"><img src="../resources/Academy_Thumbnail.png"class="img-responsive"></a>
+									<a href="AcademyofPerformingArtsEmphasisVocalMusic.pdf" target="_blank"><img src="../resources/Academy_Thumbnail.png"class="img-responsive"></a>
 								</div>
 								<div class="col-xs-6 acadSec">
 									Certification Requirements
-									<a href="http://www.santasusana.org/resources/content/schoolandacademy/thearts/Certification-vocal_music.pdf" target="_blank"><img src="../resources/Certificate_Thumbnail.png" class="img-responsive"></a>
+									<a href="Certification-vocal_music.pdf" target="_blank"><img src="../resources/Certificate_Thumbnail.png" class="img-responsive"></a>
 								</div>
 							</div>
 						</div>
@@ -195,11 +195,11 @@
 							<div class="panel-body">
 								<div class="col-xs-6 acadSec">
 									Suggested Course of Study
-									<a href="http://www.santasusana.org/resources/content/schoolandacademy/thearts/AcademyofPerformingArtsEmphasisInstrumentalMusic.pdf" target="_blank"><img src="../resources/Academy_Thumbnail.png"class="img-responsive"></a>
+									<a href="AcademyofPerformingArtsEmphasisInstrumentalMusic.pdf" target="_blank"><img src="../resources/Academy_Thumbnail.png"class="img-responsive"></a>
 								</div>
 								<div class="col-xs-6 acadSec">
 									Certification Requirements
-									<a href="http://www.santasusana.org/resources/content/schoolandacademy/thearts/Certification-InstrumentalMusic_1.pdf" target="_blank"><img src="../resources/Certificate_Thumbnail.png" class="img-responsive"></a>
+									<a href="Certification-InstrumentalMusic_1.pdf" target="_blank"><img src="../resources/Certificate_Thumbnail.png" class="img-responsive"></a>
 								</div>
 							</div>
 						</div>
@@ -210,11 +210,11 @@
 							<div class="panel-body">
 								<div class="col-xs-6 acadSec">
 									Suggested Course of Study
-									<a href="http://www.santasusana.org/resources/content/schoolandacademy/thearts/AcademyofPerformingArtsEmphasisTheatre.pdf" target="_blank"><img src="../resources/Academy_Thumbnail.png"class="img-responsive"></a>
+									<a href="AcademyofPerformingArtsEmphasisTheatre.pdf" target="_blank"><img src="../resources/Academy_Thumbnail.png"class="img-responsive"></a>
 								</div>
 								<div class="col-xs-6 acadSec">
 									Certification Requirements
-									<a href="http://www.santasusana.org/resources/content/schoolandacademy/thearts/Certification-Theater_1.pdf" target="_blank"><img src="../resources/Certificate_Thumbnail.png" class="img-responsive"></a>
+									<a href="Certification-Theater_1.pdf" target="_blank"><img src="../resources/Certificate_Thumbnail.png" class="img-responsive"></a>
 								</div>
 							</div>
 						</div>
@@ -225,11 +225,11 @@
 							<div class="panel-body">
 								<div class="col-xs-6 acadSec">
 									Suggested Course of Study
-									<a href="http://www.santasusana.org/resources/content/schoolandacademy/thearts/AcademyofPerformingArtsEmphasisDance.pdf" target="_blank"><img src="../resources/Academy_Thumbnail.png"class="img-responsive"></a>
+									<a href="AcademyofPerformingArtsEmphasisDance.pdf" target="_blank"><img src="../resources/Academy_Thumbnail.png"class="img-responsive"></a>
 								</div>
 								<div class="col-xs-6 acadSec">
 									Certification Requirements
-									<a href="http://www.santasusana.org/resources/content/schoolandacademy/thearts/Certification-Dance_1.pdf" target="_blank"><img src="../resources/Certificate_Thumbnail.png" class="img-responsive"></a>
+									<a href="Certification-Dance_1.pdf" target="_blank"><img src="../resources/Certificate_Thumbnail.png" class="img-responsive"></a>
 								</div>
 							</div>
 						</div>
@@ -240,11 +240,11 @@
 							<div class="panel-body">
 								<div class="col-xs-6 acadSec">
 									Suggested Course of Study
-									<a href="http://www.santasusana.org/resources/content/schoolandacademy/thearts/AcademyofPerformingArtsEmphasisMusicalTheatre.pdf" target="_blank"><img src="../resources/Academy_Thumbnail.png"class="img-responsive"></a>
+									<a href="AcademyofPerformingArtsEmphasisMusicalTheatre.pdf" target="_blank"><img src="../resources/Academy_Thumbnail.png"class="img-responsive"></a>
 								</div>
 								<div class="col-xs-6 acadSec">
 									Certification Requirements
-									<a href="http://www.santasusana.org/resources/content/schoolandacademy/thearts/Certification-MusicalTheater_1.pdf" target="_blank"><img src="../resources/Certificate_Thumbnail.png" class="img-responsive"></a>
+									<a href="Certification-MusicalTheater_1.pdf" target="_blank"><img src="../resources/Certificate_Thumbnail.png" class="img-responsive"></a>
 								</div>
 							</div>
 						</div>
