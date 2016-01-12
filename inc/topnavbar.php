@@ -37,9 +37,9 @@
 				<ul class="dropdown-menu">
 					<li id="/parents/"><a href="/parents/">Parents</a></li>
 					<li role="separator" class="divider"></li>
-					<li><a href="/">Parent Info</a></li>
-					<li><a href="/">Choose SSHS</a></li>
-					<li><a href="/">Documents</a></li>
+					<li id="/parents/parentinfo.php"><a href="/parents/parentinfo.php">Parent Info</a></li>
+					<li id="/parents/choosesshs.php"><a href="/parents/choosesshs.php">Choose SSHS</a></li>
+					<li id="/parents/documents.php"><a href="/parents/documents.php">Documents</a></li>
 					<li><a href="/">Troubadour Express</a></li>
 					<li><a href="/">Discipline Policy</a></li>
 				</ul>

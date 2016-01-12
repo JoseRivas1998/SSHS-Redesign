@@ -64,7 +64,10 @@
 						</div>
 						<div class="list-group">
 							<a href="/parents/" class="list-group-item head">Parents</a>
-						</div>	
+							<a href="/parents/parentinfo.php" class="list-group-item">Parent Info</a>
+							<a href="/parents/choosesshs.php" class="list-group-item">Choose SSHS</a>
+							<a href="/parents/documents.php" class="list-group-item">Documents</a>
+						</div>
 						<div class="list-group">
 							<a href="" class="list-group-item head">Community</a>
 							<a href="/community/partnersineducation" class="list-group-item">Partners in Education</a>
