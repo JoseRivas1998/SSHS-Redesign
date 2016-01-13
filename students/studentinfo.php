@@ -40,20 +40,21 @@
 					<div class="col-xs-6">
 						<div class="list-group">
 							<a href="https://awps.simivalleyusd.org/aeries.net/" target="_blank" class="list-group-item">Aeries Website</a>
-							<a href="" class="list-group-item">Student Parking Permit</a>
-							<a href="" class="list-group-item">Community Resources</a>
+							<a href="/resources/downloads/parkingpermit.pdf" class="list-group-item">Student Parking Permit</a>
+							<a href="/community/communityresources/" class="list-group-item">Community Resources</a>
 							<a href="/resources/content/bellschedule.php" class="list-group-item">Bell Schedule</a>
-							<a href="" class="list-group-item">School &amp; Academy Structure</a>
+							<a href="/resources/content/schoolandacademy/" class="list-group-item">School &amp; Academy Structure</a>
 							<a href="/students/tap.php" class="list-group-item">TAP</a>
 						</div>
 					</div>
 					<div class="col-xs-6">
 						<div class="list-group">
-							<a href="" class="list-group-item">CTE Information</a>
+							<a href="http://www.cte.santasusana.org/" class="list-group-item">CTE Information</a>
 							<a href="/clubs/" class="list-group-item">Clubs</a>
 							<a href="http://webstores.activenetwork.com/school-software/santa_susana_high_sc/" target="_blank" class="list-group-item">Student Store</a>
-							<a href="" class="list-group-item">AP/Honors Summer Work</a>
-							<a href="" class="list-group-item">Verbal Advantage</a>
+							<a href="/students/apsummer/" class="list-group-item">AP/Honors Summer Work</a>
+							<a href="/resources/downloads/verbaladvantage.pdf" class="list-group-item" target="_blank">Verbal Advantage</a>
+							<a href="http://sshsauditions.weebly.com/" class="list-group-item" target="_blank">Performing Arts Auditions</a>
 						</div>
 					</div>
 				</div>
