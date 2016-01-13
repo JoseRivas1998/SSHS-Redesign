@@ -52,21 +52,10 @@
     $(document).ready(function() {
       $("#partners").hide();
       $("#partners").promise().done(function() {
-
-			do {
         $("#partners").load("loadPartners.php", function() {
-	          $(".img-responsive").each(function() {
-	              $(this).height($(".img-responsive").first().height());
-	          });
-          $("div div.noImg").each(function() {
-              $(this).height($(".img-responsive").first().height());
-              $(this).width($(".img-responsive").first().width());
-          });
+	          
 	        $("#partners").show();
         });
-			}while($(".img-responsive").first().height() <= 0);
-
-
       });
     });
   </script>

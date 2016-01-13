@@ -42,3 +42,12 @@ if(mysqli_num_rows($result) > 0) {
 mysqli_close($conn);
 
 ?>
+<script>
+$(".img-responsive").each(function() {
+    $(this).height($(".img-responsive").first().height());
+});
+$("div div.noImg").each(function() {
+  $(this).height($(".img-responsive").first().height());
+  $(this).width($(".img-responsive").first().width());
+});
+</script>
