@@ -54,21 +54,13 @@
 	?>
   <script>
     $(document).ready(function() {
-      // $("#partners").hide();
-      $("#partners").promise().done(function() {
-
-        // $("#partners").load("loadPartners.php").done(function() {
-          $(".img-responsive").each(function() {
-              $(this).height($(".img-responsive").first().height());
-          });
-          $("div div.noImg").each(function() {
-              $(this).height($(".img-responsive").first().height());
-              $(this).width($(".img-responsive").first().width());
-          });
-	        // $("#partners").show();
-        // });
-
-      });
+        $(".img-responsive").each(function() {
+            $(this).height($("#first-img").height());
+        });
+        $("div div.noImg").each(function() {
+            $(this).height($("#first-img").height());
+            $(this).width($("#first-img")..width());
+        });
     });
   </script>
 </body>
