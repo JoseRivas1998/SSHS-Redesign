@@ -53,19 +53,19 @@
       $("#partners").hide();
       $("#partners").promise().done(function() {
 
+			do {
         $("#partners").load("loadPartners.php", function() {
-					do {
 	          $(".img-responsive").each(function() {
 	              $(this).height($(".img-responsive").first().height());
 	          });
-					}while($(".img-responsive").first().height() <= 0);
           $("div div.noImg").each(function() {
               $(this).height($(".img-responsive").first().height());
               $(this).width($(".img-responsive").first().width());
           });
+	        $("#partners").show();
         });
+			}while($(".img-responsive").first().height() <= 0);
 
-        $("#partners").show();
 
       });
     });
