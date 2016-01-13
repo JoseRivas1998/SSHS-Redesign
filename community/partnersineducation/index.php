@@ -52,10 +52,18 @@
     $(document).ready(function() {
       $("#partners").hide();
       $("#partners").promise().done(function() {
-        $("#partners").load("loadPartners.php", function() {
-	          
+
+        $("#partners").load("loadPartners.php").done(function() {
+          $(".img-responsive").each(function() {
+              $(this).height($(".img-responsive").first().height());
+          });
+          $("div div.noImg").each(function() {
+              $(this).height($(".img-responsive").first().height());
+              $(this).width($(".img-responsive").first().width());
+          });
 	        $("#partners").show();
         });
+
       });
     });
   </script>
