@@ -25,11 +25,7 @@ if(mysqli_num_rows($result) > 0) {
     if($nullImg) {
       echo "<div class='noImg'></div>";
     } else {
-<<<<<<< 129c5b44fa5b9a4972942dfb14d969b2a1dbeae0
-      if($iteration == 1) {
-=======
       if($iteration != 1) {
->>>>>>> First-img
         echo "<img src='img/$imgPath' alt='$name' class='img-responsive'>";
       } else {
         echo "<img src='img/$imgPath' alt='$name' class='img-responsive' id='first-img'>";
