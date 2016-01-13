@@ -40,32 +40,32 @@
 					<li id="/parents/parentinfo.php"><a href="/parents/parentinfo.php">Parent Info</a></li>
 					<li id="/parents/choosesshs.php"><a href="/parents/choosesshs.php">Choose SSHS</a></li>
 					<li id="/parents/documents.php"><a href="/parents/documents.php">Documents</a></li>
-					<li><a href="/">Troubadour Express</a></li>
-					<li><a href="/">Discipline Policy</a></li>
+					<li><a href="http://troubex.santasusana.org/">Troubadour Express</a></li>
+					<li><a href="/resources/downloads/SVUSDDiscipline.pdf">Discipline Policy</a></li>
 				</ul>
 			</li>
 
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staff <span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Staff</a></li>
+					<li id="/staff/"><a href="/staff/">Staff</a></li>
 					<li role="separator" class="divider"></li>
 					<li id="/staff/teachers/"><a href="/staff/teachers/">Teachers</a></li>
 					<li id="/staff/administrators/"><a href="/staff/administrators/">Administrators</a></li>
 					<li id="/staff/supportstaff/"><a href="/staff/supportstaff/">Support Staff</a></li>
-					<li><a href="/">Links for Teachers</a></li>
+					<li id="/staff/linksforteachers/"><a href="/staff/linksforteachers/">Links for Teachers</a></li>
 				</ul>
 			</li>
 
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Community</a></li>
+					<li id="/community/"><a href="/community/">Community</a></li>
 					<li role="separator" class="divider"></li>
-					<li><a href="/">PTSA</a></li>
-					<li><a href="/">Boosters</a></li>
+					<li id="/community/ptsa/"><a href="/community/ptsa/">PTSA</a></li>
+					<li><a href="http://www.sspab.org/">Boosters</a></li>
 					<li id="/community/partnersineducation/"><a href="/community/partnersineducation/">Partners in Education</a></li>
-					<li><a href="/">Community Resources</a></li>
+					<li id="/community/communityresources/"><a href="/community/communityresources/">Community Resources</a></li>
 				</ul>
 			</li>
 			<li id="/sitemap/"><a href="/sitemap/"><i class="fa fa-sitemap"></i> Sitemap</a></li>
