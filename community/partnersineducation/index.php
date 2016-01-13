@@ -39,7 +39,9 @@
 				  <div class="section-title">Partners In Education</div>
 				</div>
         <div class="col-xs-12" id="partners">
-        	include('loadPartners.php');
+        	<?php
+					include('loadPartners.php');
+					?>
         </div>
 			</div>
 		</div>
