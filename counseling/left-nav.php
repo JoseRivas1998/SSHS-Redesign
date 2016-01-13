@@ -4,7 +4,7 @@
     <div class="panel-body">
       <div class="list-group">
         <a href="/counseling" class="list-group-item">Counseling Home</a>
-        <a href="/parents/choosesshs/" class="list-group-item">Enroll at SSHS</a>
+        <a href="/parents/choosesshs.php" class="list-group-item">Enroll at SSHS</a>
         <a href="ccc.php" class="list-group-item">College and Career Center (CCC)</a>
         <a href="grades.php" class="list-group-item">Grades</a>
         <a href="apcourses.php" class="list-group-item">AP Courses</a>
