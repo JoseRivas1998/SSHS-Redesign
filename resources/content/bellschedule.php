@@ -221,6 +221,19 @@
 										<div class="col-xs-6 period">Period 8/9</div>
 										<div class="col-xs-6 period time">12:35-1:12</div>
 									</div>
+									<div class="col-xs-12 col-sm-6 column">
+										<div class="title period visible-xs">Finals Weeks</div>
+										<div class="col-xs-6 period">Period 2/4/6</div>
+										<div class="col-xs-6 period time">8:00-10:00</div>
+										<div class="col-xs-6">Break</div>
+										<div class="col-xs-6 time">10:00–10:25</div>
+										<div class="col-xs-6 period">Period 3/5/7</div>
+										<div class="col-xs-6 period time">10:30-12:30</div>
+										<div class="col-xs-6">Lunch</div>
+										<div class="col-xs-6 time">12:30–1:30</div>
+										<div class="col-xs-6 period">Period 1/8/9</div>
+										<div class="col-xs-6 period time">1:30-3:30</div>
+									</div>
 								</div>
 							</div>
 						</div>
