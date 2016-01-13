@@ -17,16 +17,14 @@
 		.period {
 			font-weight: bold;
 			background-color: rgba(26, 179, 213, .25);
-			color: rgb(245, 245, 245);
 		}
 		.time {
 			text-align: right;
 		}
-		#sched {
+		.sched {
 			background-color: rgba(28, 208, 247, .25);
-			color: rgb(150, 150, 150);
 		}
-		#sched > .column > .col-xs-6 {
+		.sched > .column > .col-xs-6 {
 			padding-top: 5px;
 			padding-bottom: 5px;
 		}
@@ -76,7 +74,7 @@
 								</div>
 							</div>
 							<div class="panel-body">
-								<div class="row" id="sched">
+								<div class="row sched">
 									<div class="col-xs-12 col-sm-4 column">
 										<div class="col-xs-12 title period visible-xs">Monday / Tuesday</div>
 										<div class="col-xs-6 period">Period 1</div>
@@ -177,6 +175,51 @@
 										<div class="col-xs-6 period time">3:05-4:05</div>
 										<div class="col-xs-6 period">Period 9</div>
 										<div class="col-xs-6 period time">4:05-5:05</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 title">Minimum Days</div>
+									<div class="col-xs-12 col-sm-6 title">Finals Weeks</div>
+								</div>
+							</div>
+							<div class="panel-body">
+								<div class="row sched">
+									<div class="col-xs-12 col-sm-6 column">
+										<div class="title period visible-xs">Minumum Days</div>
+										<div class="col-xs-6 period">Period 1</div>
+										<div class="col-xs-6 period time">7:18-7:55</div>
+										<div class="col-xs-6">Passing</div>
+										<div class="col-xs-6 time">7:55-8:00</div>
+										<div class="col-xs-6 period">Period 2</div>
+										<div class="col-xs-6 period time">8:00-8:37</div>
+										<div class="col-xs-6">Passing</div>
+										<div class="col-xs-6 time">8:37-8:41</div>
+										<div class="col-xs-6 period">Period 3</div>
+										<div class="col-xs-6 period time">8:41-9:18</div>
+										<div class="col-xs-6">Passing</div>
+										<div class="col-xs-6 time">9:18-9:22</div>
+										<div class="col-xs-6 period">Period 4</div>
+										<div class="col-xs-6 period time">9:22-9:59</div>
+										<div class="col-xs-6">Break</div>
+										<div class="col-xs-6 time">9:59-10:27</div>
+										<div class="col-xs-6 period">Period 5</div>
+										<div class="col-xs-6 period time">10:27-11:08</div>
+										<div class="col-xs-6">Passing</div>
+										<div class="col-xs-6 time">11:08-11:12</div>
+										<div class="col-xs-6 period">Period 6</div>
+										<div class="col-xs-6 period time">11:12-11:49</div>
+										<div class="col-xs-6">Passing</div>
+										<div class="col-xs-6 time">11:49-11:53</div>
+										<div class="col-xs-6 period">Period 7</div>
+										<div class="col-xs-6 period time">11:53-12:30</div>
+										<div class="col-xs-6">Passing</div>
+										<div class="col-xs-6 time">12:30-12:35</div>
+										<div class="col-xs-6 period">Period 8/9</div>
+										<div class="col-xs-6 period time">12:35-1:12</div>
 									</div>
 								</div>
 							</div>
