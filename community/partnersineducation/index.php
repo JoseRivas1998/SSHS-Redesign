@@ -38,7 +38,9 @@
 				<div class="col-xs-12">
 				  <div class="section-title">Partners In Education</div>
 				</div>
-        <div class="col-xs-12" id="partners"></div>
+        <div class="col-xs-12" id="partners">
+        	include('loadPartners.php');
+        </div>
 			</div>
 		</div>
 	</section>
@@ -50,10 +52,10 @@
 	?>
   <script>
     $(document).ready(function() {
-      $("#partners").hide();
+      // $("#partners").hide();
       $("#partners").promise().done(function() {
 
-        $("#partners").load("loadPartners.php").done(function() {
+        // $("#partners").load("loadPartners.php").done(function() {
           $(".img-responsive").each(function() {
               $(this).height($(".img-responsive").first().height());
           });
@@ -61,8 +63,8 @@
               $(this).height($(".img-responsive").first().height());
               $(this).width($(".img-responsive").first().width());
           });
-	        $("#partners").show();
-        });
+	        // $("#partners").show();
+        // });
 
       });
     });
