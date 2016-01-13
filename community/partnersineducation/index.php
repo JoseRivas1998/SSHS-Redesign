@@ -54,9 +54,11 @@
       $("#partners").promise().done(function() {
 
         $("#partners").load("loadPartners.php", function() {
-          $(".img-responsive").each(function() {
-              $(this).delay(50).height($(".img-responsive").first().height());
-          });
+					do {
+	          $(".img-responsive").each(function() {
+	              $(this).height($(".img-responsive").first().height());
+	          });
+					}while($(".img-responsive").first().height() <= 0);
           $("div div.noImg").each(function() {
               $(this).height($(".img-responsive").first().height());
               $(this).width($(".img-responsive").first().width());
