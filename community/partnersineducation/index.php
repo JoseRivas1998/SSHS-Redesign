@@ -59,7 +59,7 @@
         });
         $("div div.noImg").each(function() {
             $(this).height($("#first-img").height());
-            $(this).width($("#first-img")..width());
+            $(this).width($("#first-img").width());
         });
     });
   </script>
