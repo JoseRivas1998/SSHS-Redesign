@@ -12,6 +12,7 @@
 				<a href="resources/downloads/2013-14SARCEnglish.pdf" target="_blank" class="list-group-item"><i class="fa fa-certificate fa-fw"></i> <span class="list-text">School Accountability Report Card</span></a>
 				<a href="resources/content/wasc/WASC-midterm-20122015.pdf" target="_blank" class="list-group-item"><i class="fa fa-file-text-o fa-fw"></i> <span class="list-text">WASC Mid-Term 2012-2015 Report</span></a>
 				<a href="/webmasters" class="list-group-item"><i class="fa fa-code fa-fw"></i> <span class="list-text">The Webmasters</span></a>
+				<a href="/redesign" class="list-group-item"><i class="fa fa-rebel fa-fw"></i> <span class="list-text">Website Redesign</span></a>
 			</div>
 		</div>
 	</div>
