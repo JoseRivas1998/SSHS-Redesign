@@ -57,7 +57,6 @@
 				            </ol>
 				            <div class="carousel-inner" id="roboticsItems">
 				            	<div class="item active"><img src="club/club1.JPG" class="img-resonsive carousel-img"></div>
-											<div class="item"><img src="club/club1.JPG" class="img-resonsive carousel-img"></div>
 											<div class="item"><img src="club/club2.JPG" class="img-resonsive carousel-img"></div>
 											<div class="item"><img src="club/club3.JPG" class="img-resonsive carousel-img"></div>
 											<div class="item"><img src="club/club4.JPG" class="img-resonsive carousel-img"></div>
