@@ -1,3 +1,4 @@
 /cgi-bin
-
+.idea/
+*.bak
 *.htaccess
