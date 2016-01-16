@@ -1,4 +1,3 @@
-console.log("JS Loaded");
 $(document).ready(function() {
 	var id = $(location).attr('pathname');
 	console.log(id);

@@ -38,7 +38,7 @@
 						<a href='mailto:jennifer.wigdor@simivalleyusd.org'>jennifer.wigdor@simivalleyusd.org</a><br />
 						(805) 520-6800 x3717<br/>
 						Follow the Counseling Department and the CCC!<br/>
-						Instagram: <a href='https://instagram.com/sshs_ccc/'>SSHS_CCC</a><br/>
+						Instagram: <a href='https://instagram.com/SSHS_Counseling/'>SSHS_Counseling</a><br/>
 						Facebook: <a href='https://www.facebook.com/SSHSCounseling'>SSHS Counseling</a><br/>
 						<a href="https://twitter.com/SSHS_Counseling" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @SSHS_Counseling</a>
 						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
