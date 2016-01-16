@@ -38,8 +38,41 @@
 					<div class="embed-responsive embed-responsive-16by9" id="embedCarousel">
 				    <div class="embed-responsive-item">
 				        <div id="roboticsCarousel" class="carousel slide">
-				            <ol class="carousel-indicators" id="roboticsInidcators"></ol>
-				            <div class="carousel-inner" id="roboticsItems"></div>
+				            <ol class="carousel-indicators" id="roboticsInidcators">
+											<li data-target="#roboticsCarousel" data-slide-to="0" class="active"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="1"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="2"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="3"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="4"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="5"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="6"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="7"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="8"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="9"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="10"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="11"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="12"></li>
+											<li data-target="#roboticsCarousel" data-slide-to="13"></li>
+				            	<li data-target="#roboticsCarousel" data-slide-to="14"></li>
+				            </ol>
+				            <div class="carousel-inner" id="roboticsItems">
+				            	<div class="item active"><img src="club/club1.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club1.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club2.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club3.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club4.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club5.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club6.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club7.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club8.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club9.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club10.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club11.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club12.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club13.JPG" class="img-resonsive carousel-img"></div>
+											<div class="item"><img src="club/club14.JPG" class="img-resonsive carousel-img"></div>
+					            <div class="item"><img src="club/club15.JPG" class="img-resonsive carousel-img"></div>
+				            </div>
 
 				            <a href="#roboticsCarousel" class="carousel-control left home" data-slide="prev">
 				                <span class="icon-prev"></span>
@@ -62,33 +95,6 @@
 	$path .= "/inc/javascript.php";
 	include($path);
 	?>
-	<script>
-
-	$(document).ready(function() {
-		var dir = "club/";
-		var fileextension = ".JPG";
-		$.ajax({
-		    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-		    url: dir,
-		    success: function (data) {
-		        //List all .png file names in the page
-						var img = 0;
-		        $(data).find("a:contains(" + fileextension + ")").each(function () {
-		            var filename = this.href.replace(window.location, "");
-								if(img == 0) {
-									$("#roboticsItems").append('<div class="item active"><img src="' + dir + filename + '" class="img-resonsive carousel-img"></div>');
-									$("#roboticsInidcators").append('<li data-target="#roboticsCarousel" data-slide-to="'+ img +'" class="active"></li>');
-								} else {
-									$("#roboticsItems").append('<div class="item"><img src="' + dir + filename + '" class="img-resonsive carousel-img"></div>');
-									$("#roboticsInidcators").append('<li data-target="#roboticsCarousel" data-slide-to="'+ img +'"></li>');
-								}
-								img++;
-		        });
-		    }
-		});
-	});
-
-	</script>
 </body>
 
 </html>
