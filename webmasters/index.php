@@ -10,34 +10,39 @@
     ?>
 	<title>Webmasters | Santa Susana High School</title>
     <style>
-        #JackApelbaum {
-            background-image: url(jackA-blur.jpg);
-            background-size: 100% 100%;
-            background-position: center;
-            -webkit-transition: background-image .25s;
-            transition: background-image .25s;
+        @media (max-width: 768px) {
+            #JackApelbaum {
+                background: url(jackA.png) 0 0 no-repeat;
+                background-size: 100% 200%;
+            }
+            #joseRivas {
+                background: url(joseR.png) 0 0 no-repeat;
+                background-size: 100% 200%;
+            }
         }
-        #JackApelbaum:hover {
-            background-image: url(jackA.jpg);
-            -webkit-transition: background-image .25s;
-            transition: background-image .25s;
-        }
-        #joseRivas {
-            background-image: url(joseR-blur.jpg);
-            background-size: 100% 100%;
-            background-position: center;
-            -webkit-transition: background-image .25s;
-            transition: background-image .25s;
-        }
-        #joseRivas:hover {
-            background-image: url(joseR.jpg);
-            -webkit-transition: background-image .25s;
-            transition: background-image .25s;
-        }
-        #joseTitle {
-            font-size: 13px;
-            padding-top: 2px;
-            padding-bottom: 2px;
+        @media (min-width: 769px) {
+            #JackApelbaum {
+                background: url(jackA.png) 0 100% no-repeat;
+                background-size: 100% 200%;
+            }
+            #JackApelbaum:hover {
+                background: url(jackA.png) 0 0 no-repeat;
+                background-size: 100% 200%;
+            }
+            #joseRivas {
+                background: url(joseR.png) 0 100% no-repeat;
+                background-size: 100% 200%;
+            }
+            #joseRivas:hover {
+                background: url(joseR.png) 0 0 no-repeat;
+                background-size: 100% 200%;
+            }
+            .smallTitle {
+                font-size: 13px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+
         }
     </style>
 </head>
@@ -63,37 +68,37 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="row">
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/dosperos13" target="_blank">Jack Apelbaum</a></div></div>
                                 <div class="panel-body student"  id="JackApelbaum"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/AidanChisum" target="_blank">Aidan Chisum</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/Bapap" target="_blank">Mason Cohen</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/ComradeVanko" target="_blank">Ivan Georgiev</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/Cybergv2" target="_blank">Jacob Gherardi</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/TristanHennerty" target="_blank">Tristan Hennerty</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
@@ -101,51 +106,57 @@
                         </div>
                     </div>
                     <div class="row webmastermasterRow">
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/CollinHersh" target="_blank">Collin Hersh</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/shmeshme" target="_blank">David Laury</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><div class="panel-title smallTitle"><a href="https://github.com/ThomasMancinelli" target="_blank">Thomas Mancinelli</a></div></div>
+                                <div class="panel-body student" id="pending"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/ganonswag" target="_blank">Caleb McDonald</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/jeremynovember" target="_blank">Jeremy November</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/Connor-Ries" target="_blank">Connor Ries</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-12 col-sm-offset-3">
                             <div class="panel panel-default">
-                                <div class="panel-heading"><div class="panel-title" id="joseTitle"><a href="https://github.com/JoseRivas1998" target="_blank">Jos&eacute; Rodriguez-Rivas</a></div></div>
+                                <div class="panel-heading"><div class="panel-title smallTitle"><a href="https://github.com/JoseRivas1998" target="_blank">Jos&eacute; Rodriguez-Rivas</a></div></div>
                                 <div class="panel-body student" id="joseRivas"></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-4 col-sm-2 col-sm-offset-4">
+                        <div class="col-xs-12 col-sm-2">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/GabrielShabat" target="_blank">Gabriel Shabat</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
                             </div>
                         </div>
-                        <div class="col-sm-2 col-xs-4">
+                        <div class="col-sm-2 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><div class="panel-title"><a href="https://github.com/jakewait" target="_blank">Jacob Waitkuweit</a></div></div>
                                 <div class="panel-body student" id="pending"></div>
