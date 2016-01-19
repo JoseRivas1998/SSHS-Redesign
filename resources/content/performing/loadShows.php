@@ -15,7 +15,7 @@ $show4sql = "DATE_FORMAT(fourthShow, '%W, %M %D @ %l:%i %p')";
 $show5sql = "DATE_FORMAT(fithShow, '%W, %M %D @ %l:%i %p')";
 $show6sql = "DATE_FORMAT(sixthShow, '%W, %M %D @ %l:%i %p')";
 
-$futureSql = "SELECT title, posterPath, $show1sql, $show2sql, $show3sql, $show4sql, $show5sql, $show6sql, ticket1, ticket2, ticket3, ticket4, location FROM performances WHERE lastShow >= CURRENT_DATE() ORDER BY firstShow desc";
+$futureSql = "SELECT title, posterPath, $show1sql, $show2sql, $show3sql, $show4sql, $show5sql, $show6sql, ticket1, ticket2, ticket3, ticket4, location FROM performances WHERE lastShow >= NOW() ORDER BY firstShow desc";
 
 echo "<div class='col-xs-12'>";
 echo "<div class='section-title'>On Sale Now</div>";
@@ -24,7 +24,7 @@ loadShows($conn, $futureSql, $show1sql, $show2sql, $show3sql, $show4sql, $show5s
 
 echo "</div>";
 
-$pastSql = "SELECT title, posterPath, $show1sql, $show2sql, $show3sql, $show4sql, $show5sql, $show6sql, ticket1, ticket2, ticket3, ticket4, location FROM performances WHERE lastShow < CURRENT_DATE() ORDER BY firstShow desc";
+$pastSql = "SELECT title, posterPath, $show1sql, $show2sql, $show3sql, $show4sql, $show5sql, $show6sql, ticket1, ticket2, ticket3, ticket4, location FROM performances WHERE lastShow < NOW() ORDER BY firstShow desc";
 
 echo "<div class='col-xs-12'>";
 echo "<div class='section-title'>Past Performances</div>";
