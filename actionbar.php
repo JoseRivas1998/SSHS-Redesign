@@ -1,7 +1,7 @@
 <?php
 include("inc/dbConnect.php");
 
-$sql = "SELECT barText, link FROM actionBar WHERE publishDate <= CURRENT_DATE() and showUntil >= CURRENT_DATE() ORDER BY showUntil LIMIT 1";
+$sql = "SELECT barText, link FROM actionBar WHERE publishDate <= NOW() and showUntil >= NOW() ORDER BY showUntil LIMIT 1";
 
 $result = mysqli_query($conn, $sql);
 if(mysqli_num_rows($result) > 0) {

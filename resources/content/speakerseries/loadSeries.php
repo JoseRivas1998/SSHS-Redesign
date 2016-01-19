@@ -6,9 +6,9 @@ include($incPath);
 
 $dateSql = "DATE_FORMAT(showDate, '%W, %M %D @ %l:%i %p')";
 
-$futureSql = "SELECT title, posterThumb, posterLarge, $dateSql, location, infoThumb, infoLarge FROM speakerseries WHERE showDate >= CURRENT_DATE() ORDER BY showDate desc";
+$futureSql = "SELECT title, posterThumb, posterLarge, $dateSql, location, infoThumb, infoLarge FROM speakerseries WHERE showDate >= NOW() ORDER BY showDate desc";
 
-$pastSql = "SELECT title, posterThumb, posterLarge, $dateSql, location, infoThumb, infoLarge FROM speakerseries WHERE showDate < CURRENT_DATE() ORDER BY showDate desc";
+$pastSql = "SELECT title, posterThumb, posterLarge, $dateSql, location, infoThumb, infoLarge FROM speakerseries WHERE showDate < NOW() ORDER BY showDate desc";
 
 echo '<div class="col-xs-12">';
 
