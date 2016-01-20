@@ -21,7 +21,7 @@ if(mysqli_num_rows($result) > 0) {
     echo "</div>";
 
     echo "<div class='col-xs-12 col-sm-4 partner'>";
-    echo "<a href='$website' target='_blank'>$website</a>";
+    echo "<a href='$website' target='_blank' class='supportLink'>$website</a>";
     echo "</div>";
 
     echo "<div class='col-xs-12 col-sm-4 partner'>";
