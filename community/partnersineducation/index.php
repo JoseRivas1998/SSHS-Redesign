@@ -16,6 +16,11 @@
 		.partner > .img-responsive {
 			margin: auto;
 		}
+		@media (max-width: 454px) {
+			.supportLink {
+				font-size: 8px;
+			}
+		}
   </style>
 </head>
 
