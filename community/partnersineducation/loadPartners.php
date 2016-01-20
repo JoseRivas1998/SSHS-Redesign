@@ -9,40 +9,30 @@ $sql = "SELECT * FROM partnersInEducation ORDER BY orderNum";
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) > 0) {
-  $index = 0;
-  $iteration = 1;
 	while($row = mysqli_fetch_assoc($result)) {
     $name = $row["partner"];
     $imgPath = $row["imgSrc"];
     $website = $row["website"];
-    $nullImg = is_null($imgPath);
-    $openRow = ($index == 0);
-    $closeRow = ($index == 3);
-    if($openRow) {
-      echo "<div class='row partnerRow'>";
-    }
-    echo "<div class='col-xs-12 col-sm-3 partner'>";
-    if($nullImg) {
-      echo "<div class='noImg'></div>";
-    } else {
-      if($iteration != 1) {
-        echo "<img src='img/$imgPath' alt='$name' class='img-responsive'>";
-      } else {
-        echo "<img src='img/$imgPath' alt='$name' class='img-responsive' id='first-img'>";
-      }
-    }
-    echo "<a href='$website' target='_blank'>$name</a>";
+    $displayImg = is_null($imgPath) !== true;
+    echo "<div class='row'>";
+
+    echo "<div class='col-xs-12 col-sm-4 partner'>";
+    echo "$name";
     echo "</div>";
-    $index++;
-    $iteration++;
-    if($closeRow) {
-      echo "</div>";
-      $index = 0;
+
+    echo "<div class='col-xs-12 col-sm-4 partner'>";
+    echo "<a href='$website' target='_blank'>$website</a>";
+    echo "</div>";
+
+    echo "<div class='col-xs-12 col-sm-4 partner'>";
+    if($displayImg) {
+      echo "<img class='img-responsive' src='img/$imgPath' alt='$name Logo'>";
     }
+    echo "</div>";
+
+    echo "</div>";
+    echo "<hr />";
 	}
-  if($index >= 0 && $index < 3) {
-    echo "</div>";
-  }
 }
 
 mysqli_close($conn);

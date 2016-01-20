@@ -13,13 +13,9 @@
     .partner {
       text-align: center;
     }
-    .partner > .img-responsive {
-      margin: auto;
-      width: 50%;
-    }
-    .partnerRow {
-      padding-top: 10px;
-    }
+		.partner > .img-responsive {
+			margin: auto;
+		}
   </style>
 </head>
 
@@ -38,10 +34,17 @@
 				<div class="col-xs-12">
 				  <div class="section-title">Partners In Education</div>
 				</div>
-        <div class="col-xs-12" id="partners">
-        	<?php
-					include('loadPartners.php');
-					?>
+        <div class="col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-12 col-sm-4 partner">Name</div>
+								<div class="col-xs-12 col-sm-4 partner">Website</div>
+								<div class="col-xs-12 col-sm-4 partner">Logo</div>
+							</div>
+						</div>
+						<div class="panel-body" id="parnters"></div>
+					</div>
         </div>
 			</div>
 		</div>
@@ -52,17 +55,10 @@
 	$path .= "/inc/javascript.php";
 	include($path);
 	?>
-  <script>
-    $(document).ready(function() {
-        $(".img-responsive").each(function() {
-            $(this).height($("#first-img").height());
-        });
-        $("div div.noImg").each(function() {
-            $(this).height($("#first-img").height());
-            $(this).width($("#first-img").width());
-        });
-    });
-  </script>
 </body>
-
+<script>
+	$(document).ready(function() {
+		$("#partners").load("loadPartners.php");
+	});
+</script>
 </html>
