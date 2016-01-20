@@ -55,10 +55,10 @@
 	$path .= "/inc/javascript.php";
 	include($path);
 	?>
+	<script>
+		$(document).ready(function() {
+			$("#partners").load("loadPartners.php");
+		});
+	</script>
 </body>
-<script>
-	$(document).ready(function() {
-		$("#partners").load("loadPartners.php");
-	});
-</script>
 </html>
