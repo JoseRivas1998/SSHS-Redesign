@@ -43,7 +43,9 @@
 								<div class="col-xs-12 col-sm-4 partner">Logo</div>
 							</div>
 						</div>
-						<div class="panel-body" id="parnters"></div>
+						<div class="panel-body">
+							<div id="partners"></div>
+						</div>
 					</div>
         </div>
 			</div>
@@ -57,7 +59,7 @@
 	?>
 	<script>
 		$(document).ready(function() {
-			$("#partners").load("loadPartners.php");
+			$('#partners').load('loadPartners.php');
 		});
 	</script>
 </body>
