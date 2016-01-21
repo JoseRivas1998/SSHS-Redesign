@@ -410,3 +410,7 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 .buttons > li > a.active {
     background-color: rgb(11,89,107);
 }
+
+#googleProfile {
+    padding-bottom: 5px;
+}
