@@ -138,6 +138,7 @@
 
 .navbar-nav>li>.dropdown-menu {
     background-color: rgb(18,138,165);
+    border-top: 0;
 }
 
 .dropdown-menu>li>a {
