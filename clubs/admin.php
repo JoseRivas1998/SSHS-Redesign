@@ -116,7 +116,8 @@
 						"president": form.find("input[name='newPresident']").val(),
 						"advisor": form.find("input[name='newAdvisor']").val(),
 						"time": form.find("input[name='newTime']").val(),
-						"room": form.find("input[name='newRoom']").val()
+						"room": form.find("input[name='newRoom']").val(),
+						"userEmail": profile.getEmail().substring(0 , profile.getEmail().indexOf("@"))
 					},
 					cache: false,
 					success: function(data){
