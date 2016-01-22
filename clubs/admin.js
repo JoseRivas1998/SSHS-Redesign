@@ -40,9 +40,10 @@ function onListChange() {
 	var form = $("#editForm");
 	var clubId;
 	if($("#clubList").val() < 1) {
-		$("#clubList").val("1");
+		clubId = 1;
+	} else {
+		clubId = $("#clubList").val();
 	}
-	clubId = $("#clubList").val();
 	$.ajax({
 		type: "POST",
 		dataType: "json",
