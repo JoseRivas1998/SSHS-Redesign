@@ -22,7 +22,7 @@ if($userId != -1) {
 
   $output = "<div class='alert alert-success'>$userEmail, $userId</div>";
 } else {
-  $output = "<div class='alert alert-warning'>Sorry, your email does not have permission to manage the website.</div>";
+  $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage the website.</div>";
 }
 
 echo $output;
