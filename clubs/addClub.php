@@ -19,7 +19,7 @@ if(mysqli_num_rows($usersResult) > 0) {
 }
 
 if($userId != -1) {
-  $getPermissionsSql = "SELECT * FROM userPermisions WHERE userId = $userId AND tableAccess = 'clubs'";
+  $getPermissionsSql = "SELECT * FROM userPermisions WHERE userId = $userId AND (tableAccess = 'clubs' OR tableAccess = 'full')";
   $permissionResult = mysqli_query($conn, $getPermissionsSql);
   if(mysqli_num_rows($permissionResult) > 0) {
     $name = $_POST["name"];
