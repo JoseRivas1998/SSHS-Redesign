@@ -42,6 +42,15 @@ if($userId != -1) {
             $insertSql .= ", meetingRoom";
           }
           $insertSql .= ") VALUES($userEmail@simivalleyusd.org, '$name', '$president', '$advisor'";
+          if($website) {
+            $insertSql .= ", '$website'";
+          }
+          if($time) {
+            $insertSql .= ", '$time'";
+          }
+          if($room) {
+            $insertSql .= ", '$room'";
+          }
           $insertSql .= ")";
           $output = "<div class='alert alert-success'>$insertSql</div>";
         } else {
