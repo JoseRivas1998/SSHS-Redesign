@@ -33,7 +33,7 @@ if(mysqli_num_rows($result) > 0) {
 		if(is_null($row["meetinRoom"])) {
 			$output["clubRoom"] = "";
 		} else {
-			$output["clubRoom"] = $row["meetinRoom"];
+			$output["clubRoom"] = $row["meetingRoom"];
 		}
 	}
 }
