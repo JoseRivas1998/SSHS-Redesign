@@ -134,12 +134,14 @@
 		});
 		function onListChange() {
 			var form = $("#editForm");
-			console.log(form);
+			console.log($("#clubList").val());
 			$.ajax({
 				type: "POST",
 				dataType: "json",
 				url: "clubInfoToForm.php",
-				data: {"clubId": $("#clubList").val()},
+				data: {
+					"clubId": $("#clubList").val()
+				},
 				cache: false,
 				success: function(data) {
 					console.log(data["clubName"]);
