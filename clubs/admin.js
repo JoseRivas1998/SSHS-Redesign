@@ -61,6 +61,8 @@ $("#clubList").on('change', function() {
 	onListChange();
 });
 $(document).ready(function() {
-	$("#clubList").load("loadClubList.php");
+	$("#clubList").load("loadClubList.php", function() {
+		$("#clubList").val(1);
+	});
 	onListChange();
 });
