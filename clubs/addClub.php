@@ -31,7 +31,7 @@ if($userId != -1) {
     if($name) {
       if($president) {
         if($advisor) {
-          $insertSql = "INSERT INTO clubs (userCreated, name, president, advisor"
+          $insertSql = "INSERT INTO clubs (userCreated, name, president, advisor";
           if($website) {
             $insertSql .= ", website";
           }
