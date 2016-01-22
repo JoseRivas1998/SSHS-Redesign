@@ -43,7 +43,7 @@ if($userId != -1) {
           }
           $insertSql .= ") VALUES($userEmail@simivalleyusd.org, '$name', '$president', '$advisor'";
           $insertSql .= ")";
-          $ouput = "<div class='alert alert-success'>$insertSql</div>";
+          $output = "<div class='alert alert-success'>$insertSql</div>";
         } else {
           $output = "<div class='alert alert-danger'>Enter a club advisor.</div>";
         }
