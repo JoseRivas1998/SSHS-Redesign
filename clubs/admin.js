@@ -36,9 +36,9 @@ $("#newForm").submit(function(event) {
 		$("#newFormOut").html("<div class='alert alert-danger'>Your Email is not a Simi Valley USD account.</div>")
 	}
 });
+var clubId;
 function onListChange() {
 	var form = $("#editForm");
-	var clubId;
 	if($("#clubList").val() < 1) {
 		clubId = 1;
 	} else {
@@ -54,6 +54,16 @@ function onListChange() {
 		cache: false,
 		success: function(data) {
 			$("#editName").val(data["clubName"]);
+			$("#editWebsite").val(data["clubSite"]);
+			if(data["clubApproved"] == 1) {
+				document.getElementById("editApproved").checked  = true;
+			} else {
+				document.getElementById("editApproved").checked  = false;
+			}
+			$("#editPresident").val(data["clubPresident"]);	
+			$("#editAdvisor").val(data["clubAdvisor"]);
+			$("#editTime").val(data["clubTime"]);
+			$("#editRoom").val(data["clubRoom"]);
 		} 
 	});
 }
