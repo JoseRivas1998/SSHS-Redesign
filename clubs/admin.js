@@ -53,7 +53,7 @@ function onListChange() {
 		},
 		cache: false,
 		success: function(data) {
-			console.log(data["clubName"]);
+			$("#editName").val(data["clubName"]);
 		} 
 	});
 }
@@ -61,6 +61,8 @@ $("#clubList").on('change', function() {
 	onListChange();
 });
 $(document).ready(function() {
-	$("#clubList").load("loadClubList.php");
+	$("#clubList").load("loadClubList.php", function() {
+		$("#clubList").val(1);
+	});
 	onListChange();
 });
