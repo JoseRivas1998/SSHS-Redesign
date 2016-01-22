@@ -76,7 +76,39 @@
 									<label for="clubList" class="control-label">Select A Club to Edit</label>
 									<select id="clubList" class="form-control"></select>
 								</div>
+								<div class="form-group">
+									<label for="editName" class="control-label">Club Name<span id="red">*</span></label>
+									<input type="text" class="form-control" id="editName" name="editName" placeholder="Club Name" value="">
+								</div>
+								<div class="form-group">
+									<label for="editWebsite" class="control-label">Website</label>
+									<input type="text" class="form-control" id="editWebsite" name="editWebsite" placeholder="Website URL (If Applicable)" value="">
+								</div>
+								<div class="form-group">
+									<label for="editPresident" class="control-label">President<span id="red">*</span></label>
+									<input type="text" class="form-control" id="editPresident" name="editPresident" placeholder="President's Full Name" value="">
+								</div>
+								<div class="form-group">
+									<label for="editAdvisor" class="control-label">Advisor<span id="red">*</span></label>
+									<input type="text" class="form-control" id="editAdvisor" name="editAdvisor" placeholder="Advisor's Last Name" value="">
+								</div>
+								<div class="form-group">
+									<label for="editTime" class="control-label">Meeting Time</label>
+									<input type="text" class="form-control" id="editTime" name="editTime" placeholder="Meeting Time (If Applicable)" value="">
+								</div>
+								<div class="form-group">
+									<label for="editRoom" class="control-label">Meeting Room</label>
+									<input type="text" class="form-control" id="editRoom" name="editRoom" placeholder="Meeting Room (If Applicable)" value="">
+								</div>
+								<div class="checkbox">
+									<label><input type="checkbox" value="" id="editApproved" name="editApproved">Approved</label>
+								</div>
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Send">
+								</div>
 							</form>
+							<span id="red">*Required</span>
+							<div id="editFormOut"></div>
 						</div>
 
 					</div>

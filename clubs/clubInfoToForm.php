@@ -14,12 +14,27 @@ if(mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
 		$output = array();
 		$output["clubName"] = $row["name"];
-		$output["clubSite"] = $row["website"];
+		if(is_null($row["website"])) {
+			$output["clubSite"] = "";
+		} else {
+			$output["clubSite"] = $row["website"];
+		}
+		
 		$output["clubApproved"] = $row["approved"];
 		$output["clubPresident"] = $row["president"];
 		$output["clubAdvisor"] = $row["advisor"];
-		$output["clubTime"] = $row["meetingTime"];
-		$output["clubRoom"] = $row["meetinRoom"];
+
+		if(is_null($row["meetingTime"])) {
+			$output["clubTime"] = "";
+		} else {
+			$output["clubTime"] = $row["meetingTime"];
+		}
+
+		if(is_null($row["meetinRoom"])) {
+			$output["clubRoom"] = "";
+		} else {
+			$output["clubRoom"] = $row["meetinRoom"];
+		}
 	}
 }
 
