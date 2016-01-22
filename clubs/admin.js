@@ -39,11 +39,10 @@ $("#newForm").submit(function(event) {
 function onListChange() {
 	var form = $("#editForm");
 	var clubId;
-	// if($("#clubList").val() < 1) {
-		// clubId = 1;
-	// } else {
-		clubId = $("#clubList").val();
-	// }
+	if($("#clubList").val() < 1) {
+		$("#clubList").val("1");
+	}
+	clubId = $("#clubList").val();
 	$.ajax({
 		type: "POST",
 		dataType: "json",
@@ -61,8 +60,6 @@ $("#clubList").on('change', function() {
 	onListChange();
 });
 $(document).ready(function() {
-	$("#clubList").load("loadClubList.php", function() {
-		$("#clubList").val(1);
-	});
+	$("#clubList").load("loadClubList.php");
 	onListChange();
 });
