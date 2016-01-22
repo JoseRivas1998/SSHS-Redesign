@@ -55,7 +55,7 @@ if($userId != -1) {
           if(mysqli_query($conn, $insertSql)) {
             $output = "<div class='alert alert-success'>Club Successfully Added!</div>";
           } else {
-            $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+            $output = "<div class='alert alert-danger'>There was an error, please try again.<br />$insertSql</div>";
           }
         } else {
           $output = "<div class='alert alert-danger'>Enter a club advisor.</div>";
