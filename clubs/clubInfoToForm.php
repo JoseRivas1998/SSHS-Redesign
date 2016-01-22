@@ -4,7 +4,7 @@ $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
 
-$clubId = $_POST["clubId"]
+$clubId = $_POST["clubId"];
 
 $sql = "SELECT * FROM clubs WHERE id = $clubId LIMIT 1";
 
