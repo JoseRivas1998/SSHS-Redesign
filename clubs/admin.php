@@ -26,7 +26,7 @@
 		<div class="container" id="content-container">
 			<div class="row">
 				<div class="col-xs-12">
-					<div class="section-title">Clubs Page Admin</div>	
+					<div class="section-title">Clubs Page Admin</div>
 					<?php
 					$path = $_SERVER['DOCUMENT_ROOT'];
 				    $path .= "/inc/google/googleProfile.php";
@@ -70,8 +70,8 @@
 
 						<div class="col-xs-12 col-sm-6">
 							<div class="section-title">Edit Existing Club</div>
-							
-							
+
+
 						</div>
 
 					</div>
@@ -100,25 +100,32 @@
 	        profileDiv.append("</div>");
 		}
 		$("#newForm").submit(function(event) {
-			var form = $("#newForm").children();
-			console.log("New Name: " + form.find("input[name='newName']").val());
-			console.log("New Website: " + form.find("input[name='newName']").val());
-			$.ajax({
-				type: "POST",
-				url: "addClub.php",
-				data: {
-					"name": form.find("input[name='newName']").val(),
-					"website": form.find("input[name='newName']").val(),
-					"president": form.find("input[name='newPresident']").val(),
-					"advisor": form.find("input[name='newAdvisor']").val(),
-					"time": form.find("input[name='newTime']").val(),
-					"room": form.find("input[name='newRoom']").val()
-				},
-				cache: false,
-				success: function(data){
-					$("#newFormOut").html(data);
-				}
-			});
+		 var auth2 = gapi.auth2.getAuthInstance();
+			if(!(auth2.isSignedIn.get()) || profile == null) {
+				$("#newFormOut").html("<div class='alert alert-danger'>You Must Be Logged in to Google</div>")
+			} else if(profile.getEmail().indexOf("@simivalleyusd.org") > -1) {
+				var form = $("#newForm").children();
+				console.log("New Name: " + form.find("input[name='newName']").val());
+				console.log("New Website: " + form.find("input[name='newName']").val());
+				$.ajax({
+					type: "POST",
+					url: "addClub.php",
+					data: {
+						"name": form.find("input[name='newName']").val(),
+						"website": form.find("input[name='newName']").val(),
+						"president": form.find("input[name='newPresident']").val(),
+						"advisor": form.find("input[name='newAdvisor']").val(),
+						"time": form.find("input[name='newTime']").val(),
+						"room": form.find("input[name='newRoom']").val()
+					},
+					cache: false,
+					success: function(data){
+						$("#newFormOut").html(data);
+					}
+				});
+			} else {
+				$("#newFormOut").html("<div class='alert alert-danger'>Your Email is not a Simi Valley USD account.</div>")
+			}
 		});
 	</script>
 
