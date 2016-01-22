@@ -139,7 +139,7 @@
 				type: "POST",
 				dataType: "json",
 				url: "clubInfoToForm.php",
-				data: {"clubId": $("clubList").val()},
+				data: {"clubId": $("#clubList").val()},
 				cache: false,
 				success: function(data) {
 					console.log(data["clubName"]);
