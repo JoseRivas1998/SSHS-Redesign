@@ -53,7 +53,7 @@ function onListChange() {
 		},
 		cache: false,
 		success: function(data) {
-			console.log(data["clubName"]);
+			$("#editName").val(data["clubName"]);
 		} 
 	});
 }
