@@ -19,8 +19,13 @@ if(mysqli_num_rows($usersResult) > 0) {
 }
 
 if($userId != -1) {
-
-  $output = "<div class='alert alert-success'>$userEmail, $userId</div>";
+  $getPermissionsSql = "SELECT * FROM userPermisions WHERE userId = $userId AND tableAccess = 'clubs'";
+  $permissionResult = mysqli_query($conn, $getPermissionsSql);
+  if(mysqli_num_rows($permissionResult) > 0) {
+    $output = "<div class='alert alert-success'>$userEmail, $userId</div>";
+  } else {
+    $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage this page.</div>";
+  }
 } else {
   $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage the website.</div>";
 }
