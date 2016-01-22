@@ -38,6 +38,9 @@ $("#newForm").submit(function(event) {
 });
 function onListChange() {
 	var form = $("#editForm");
+	if($("#clubList").val() == null) {
+		$("#clubList").val(1);
+	}
 	$.ajax({
 		type: "POST",
 		dataType: "json",
