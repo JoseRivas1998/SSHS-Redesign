@@ -38,7 +38,7 @@ $("#newForm").submit(function(event) {
 });
 function onListChange() {
 	var form = $("#editForm");
-	if($("#clubList").val() == null) {
+	if($("#clubList").val() < 1) {
 		$("#clubList").val(1);
 	}
 	$.ajax({
