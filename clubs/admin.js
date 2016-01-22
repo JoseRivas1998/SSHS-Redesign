@@ -38,16 +38,18 @@ $("#newForm").submit(function(event) {
 });
 function onListChange() {
 	var form = $("#editForm");
+	var clubId;
 	if($("#clubList").val() < 1) {
-		$("#clubList").val(1);
-		console.log('test');
+		clubId = 1;
+	} else {
+		clubId = $("#clubList").val();
 	}
 	$.ajax({
 		type: "POST",
 		dataType: "json",
 		url: "clubInfoToForm.php",
 		data: {
-			"clubId": $("#clubList").val()
+			"clubId": clubId;
 		},
 		cache: false,
 		success: function(data) {
