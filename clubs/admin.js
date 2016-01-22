@@ -49,7 +49,7 @@ function onListChange() {
 		dataType: "json",
 		url: "clubInfoToForm.php",
 		data: {
-			"clubId": clubId;
+			"clubId": clubId
 		},
 		cache: false,
 		success: function(data) {
