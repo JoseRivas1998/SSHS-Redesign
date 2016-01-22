@@ -94,9 +94,6 @@
 	include($path);
 	?>
 	<script>
-		$(document).ready(function() {
-			$("#clubList").load("loadClubList.php");
-		});
 		var profile = null;
 		function onSignIn(googleUser) {
 			profile = googleUser.getBasicProfile();
@@ -135,7 +132,7 @@
 				$("#newFormOut").html("<div class='alert alert-danger'>Your Email is not a Simi Valley USD account.</div>")
 			}
 		});
-		$("#clubList").on('change', function() {
+		function onListChange() {
 			var form = $("#editForm");
 			console.log(form);
 			$.ajax({
@@ -145,9 +142,16 @@
 				data: {"clubId": $("clubList").val()},
 				cache: false,
 				success: function(data) {
-					console.log(data);
+					console.log(data["clubName"]);
 				} 
 			});
+		}
+		$("#clubList").on('change', function() {
+			onListChange();
+		});
+		$(document).ready(function() {
+			$("#clubList").load("loadClubList.php");
+			onListChange();
 		});
 	</script>
 

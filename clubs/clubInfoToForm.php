@@ -12,11 +12,18 @@ $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
-		$ouput[] = $row;
+		$output = array();
+		$output["clubName"] = $row["name"];
+		$output["clubSite"] = $row["website"];
+		$output["clubApproved"] = $row["approved"];
+		$output["clubPresident"] = $row["president"];
+		$output["clubAdvisor"] = $row["advisor"];
+		$output["clubTime"] = $row["meetingTime"];
+		$output["clubRoom"] = $row["meetinRoom"];
 	}
 }
 
-echo json_encode($ouput);
+echo json_encode($output);
 
 mysqli_close($conn);
 ?>
