@@ -135,6 +135,19 @@
 				$("#newFormOut").html("<div class='alert alert-danger'>Your Email is not a Simi Valley USD account.</div>")
 			}
 		});
+		$("#clubList").on('change', function() {
+			var form = $("#editForm")
+			$.ajax({
+				type: "POST",
+				dataType: "json",
+				url: "clubInfoToForm.php",
+				data: {"clubId": $("clubList").val()},
+				cache: false,
+				success: function(data) {
+					console.log(data);
+				} 
+			});
+		});
 	</script>
 
 </body>
