@@ -103,9 +103,8 @@
 			if(!(auth2.isSignedIn.get()) || profile == null) {
 				$("#newFormOut").html("<div class='alert alert-danger'>You Must Be Logged in to Google</div>")
 			} else if(profile.getEmail().indexOf("@simivalleyusd.org") > -1) {
+				$("#newFormOut").html("<div class='alert alert-warning'><i class='fa fa-spinner fa-spin'></i> Sending Data To Server</div>")
 				var form = $("#newForm").children();
-				console.log("New Name: " + form.find("input[name='newName']").val());
-				console.log("New Website: " + form.find("input[name='newName']").val());
 				$.ajax({
 					type: "POST",
 					url: "addClub.php",
