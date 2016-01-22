@@ -414,3 +414,11 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 #googleProfile {
     padding-bottom: 5px;
 }
+
+#red {
+  color: rgb(255, 0, 0);
+}
+
+#signOutBtn {
+  padding-top: 10px;
+}

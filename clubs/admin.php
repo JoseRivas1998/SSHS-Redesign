@@ -10,7 +10,7 @@
     $path .= "/inc/google/googleHeader.php";
     include($path);
     ?>
-	<title>Santa Susana High School</title>
+	<title>Club Admins | Santa Susana High School</title>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
 							<div class="section-title">Add a New Club</div>
 							<form role="form" action="javascript:void(0)" id="newForm">
 								<div class="form-group">
-									<label for="newName" class="control-label">Club Name</label>
+									<label for="newName" class="control-label">Club Name<span id="red">*</span></label>
 									<input type="text" class="form-control" id="newName" name="newName" placeholder="Club Name" value="">
 								</div>
 								<div class="form-group">
@@ -46,11 +46,11 @@
 									<input type="text" class="form-control" id="newWebsite" name="newWebsite" placeholder="Website URL (If Applicable)" value="">
 								</div>
 								<div class="form-group">
-									<label for="newPresident" class="control-label">President</label>
+									<label for="newPresident" class="control-label">President<span id="red">*</span></label>
 									<input type="text" class="form-control" id="newPresident" name="newPresident" placeholder="President's Full Name" value="">
 								</div>
 								<div class="form-group">
-									<label for="newAdvisor" class="control-label">Advisor</label>
+									<label for="newAdvisor" class="control-label">Advisor<span id="red">*</span></label>
 									<input type="text" class="form-control" id="newAdvisor" name="newAdvisor" placeholder="Advisor's Last Name" value="">
 								</div>
 								<div class="form-group">
@@ -65,18 +65,17 @@
 									<input type="submit" class="btn btn-primary" value="Send">
 								</div>
 							</form>
+							<span id="red">*Required</span>
 							<div id="newFormOut"></div>
 						</div>
 
 						<div class="col-xs-12 col-sm-6">
 							<div class="section-title">Edit Existing Club</div>
-
-
 						</div>
 
 					</div>
 				</div>
-				<div class="col-xs-12">
+				<div class="col-xs-12" id="signOutBtn">
 					<button class="btn btn-default" onclick="signOut();">Sign Out</button>
 				</div>
 			</div>
@@ -112,7 +111,7 @@
 					url: "addClub.php",
 					data: {
 						"name": form.find("input[name='newName']").val(),
-						"website": form.find("input[name='newName']").val(),
+						"website": form.find("input[name='newWebsite']").val(),
 						"president": form.find("input[name='newPresident']").val(),
 						"advisor": form.find("input[name='newAdvisor']").val(),
 						"time": form.find("input[name='newTime']").val(),
