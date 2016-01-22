@@ -41,7 +41,7 @@ if($userId != -1) {
           if($room) {
             $insertSql .= ", meetingRoom";
           }
-          $insertSql .= ") VALUES($userEmail@simivalleyusd.org, '$name', '$president', '$advisor'";
+          $insertSql .= ") VALUES('$userEmail@simivalleyusd.org', '$name', '$president', '$advisor'";
           if($website) {
             $insertSql .= ", '$website'";
           }
