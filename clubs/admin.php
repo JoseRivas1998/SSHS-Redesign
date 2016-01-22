@@ -136,7 +136,8 @@
 			}
 		});
 		$("#clubList").on('change', function() {
-			var form = $("#editForm")
+			var form = $("#editForm");
+			console.log(form);
 			$.ajax({
 				type: "POST",
 				dataType: "json",
