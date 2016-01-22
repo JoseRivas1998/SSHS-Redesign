@@ -71,6 +71,12 @@
 
 						<div class="col-xs-12 col-sm-6">
 							<div class="section-title">Edit Existing Club</div>
+							<form role="form" action="javascript:void(0)" id="editForm">
+								<div class="form-group">
+									<label for="clubList" class="control-label">Select A Club to Edit</label>
+									<select id="clubList" class="form-control"></select>
+								</div>
+							</form>
 						</div>
 
 					</div>
@@ -88,6 +94,9 @@
 	include($path);
 	?>
 	<script>
+		$(document).ready(function() {
+			$("#clubList").load("loadClubList.php");
+		});
 		var profile = null;
 		function onSignIn(googleUser) {
 			profile = googleUser.getBasicProfile();
