@@ -40,6 +40,7 @@ function onListChange() {
 	var form = $("#editForm");
 	if($("#clubList").val() < 1) {
 		$("#clubList").val(1);
+		console.log('test');
 	}
 	$.ajax({
 		type: "POST",
