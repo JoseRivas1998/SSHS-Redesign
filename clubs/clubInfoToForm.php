@@ -30,7 +30,7 @@ if(mysqli_num_rows($result) > 0) {
 			$output["clubTime"] = $row["meetingTime"];
 		}
 
-		if(is_null($row["meetinRoom"])) {
+		if(is_null($row["meetingRoom"])) {
 			$output["clubRoom"] = "";
 		} else {
 			$output["clubRoom"] = $row["meetingRoom"];
