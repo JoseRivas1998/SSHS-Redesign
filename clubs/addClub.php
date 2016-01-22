@@ -18,7 +18,12 @@ if(mysqli_num_rows($usersResult) > 0) {
   }
 }
 
-$output = "<div class='alert alert-success'>$userEmail, $userId</div>";
+if($userId != -1) {
+
+  $output = "<div class='alert alert-success'>$userEmail, $userId</div>";
+} else {
+  $output = "<div class='alert alert-alert'>Sorry, your email does not have permission to manage the website.</div>";
+}
 
 echo $output;
 
