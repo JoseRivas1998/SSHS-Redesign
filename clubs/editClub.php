@@ -44,7 +44,7 @@ if($userId != -1) {
     } else {
       $updateSql .= ", meetingTime = NULL";
     }
-    if(empty($clubRoom)) {
+    if(empty($clubRoom) !== true) {
       $updateSql .= ", meetingRoom = '$clubRoom'";
     } else {
       $updateSql .= ", meetingRoom = NULL";
