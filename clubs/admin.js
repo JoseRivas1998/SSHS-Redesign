@@ -60,15 +60,31 @@ function onListChange() {
 			} else {
 				document.getElementById("editApproved").checked  = false;
 			}
-			$("#editPresident").val(data["clubPresident"]);	
+			$("#editPresident").val(data["clubPresident"]);
 			$("#editAdvisor").val(data["clubAdvisor"]);
 			$("#editTime").val(data["clubTime"]);
 			$("#editRoom").val(data["clubRoom"]);
-		} 
+		}
 	});
 }
 $("#clubList").on('change', function() {
 	onListChange();
+});
+$("#editForm").submit(function(event) {
+	var auth2 = gapi.auth2.getAuthInstance();
+ if(!(auth2.isSignedIn.get()) || profile == null) {
+	 $("#editFormOut").html("<div class='alert alert-danger'>You Must Be Logged in to Google</div>")
+ } else if(profile.getEmail().indexOf("@simivalleyusd.org") > -1) {
+	 var form = $("#editForm");
+	 if($("#clubList").val() < 1) {
+		 clubId = 1;
+	 } else {
+		 clubId = $("#clubList").val();
+	 }
+	 $("#editFormOut").html("<div class='alert alert-danger'>" + clubId + "</div>")
+ } else {
+	 $("#editFormOut").html("<div class='alert alert-danger'>Your Email is not a Simi Valley USD account.</div>")
+ }
 });
 $(document).ready(function() {
 	$("#clubList").load("loadClubList.php");
