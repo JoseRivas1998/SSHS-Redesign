@@ -32,18 +32,18 @@ if($userId != -1) {
     $updateSql = "UPDATE clubs SET
                   name = '$clubName',
                   approved = $clubApproved,
-                  president = $clubPresident,
-                  advisor = $clubadvisor";
+                  president = '$clubPresident',
+                  advisor = '$clubadvisor'";
     if(empty($clubSite) !== true) {
       $updateSql .= ", website = '$clubSite'";
     }
     if(empty($clubTime) !== true) {
-      $updateSql .= ", meetingTime = $clubTime";
+      $updateSql .= ", meetingTime = '$clubTime'";
     }
     if(empty($clubRoom)) {
-      $updateSql .= ", meetingRoom = $clubRoom";
+      $updateSql .= ", meetingRoom = '$clubRoom'";
     }
-    $updateSql .= "WHERE id = $clubId";
+    $updateSql .= " WHERE id = $clubId";
     $output = "<div class='alert alert-success'>$updateSql</div>";
   } else {
     $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage this page.</div>";
