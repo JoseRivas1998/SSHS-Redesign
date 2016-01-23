@@ -36,12 +36,18 @@ if($userId != -1) {
                   advisor = '$clubadvisor'";
     if(empty($clubSite) !== true) {
       $updateSql .= ", website = '$clubSite'";
+    } else {
+      $updateSql .= ", website = NULL";
     }
     if(empty($clubTime) !== true) {
       $updateSql .= ", meetingTime = '$clubTime'";
+    } else {
+      $updateSql .= ", meetingTime = NULL";
     }
     if(empty($clubRoom)) {
       $updateSql .= ", meetingRoom = '$clubRoom'";
+    } else {
+      $updateSql .= ", meetingRoom = NULL";
     }
     $updateSql .= " WHERE id = $clubId";
     $output = "<div class='alert alert-success'>$updateSql</div>";
