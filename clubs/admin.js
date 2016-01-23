@@ -81,7 +81,32 @@ $("#editForm").submit(function(event) {
 	 } else {
 		 clubId = $("#clubList").val();
 	 }
-	 $("#editFormOut").html("<div class='alert alert-danger'>" + clubId + "</div>")
+	 var approvedInt;
+	 if(document.getElementById("editApproved").checked) {
+		 approvedInt = 1;
+	 } else {
+		 approvedInt = 0;
+	 }
+	 $.ajax({
+			url: 'editClub.php',
+			type: 'POST',
+			data: {
+				"clubId": clubId,
+				"name": form.find("input[name='editName']").val(),
+				"website": form.find("input[name='editWebsite']").val(),
+				"president": form.find("input[name='editPresident']").val(),
+				"advisor": form.find("input[name='editAdvisor']").val(),
+				"time": form.find("input[name='editTime']").val(),
+				"room": form.find("input[name='editRoom']").val(),
+				"approved": approvedInt,
+				"userEmail": profile.getEmail().substring(0 , profile.getEmail().indexOf("@"))
+			},
+			cache: false,
+			success: function(data) {
+				$("#editFormOut").html(data);
+			}
+	 });
+	 $("#editFormOut").html("<div class='alert alert-danger'>" + clubId + " " + approvedInt +  "</div>")
  } else {
 	 $("#editFormOut").html("<div class='alert alert-danger'>Your Email is not a Simi Valley USD account.</div>")
  }
