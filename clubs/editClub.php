@@ -50,7 +50,11 @@ if($userId != -1) {
       $updateSql .= ", meetingRoom = NULL";
     }
     $updateSql .= " WHERE id = $clubId";
-    $output = "<div class='alert alert-success'>$updateSql</div>";
+    if(mysqli_query($conn, $updateSql)) {
+      $output = "<div class='alert alert-success'>Club Successfully Edited!</div>";
+    } else {
+      $output = "<div class='alert alert-danger'>There was an error, please try again.<br />$insertSql</div>";
+    }
   } else {
     $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage this page.</div>";
   }
