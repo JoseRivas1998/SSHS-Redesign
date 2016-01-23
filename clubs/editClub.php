@@ -43,7 +43,7 @@ if($userId != -1) {
     if(empty($clubRoom)) {
       $updateSql .= ", meetingRoom = $clubRoom";
     }
-    $updateSql .= "WHERE id = $clubId";
+    $updateSql .= " WHERE id = $clubId";
     $output = "<div class='alert alert-success'>$updateSql</div>";
   } else {
     $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage this page.</div>";
