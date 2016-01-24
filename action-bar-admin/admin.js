@@ -90,4 +90,4 @@ $("#editForm").submit(function(event) {
   }
 });
 
-$("#refreshActionBarList").on('click', loadBarList());
+$("#refreshActionBarList").on('click', loadBarList);
