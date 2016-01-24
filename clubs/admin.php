@@ -38,7 +38,7 @@
 							<div class="section-title">Add a New Club</div>
 							<form role="form" action="javascript:void(0)" id="newForm">
 								<div class="form-group">
-									<label for="newName" class="control-label">Club Name<span id="red">*</span></label>
+									<label for="newName" class="control-label">Club Name<span class="red">*</span></label>
 									<input type="text" class="form-control" id="newName" name="newName" placeholder="Club Name" value="">
 								</div>
 								<div class="form-group">
@@ -46,11 +46,11 @@
 									<input type="text" class="form-control" id="newWebsite" name="newWebsite" placeholder="Website URL (If Applicable)" value="">
 								</div>
 								<div class="form-group">
-									<label for="newPresident" class="control-label">President<span id="red">*</span></label>
+									<label for="newPresident" class="control-label">President<span class="red">*</span></label>
 									<input type="text" class="form-control" id="newPresident" name="newPresident" placeholder="President's Full Name" value="">
 								</div>
 								<div class="form-group">
-									<label for="newAdvisor" class="control-label">Advisor<span id="red">*</span></label>
+									<label for="newAdvisor" class="control-label">Advisor<span class="red">*</span></label>
 									<input type="text" class="form-control" id="newAdvisor" name="newAdvisor" placeholder="Advisor's Last Name" value="">
 								</div>
 								<div class="form-group">
@@ -62,10 +62,10 @@
 									<input type="text" class="form-control" id="newRoom" name="newRoom" placeholder="Meeting Room (If Applicable)" value="">
 								</div>
 								<div class="form-group">
-									<input type="submit" class="btn btn-primary" value="Send">
+									<input type="submit" class="btn btn-primary form-control" value="Send">
 								</div>
 							</form>
-							<span id="red">*Required</span>
+							<span class="red">*Required</span>
 							<div id="newFormOut"></div>
 						</div>
 
@@ -77,7 +77,7 @@
 									<select id="clubList" class="form-control"></select>
 								</div>
 								<div class="form-group">
-									<label for="editName" class="control-label">Club Name<span id="red">*</span></label>
+									<label for="editName" class="control-label">Club Name<span class="red">*</span></label>
 									<input type="text" class="form-control" id="editName" name="editName" placeholder="Club Name" value="">
 								</div>
 								<div class="form-group">
@@ -85,11 +85,11 @@
 									<input type="text" class="form-control" id="editWebsite" name="editWebsite" placeholder="Website URL (If Applicable)" value="">
 								</div>
 								<div class="form-group">
-									<label for="editPresident" class="control-label">President<span id="red">*</span></label>
+									<label for="editPresident" class="control-label">President<span class="red">*</span></label>
 									<input type="text" class="form-control" id="editPresident" name="editPresident" placeholder="President's Full Name" value="">
 								</div>
 								<div class="form-group">
-									<label for="editAdvisor" class="control-label">Advisor<span id="red">*</span></label>
+									<label for="editAdvisor" class="control-label">Advisor<span class="red">*</span></label>
 									<input type="text" class="form-control" id="editAdvisor" name="editAdvisor" placeholder="Advisor's Last Name" value="">
 								</div>
 								<div class="form-group">
@@ -104,10 +104,10 @@
 									<label><input type="checkbox" value="" id="editApproved" name="editApproved">Approved</label>
 								</div>
 								<div class="form-group">
-									<input type="submit" class="btn btn-primary" value="Send">
+									<input type="submit" class="btn btn-primary form-control" value="Send">
 								</div>
 							</form>
-							<span id="red">*Required</span>
+							<span class="red">*Required</span>
 							<div id="editFormOut"></div>
 							<button class="btn btn-default" id="deleteClub">Delete Club</button>
 							<button class="btn btn-default" id="refreshClub">Refresh Club List</button>
