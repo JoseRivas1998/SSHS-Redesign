@@ -115,3 +115,47 @@ $(document).ready(function() {
 	$("#clubList").load("loadClubList.php");
 	onListChange();
 });
+
+$("#refreshClub").on('click', function() {
+	$("#clubList").load("loadClubList.php");
+	onListChange();
+});
+
+$("#deleteClub").on('click', function() {
+	var auth2 = gapi.auth2.getAuthInstance();
+	 if(!confirm("Delete the club?")) {
+		 $("#editFormOut").html("<div class='alert alert-danger'>You cancelled deletion.</div>")
+	 } else if(!(auth2.isSignedIn.get()) || profile == null) {
+		 $("#editFormOut").html("<div class='alert alert-danger'>You Must Be Logged in to Google</div>")
+	 } else if(profile.getEmail().indexOf("@simivalleyusd.org") > -1) {
+	 $("#editFormOut").html("<div class='alert alert-warning'><i class='fa fa-spinner fa-spin'></i> Sending Data To Server</div>")
+	 var form = $("#editForm");
+	 if($("#clubList").val() < 1) {
+		 clubId = 1;
+	 } else {
+		 clubId = $("#clubList").val();
+	 }
+	 var approvedInt;
+	 if(document.getElementById("editApproved").checked) {
+		 approvedInt = 1;
+	 } else {
+		 approvedInt = 0;
+	 }
+	 $.ajax({
+			url: 'deleteClub.php',
+			type: 'POST',
+			data: {
+				"clubId": clubId,
+				"userEmail": profile.getEmail().substring(0 , profile.getEmail().indexOf("@"))
+			},
+			cache: false,
+			success: function(data) {
+				$("#editFormOut").html(data);
+				$("#clubList").load("loadClubList.php");
+				onListChange();
+			}
+	 });
+ } else {
+	 $("#editFormOut").html("<div class='alert alert-danger'>Your Email is not a Simi Valley USD account.</div>")
+ }
+});
