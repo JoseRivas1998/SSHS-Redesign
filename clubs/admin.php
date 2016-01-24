@@ -109,6 +109,8 @@
 							</form>
 							<span id="red">*Required</span>
 							<div id="editFormOut"></div>
+							<button class="btn btn-default" id="deleteClub">Delete Club</button>
+							<button class="btn btn-default" id="refreshClub">Refresh Club List</button>
 						</div>
 
 					</div>
