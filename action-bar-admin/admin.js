@@ -89,3 +89,5 @@ $("#editForm").submit(function(event) {
     $("#editFormOut").html("<div class='alert alert-danger'>Your Email is not a Simi Valley USD account.</div>")
   }
 });
+
+$("#refreshActionBarList").on('click', loadBarList());
