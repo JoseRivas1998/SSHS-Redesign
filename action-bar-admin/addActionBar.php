@@ -40,7 +40,7 @@ if($userId != -1) {
           }
           $insertSql .= ")";
           if(mysqli_query($conn, $insertSql)) {
-            $output = "<div class='alert alert-success'>Club Successfully Added!</div>";
+            $output = "<div class='alert alert-success'>Action Bar Successfully Added!</div>";
           } else {
             $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
           }
