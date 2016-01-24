@@ -21,5 +21,9 @@ function formatDateTimeLocal(dateValue) {
   var date = dateValue.substring(0, indexT);
   var time = dateValue.substring(indexT + 1) + ":00";
   var dateTime = date + " " + time;
-  return dateTime;
+	if(!dateValue || dateValue === "") {
+		return "";
+	} else {
+		return dateTime;
+	}
 }
