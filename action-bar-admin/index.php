@@ -94,7 +94,7 @@
 							</form>
 							<span class="red">*Required</span>
 							<div id="editFormOut"></div>
-							<button class="btn btn-default" id="deleteActionBar"></button>
+							<button class="btn btn-default" id="deleteActionBar">Delete Action Bar</button>
 							<button class="btn btn-default" id="refreshActionBarList">Refresh list and form</button>
 						</div>
 					</div>
