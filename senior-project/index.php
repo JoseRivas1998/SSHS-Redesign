@@ -67,9 +67,12 @@
 										your sr. project endeavor.
 								</li>
 						</ul>
-						<br>
-						<br>
-						<a href="downloads/seniorprojectparentnight2015-2016.pdf">Senior Project Parent Night</a>
+						<div class="list-group">
+							<a href="downloads/Intro-to-Senior-Portfolio.pdf" class="list-group-item" target="_blank">Intro to Senior Portfolio</a>
+							<a href="http://goo.gl/a7yfNj" class="list-group-item" target="_blank">Portfolio - Resources – Digital Portfolio Guide</a>
+							<a href="http://sshsseniorprojectsamplesite.weebly.com" class="list-group-item" target="_blank">Portfolio - Resources - Demo Site</a>
+							<a href="http://goo.gl/forms/qr5VLLhCag" class="list-group-item" target="_blank">Portfolio - Resources - Portfolio Submission Form</a>
+						</div>
 					</div>
 				</div>
 			</div>
