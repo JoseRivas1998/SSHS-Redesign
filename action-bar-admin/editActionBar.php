@@ -43,7 +43,11 @@ if($userId != -1) {
             $editSql .= ", link = '$barLink'";
           }
           $editSql .= " WHERE id = $barId";
-          $output = "<div class='alert alert-success'>$editSql</div>";
+          if(mysqli_query($conn, $editSql)) {
+            $output = "<div class='alert alert-success'>Action Bar Editted Successfully!</div>";
+          } else {
+            $output = "<div class='alert alert-danger'>There was an error, please try again</div>";
+          }
         } else {
           $output = "<div class='alert alert-danger'>Enter Show Until Date</div>";
         }
