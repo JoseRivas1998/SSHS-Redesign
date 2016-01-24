@@ -38,6 +38,7 @@ $("#newForm").submit(function(event) {
 });
 var clubId;
 function onListChange() {
+	$("#clubList").val();
 	var form = $("#editForm");
 	if($("#clubList").val() < 1) {
 		clubId = 1;
@@ -112,13 +113,15 @@ $("#editForm").submit(function(event) {
  }
 });
 $(document).ready(function() {
-	$("#clubList").load("loadClubList.php");
-	onListChange();
+	$("#clubList").load("loadClubList.php", function() {
+		onListChange();
+	});
 });
 
 $("#refreshClub").on('click', function() {
-	$("#clubList").load("loadClubList.php");
-	onListChange();
+	$("#clubList").load("loadClubList.php", function() {
+		onListChange();
+	});
 });
 
 $("#deleteClub").on('click', function() {
@@ -151,8 +154,9 @@ $("#deleteClub").on('click', function() {
 			cache: false,
 			success: function(data) {
 				$("#editFormOut").html(data);
-				$("#clubList").load("loadClubList.php");
-				onListChange();
+				$("#clubList").load("loadClubList.php", function() {
+					onListChange();
+				});
 			}
 	 });
  } else {
