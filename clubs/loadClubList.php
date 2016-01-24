@@ -13,7 +13,7 @@ if(mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
 		$name = $row["name"];
 		$id = $row["id"];
-		if($index != 1) {
+		if($index != 0) {
 			echo "<option value='$id'>$name</option>";
 		} else {
 			echo "<option value='$id' selected>$name</option>";
