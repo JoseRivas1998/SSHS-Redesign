@@ -16,10 +16,13 @@ $('.dropdown').on('hide.bs.dropdown', function(e){
 	});
 });
 
-function formatDateTimeLocal(dateValue) {
+function formatDateTimeLocal(dateValue, addZeroes) {
   var indexT = dateValue.indexOf("T");
   var date = dateValue.substring(0, indexT);
-  var time = dateValue.substring(indexT + 1) + ":00";
+  var time = dateValue.substring(indexT + 1);
+	if(addZeroes) {
+		time += ":00";
+	}
   var dateTime = date + " " + time;
 	if(!dateValue || dateValue === "") {
 		return "";
