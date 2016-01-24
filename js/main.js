@@ -27,3 +27,15 @@ function formatDateTimeLocal(dateValue) {
 		return dateTime;
 	}
 }
+
+function dateTimeToDateTimeLocal(dateTime) {
+	var indexSpace = dateTime.indexOf(" ");
+	var date = dateTime.substring(0, indexSpace);
+	var time = dateTime.substring(indexSpace + 1);
+	var dateTimeLocal = date + "T" + time;
+	if(!dateTime || dateTime == null) {
+		return "";
+	} else {
+		return dateTimeLocal;
+	}
+}
