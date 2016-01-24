@@ -67,7 +67,7 @@
 						</div>
 						<div class="col-xs-12 col-sm-6">
 							<div class="section-title">Exit Existing Action Bar</div>
-							<form role="form" action="javascript:void(0)" id="editFrom">
+							<form role="form" action="javascript:void(0)" id="editForm">
 								<div class="form-group">
 									<label for="editBarList" class="control-label">Select Action Bar To Edit</label>
 									<select name="editBarList" id="editBarList" class="form-control"></select>
