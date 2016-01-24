@@ -67,8 +67,8 @@ $("#editForm").submit(function(event) {
   } else if(profile.getEmail().indexOf("@simivalleyusd.org") > -1) {
     $("#editFormOut").html("<div class='alert alert-warning'><i class='fa fa-spinner fa-spin'></i> Sending Data To Server</div>");
     var form = $("#editForm").children();
-    var publishDate = formatDateTimeLocal(form.find("input[name='editPublish']").val());
-    var showUntilDate = formatDateTimeLocal(form.find("input[name='editShowUntil']").val());
+    var publishDate = formatDateTimeLocal(form.find("input[name='editPublish']").val(), false);
+    var showUntilDate = formatDateTimeLocal(form.find("input[name='editShowUntil']").val(), false);
     $.ajax({
       type: "POST",
       url: "editActionBar.php",
