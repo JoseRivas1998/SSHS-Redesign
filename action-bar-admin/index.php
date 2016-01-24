@@ -73,25 +73,27 @@
 									<select name="editBarList" id="editBarList" class="form-control"></select>
 								</div>
 								<div class="form-group">
-									<label for="" class="control-label"></label>
-									<input type="text" class="form-control">
+									<label for="editText" class="control-label">Action Bar Text<span class="red">*</span></label>
+									<input type="text" id="editText" name="editText" class="form-control" placeholder="Action Bar Text">
 								</div>
 								<div class="form-group">
-									<label for="" class="control-label"></label>
-									<input type="text" class="form-control">
+									<label for="editLink" class="control-label">Action Bar Link</label>
+									<input type="text" id="editLink" name="editLink" class="form-control" placeholder="Action Bar Link (If Applicable)"
 								</div>
 								<div class="form-group">
-									<label for="" class="control-label"></label>
-									<input type="text" class="form-control">
+									<label for="editPublish" class="control-label">Publish Date (When bar will first appear)<span class="red">*</span></label>
+									<input type="datetime-local" id="editPublish" name="editPublish" class="form-control">
 								</div>
 								<div class="form-group">
-									<label for="" class="control-label"></label>
-									<input type="text" class="form-control">
+									<label for="editShowUntil" class="control-label">Show Until (When bar will no longer appear)<span class="red">*</span></label>
+									<input type="datetime-local" id="editShowUntil" name="editShowUntil" class="form-control">
 								</div>
 								<div class="form-group">
 									<input type="submit" class="btn btn-primary form-control" value="Send">
 								</div>
 							</form>
+							<span class="red">*Required</span>
+							<div id="editFormOut"></div>
 						</div>
 					</div>
 					<div class="col-xs-12" id="signOutBtn">

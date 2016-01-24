@@ -34,7 +34,21 @@ function loadBarList() {
 }
 
 function onListChange() {
-  alert($("#editBarList").val());
+  $.ajax({
+    type: "POST",
+    dataType: "json",
+    url: "barInfoToForm.php",
+    data: {
+      "barId": $("#editBarList").val()
+    },
+    cache: false,
+    success: function(data) {
+      $("#editText").val(data["barText"]);
+      $("#editLink").val(data["barLink"]);
+      $("#editPublish").val(dateTimeToDateTimeLocal(data["barPublishDate"]));
+      $("#editShowUntil").val(dateTimeToDateTimeLocal(data["barShowUntil"]));
+    }
+  });
 }
 
 $(document).ready(function() {
