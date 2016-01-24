@@ -78,7 +78,7 @@
 								</div>
 								<div class="form-group">
 									<label for="editLink" class="control-label">Action Bar Link</label>
-									<input type="text" id="editLink" name="editLink" class="form-control" placeholder="Action Bar Link (If Applicable)"
+									<input type="text" id="editLink" name="editLink" class="form-control" placeholder="Action Bar Link (If Applicable)">
 								</div>
 								<div class="form-group">
 									<label for="editPublish" class="control-label">Publish Date (When bar will first appear)<span class="red">*</span></label>
