@@ -91,3 +91,28 @@ $("#editForm").submit(function(event) {
 });
 
 $("#refreshActionBarList").on('click', loadBarList);
+
+$("#editForm").submit(function(event) {
+  var auth2 = gapi.auth2.getAuthInstance();
+  if(!(auth2.isSignedIn.get()) || profile == null) {
+    $("#editFormOut").html("<div class='alert alert-danger'>You Must Be Logged in to Google</div>");
+  } else if(profile.getEmail().indexOf("@simivalleyusd.org") > -1) {
+    $("#editFormOut").html("<div class='alert alert-warning'><i class='fa fa-spinner fa-spin'></i> Sending Data To Server</div>");
+
+    $.ajax({
+      type: "POST",
+      url: "deleteActionBar.php",
+      data: {
+        "barId": $("#editBarList").val(),
+        "userEmail": profile.getEmail().substring(0 , profile.getEmail().indexOf("@"))
+      },
+      cache: false,
+      success: function(data) {
+        $("#editFormOut").html(data);
+        loadBarList();
+      }
+    });
+  } else {
+    $("#editFormOut").html("<div class='alert alert-danger'>Your Email is not a Simi Valley USD account.</div>")
+  }
+});
