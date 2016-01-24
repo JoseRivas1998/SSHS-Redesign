@@ -38,6 +38,7 @@ $("#newForm").submit(function(event) {
 });
 var clubId;
 function onListChange() {
+	alert($("#clubList").val());
 	var form = $("#editForm");
 	if($("#clubList").val() < 1) {
 		clubId = 1;

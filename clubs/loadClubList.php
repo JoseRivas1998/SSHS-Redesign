@@ -4,7 +4,7 @@ $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
 
-$sql = "SELECT * FROM clubs ORDER BY id asc";
+$sql = "SELECT * FROM clubs ORDER BY name asc";
 
 $result = mysqli_query($conn, $sql);
 
