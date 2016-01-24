@@ -30,7 +30,7 @@ if($userId != -1) {
     if($barText) {
       if($publishDate) {
         if($showUntilDate) {
-          $insetSql = "INSERT INTO actionBar (userCreated, userUpdated, dateUpdated, barText, publishDate, showUntil";
+          $insertSql = "INSERT INTO actionBar (userCreated, userUpdated, dateUpdated, barText, publishDate, showUntil";
           if($barLink) {
             $insertSql .= ", link";
           }
