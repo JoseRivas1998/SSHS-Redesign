@@ -67,8 +67,30 @@
 						</div>
 						<div class="col-xs-12 col-sm-6">
 							<div class="section-title">Exit Existing Action Bar</div>
-							<form role="form" action="javascript:void(0)" id="">
-
+							<form role="form" action="javascript:void(0)" id="editFrom">
+								<div class="form-group">
+									<label for="editBarList" class="control-label">Select Action Bar To Edit</label>
+									<select name="editBarList" id="editBarList" class="form-control"></select>
+								</div>
+								<div class="form-group">
+									<label for="" class="control-label"></label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="" class="control-label"></label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="" class="control-label"></label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="" class="control-label"></label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary form-control" value="Send">
+								</div>
 							</form>
 						</div>
 					</div>

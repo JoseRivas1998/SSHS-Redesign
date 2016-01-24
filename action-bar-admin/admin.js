@@ -26,3 +26,21 @@ $("#newForm").submit(function(event) {
     $("#newFormOut").html("<div class='alert alert-danger'>Your Email is not a Simi Valley USD account.</div>")
   }
 });
+
+function loadBarList() {
+  $("#editBarList").load("loadBarList.php", function() {
+    onListChange();
+  });
+}
+
+function onListChange() {
+  alert($("#editBarList").val());
+}
+
+$(document).ready(function() {
+  loadBarList();
+});
+
+$("#editBarList").on('change', function() {
+  onListChange();
+});
