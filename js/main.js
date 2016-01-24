@@ -15,3 +15,11 @@ $('.dropdown').on('hide.bs.dropdown', function(e){
 		$(this).parent().removeClass('open');
 	});
 });
+
+function formatDateTimeLocal(dateValue) {
+  var indexT = dateValue.indexOf("T");
+  var date = dateValue.substring(0, indexT);
+  var time = dateValue.substring(indexT + 1) + ":00";
+  var dateTime = date + " " + time;
+  return dateTime;
+}

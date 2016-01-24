@@ -5,9 +5,9 @@
 <head>
 	<?php
 	$path = $_SERVER['DOCUMENT_ROOT'];
-    $path .= "/inc/head.php";
-    include($path);
-    ?>
+  $path .= "/inc/head.php";
+  include($path);
+  ?>
 	<title>Santa Susana High School</title>
 </head>
 
@@ -15,9 +15,9 @@
 	<header>
 	<?php
 	$path = $_SERVER['DOCUMENT_ROOT'];
-    $path .= "/inc/topnavbar.php";
-    include($path);
-    ?>
+  $path .= "/inc/topnavbar.php";
+  include($path);
+  ?>
 	</header>
 
 	<section id="content-wrapper">
