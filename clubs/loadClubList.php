@@ -21,6 +21,7 @@ if(mysqli_num_rows($result) > 0) {
 
 		$index++;
 	}
+	echo"<script>alert($('#clubList').val());</script>";
 }
 
 mysqli_close($conn);
