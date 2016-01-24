@@ -11,8 +11,8 @@ $("#newForm").submit(function(event) {
       type: "POST",
       url: "addActionBar.php",
       data: {
-        "barText": form.find("input[name='barText']"),
-        "barLink": form.find("input[name='barLink']"),
+        "barText": form.find("input[name='barText']").val(),
+        "barLink": form.find("input[name='barLink']").val(),
         "publishDate": publishDate,
         "showUntilDate": showUntilDate,
         "userEmail": profile.getEmail().substring(0 , profile.getEmail().indexOf("@"))
