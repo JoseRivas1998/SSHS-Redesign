@@ -94,7 +94,9 @@ $("#refreshActionBarList").on('click', loadBarList);
 
 $("#editForm").submit(function(event) {
   var auth2 = gapi.auth2.getAuthInstance();
-  if(!(auth2.isSignedIn.get()) || profile == null) {
+  if(!confirm("Delete the Action Bar?")) {
+    $("#editFormOut").html("<div class='alert alert-danger'>You cancelled deletion.</div>")
+  } else if(!(auth2.isSignedIn.get()) || profile == null) {
     $("#editFormOut").html("<div class='alert alert-danger'>You Must Be Logged in to Google</div>");
   } else if(profile.getEmail().indexOf("@simivalleyusd.org") > -1) {
     $("#editFormOut").html("<div class='alert alert-warning'><i class='fa fa-spinner fa-spin'></i> Sending Data To Server</div>");
