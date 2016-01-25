@@ -92,7 +92,7 @@ $("#editForm").submit(function(event) {
 
 $("#refreshActionBarList").on('click', loadBarList);
 
-$("#editForm").submit(function(event) {
+$("#deleteActionBar").on('click', function(event) {
   var auth2 = gapi.auth2.getAuthInstance();
   if(!confirm("Delete the Action Bar?")) {
     $("#editFormOut").html("<div class='alert alert-danger'>You cancelled deletion.</div>")
