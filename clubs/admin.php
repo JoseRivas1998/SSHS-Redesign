@@ -127,7 +127,7 @@
 	$path .= "/inc/javascript.php";
 	include($path);
 	?>
-	<script src="admin.js"></script>
+	<script src="admin.min.js"></script>
 
 </body>
 
