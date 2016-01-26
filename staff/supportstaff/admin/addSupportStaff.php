@@ -33,7 +33,11 @@ if($userId != -1) {
           if($newRole) {
             $insertSql = "INSERT INTO supportStaff (userCreated, dateLastUpdated, userLastUpdated, firstName, lastName, email, role)
                           VALUES ('$fullEmail', NOW(), '$fullEmail', '$newFirstName', '$newLastName', '$newEmail', '$newRole')";
-            $output = "<div class='alert alert-success'>$insertSql</div>";
+            if(mysqli_query($conn, $insertSql)) {
+              $output = "<div class='alert alert-success'>Support Staff Member Added!</div>";
+            } else {
+              $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+            }
           } else {
             $output = "<div class='alert alert-danger'>Enter a Position</div>";
           }
