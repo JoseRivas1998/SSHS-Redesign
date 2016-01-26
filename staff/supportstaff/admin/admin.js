@@ -48,3 +48,25 @@ $(document).ready(function() {
 });
 
 $("#editStaffList").on('change', onListChange);
+
+$("#editForm").submit(function(event) {
+  authenticate("#editFormOut", function() {
+    var form = $("#editForm").children();
+    $.ajax({
+      type: "POST",
+      url: "editStaff.php",
+      data: {
+          "staffId": $("#editStaffList").val(),
+          "editFirstName": form.find("input[name='editFirstName']").val(),
+          "editLastName": form.find("input[name='editLastName']").val(),
+          "editEmail": form.find("input[name='editEmail']").val(),
+          "editRole": form.find("input[name='editPosition']").val(),
+          "userEmail": profile.getEmail().substring(0 , profile.getEmail().indexOf("@"))
+      },
+      cache: false,
+      success: function(data) {
+        $("#editFormOut").html(data);
+      }
+    });
+  })
+});
