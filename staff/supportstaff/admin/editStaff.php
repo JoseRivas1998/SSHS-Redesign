@@ -40,7 +40,11 @@ if($userId != -1) {
             email = '$editEmail',
             role = '$editRole'
             WHERE id = $staffId";
-            $output = "<div class='alert alert-success'>$editSql</div>";
+            if(mysqli_query($conn, $editSql)) {
+              $output = "<div class='alert alert-success'>Staff Member Edited Succesfully!</div>";
+            } else {
+              $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+            }
           } else {
             $output = "<div class='alert alert-danger'>Enter a Position</div>";
           }
