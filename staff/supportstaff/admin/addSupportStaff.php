@@ -29,7 +29,7 @@ if($userId != -1) {
     $newRole = $_POST["newRole"];
     if($newFirstName) {
       if($newLastName) {
-        if($newEmail) {
+        if($newEmail && filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
           if($newRole) {
             $insertSql = "INSERT INTO supportStaff (userCreated, dateLastUpdated, userLastUpdated, firstName, lastName, email, role)
                           VALUES ('$fullEmail', NOW(), '$fullEmail', '$newFirstName', '$newLastName', '$newEmail', '$newRole')";
@@ -38,7 +38,7 @@ if($userId != -1) {
             $output = "<div class='alert alert-danger'>Enter a Position</div>";
           }
         } else {
-          $output = "<div class='alert alert-danger'>Enter an Email</div>";
+          $output = "<div class='alert alert-danger'>Enter a Valid Email</div>";
         }
       } else {
         $output = "<div class='alert alert-danger'>Enter a Last Name</div>";

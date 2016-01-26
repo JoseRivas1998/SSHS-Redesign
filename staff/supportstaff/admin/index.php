@@ -47,7 +47,7 @@
 								</div>
 								<div class="form-group">
 									<label for="newEmail" class="control-label">Email<span class="red">*</span></label>
-									<input type="text" class="form-control" id="newEmail" name="newEmail" placeholder="email@simivalleyusd.org">
+									<input type="email" class="form-control" id="newEmail" name="newEmail" placeholder="email@simivalleyusd.org">
 								</div>
 								<div class="form-group">
 									<label for="newRole" class="control-label">Position<span class="red">*</span></label>
