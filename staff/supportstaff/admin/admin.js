@@ -26,7 +26,21 @@ function loadStaffList() {
 }
 
 function onListChange() {
-  alert($("#editStaffList").val());
+  $.ajax({
+    type: "POST",
+    dataType: "json",
+    url: "staffInfoToForm.php",
+    data: {
+      "staffId": $("#editStaffList").val()
+    },
+    cache: false,
+    success: function(data) {
+      $("#editFirstName").val(data["firstName"]);
+      $("#editLastName").val(data["lastName"]);
+      $("#editEmail").val(data["email"]);
+      $("#editPosition").val(data["role"]);
+    }
+  });
 }
 
 $(document).ready(function() {
