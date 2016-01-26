@@ -89,6 +89,8 @@
 							</form>
 							<span class="red">* Required</span>
 							<div id="editFormOut"></div>
+							<button class="btn btn-default"></button>
+							<button class="btn btn-default" id="refreshStaff">Refresh Support Staff List</button>
 						</div>
 					</div>
 					<div class="col-xs-12" id="signOutBtn">

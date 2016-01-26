@@ -14,6 +14,7 @@ $("#newForm").submit(function(event) {
       cache: false,
       success: function(data) {
         $("#newFormOut").html(data);
+        loadStaffList();
       }
     });
   });
@@ -70,3 +71,5 @@ $("#editForm").submit(function(event) {
     });
   })
 });
+
+$("#refreshStaff").on('click', loadStaffList);
