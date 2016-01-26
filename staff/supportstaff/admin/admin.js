@@ -18,3 +18,19 @@ $("#newForm").submit(function(event) {
     });
   });
 });
+
+function loadStaffList() {
+  $("#editStaffList").load("loadStaffList.php", function() {
+    onListChange();
+  });
+}
+
+function onListChange() {
+  alert($("#editStaffList").val());
+}
+
+$(document).ready(function() {
+  loadStaffList();
+});
+
+$("#editStaffList").on('change', onListChange);
