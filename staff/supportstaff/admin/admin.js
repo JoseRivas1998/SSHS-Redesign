@@ -75,7 +75,7 @@ $("#editForm").submit(function(event) {
 $("#refreshStaff").on('click', loadStaffList);
 
 $("#deleteStaff").on('click', function() {
-  if(!confirm("Delete the Action Bar?")) {
+  if(!confirm("Delete the Staff Member?")) {
     $("#editFormOut").html("<div class='alert alert-danger'>You cancelled deletion.</div>")
   } else {
     authenticate("#editFormOut", function() {
