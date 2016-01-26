@@ -73,3 +73,20 @@ $("#editForm").submit(function(event) {
 });
 
 $("#refreshStaff").on('click', loadStaffList);
+
+$("#deleteStaff").on('click', function() {
+  authenticate("#editFormOut", function() {
+    $.ajax({
+      type: "POST",
+      url: "deleteStaff.php",
+      data: {
+        "staffId": $("#editStaffList").val(),
+        "userEmail": profile.getEmail().substring(0 , profile.getEmail().indexOf("@"))
+      },
+      cache: false,
+      success: function(data) {
+        $("#editFormOut").html(data);
+      }
+    });
+  });
+});

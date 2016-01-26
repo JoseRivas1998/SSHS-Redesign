@@ -89,7 +89,7 @@
 							</form>
 							<span class="red">* Required</span>
 							<div id="editFormOut"></div>
-							<button class="btn btn-default"></button>
+							<button class="btn btn-default" id="deleteStaff">Delete Support Staff Member</button>
 							<button class="btn btn-default" id="refreshStaff">Refresh Support Staff List</button>
 						</div>
 					</div>
