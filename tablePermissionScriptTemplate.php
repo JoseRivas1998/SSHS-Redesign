@@ -18,6 +18,8 @@ if(mysqli_num_rows($usersResult) > 0) {
   }
 }
 
+include ($root . "/inc/loadApi.php");
+
 if($userId != -1) {
   $getPermissionsSql = "SELECT * FROM userPermisions WHERE userId = $userId AND (tableAccess = 'TABLE' OR tableAccess = 'full')";
   $permissionResult = mysqli_query($conn, $getPermissionsSql);
