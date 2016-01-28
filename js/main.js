@@ -44,7 +44,7 @@ function dateTimeToDateTimeLocal(dateTime) {
 
 function signOut() {
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: $(location).attr('href') + "?logout",
         cache: false,
         success: function(data) {
