@@ -5,6 +5,7 @@
  * Date: 1/26/2016
  * Time: 4:36 PM
  */
+
 session_start();
 
 if(!isset($_SESSION['token'])){
@@ -20,7 +21,6 @@ if(!isset($_SESSION['token'])){
     $client->setClientId(getenv("GOOGLE_CLIENT_ID"));
     $client->setClientSecret(getenv("GOOGLE_CLIENT_SECRET"));
     $client->addScope(Google_Service_Oauth2::USERINFO_EMAIL);
-    //TODO: Change this to santasusana domain when in production
     $client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/callback');
     $service = new Google_Service_Oauth2($client);
 
