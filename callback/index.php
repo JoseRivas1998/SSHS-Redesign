@@ -32,7 +32,6 @@ if (isset($_SESSION['token'])) {
 }
 
 if(isset($_SESSION['token'])) {
-    //TODO: Check if they're fucking SSHS
     $user = $service->userinfo->get();
     if(strpos($user->email, '@simivalleyusd.org')) {
         $_SESSION['name'] = $user->name;
