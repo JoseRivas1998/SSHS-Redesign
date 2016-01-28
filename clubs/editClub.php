@@ -1,11 +1,16 @@
 <?php
+session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
 
 $output;
 
-$userEmail = $_POST["userEmail"];
+$output;
+$userEmail = $_SESSION["email"];
+$userEmailArray = explode('@', $userEmail);
+$userEmail = $userEmailArray[0];
+
 $userId = -1;
 
 $getIdSql = "SELECT * FROM users WHERE email = '$userEmail' LIMIT 1";
