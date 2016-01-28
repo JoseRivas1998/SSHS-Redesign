@@ -18,15 +18,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
 class examples_idTokenTest extends BaseTest
 {
-  public function testIdToken()
-  {
-    $crawler = $this->loadExample('idtoken.php');
+    public function testIdToken() {
+        $crawler = $this->loadExample('idtoken.php');
 
-    $nodes = $crawler->filter('h1');
-    $this->assertEquals(1, count($nodes));
-    $this->assertEquals('Retrieving An Id Token', $nodes->first()->text());
-  }
+        $nodes = $crawler->filter('h1');
+        $this->assertEquals(1, count($nodes));
+        $this->assertEquals('Retrieving An Id Token', $nodes->first()->text());
+    }
 }

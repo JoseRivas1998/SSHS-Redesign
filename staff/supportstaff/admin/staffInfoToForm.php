@@ -10,14 +10,14 @@ $sql = "SELECT * FROM supportStaff WHERE id = $staffId LIMIT 1";
 
 $result = mysqli_query($conn, $sql);
 
-if(mysqli_num_rows($result) > 0) {
-	while($row = mysqli_fetch_assoc($result)) {
-		$output = array();
-    $output["firstName"] = $row["firstName"];
-    $output["lastName"] = $row["lastName"];
-    $output["email"] = $row["email"];
-    $output["role"] = $row["role"];
-	}
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $output = array();
+        $output["firstName"] = $row["firstName"];
+        $output["lastName"] = $row["lastName"];
+        $output["email"] = $row["email"];
+        $output["role"] = $row["role"];
+    }
 }
 
 

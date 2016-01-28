@@ -20,209 +20,183 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class BaseTest extends PHPUnit_Framework_TestCase
 {
-  private $key;
-  private $client;
-  private $memcacheHost;
-  private $memcachePort;
-  protected $testDir = __DIR__;
+    private $key;
+    private $client;
+    private $memcacheHost;
+    private $memcachePort;
+    protected $testDir = __DIR__;
 
-  public function getClient()
-  {
-    if (!$this->client) {
-      $this->client = $this->createClient();
+    public function getClient() {
+        if (!$this->client) {
+            $this->client = $this->createClient();
+        }
+
+        return $this->client;
     }
 
-    return $this->client;
-  }
-
-  public function getCache()
-  {
-    return new Google_Cache_File(sys_get_temp_dir().'/google-api-php-client-tests');
-  }
-
-  private function createClient()
-  {
-    $options = [
-      'auth' => 'google_auth',
-      'exceptions' => false,
-    ];
-
-    if ($proxy = getenv('HTTP_PROXY')) {
-      $options['proxy'] = $proxy;
-      $options['verify'] = false;
+    public function getCache() {
+        return new Google_Cache_File(sys_get_temp_dir() . '/google-api-php-client-tests');
     }
 
-    // adjust constructor depending on guzzle version
-    if (!$this->isGuzzle6()) {
-      $options = ['defaults' => $options];
+    private function createClient() {
+        $options = ['auth' => 'google_auth', 'exceptions' => false,];
+
+        if ($proxy = getenv('HTTP_PROXY')) {
+            $options['proxy'] = $proxy;
+            $options['verify'] = false;
+        }
+
+        // adjust constructor depending on guzzle version
+        if (!$this->isGuzzle6()) {
+            $options = ['defaults' => $options];
+        }
+
+        $httpClient = new GuzzleHttp\Client($options);
+
+        $client = new Google_Client();
+        $client->setApplicationName('google-api-php-client-tests');
+        $client->setHttpClient($httpClient);
+        $client->setScopes(["https://www.googleapis.com/auth/plus.me", "https://www.googleapis.com/auth/urlshortener", "https://www.googleapis.com/auth/tasks", "https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/youtube", "https://www.googleapis.com/auth/drive",]);
+
+        if ($this->key) {
+            $client->setDeveloperKey($this->key);
+        }
+
+        list($clientId, $clientSecret) = $this->getClientIdAndSecret();
+        $client->setClientId($clientId);
+        $client->setClientSecret($clientSecret);
+        $client->setCache($this->getCache());
+
+        return $client;
     }
 
-    $httpClient = new GuzzleHttp\Client($options);
+    public function checkToken() {
+        $client = $this->getClient();
+        $cache = $client->getCache();
 
-    $client = new Google_Client();
-    $client->setApplicationName('google-api-php-client-tests');
-    $client->setHttpClient($httpClient);
-    $client->setScopes([
-        "https://www.googleapis.com/auth/plus.me",
-        "https://www.googleapis.com/auth/urlshortener",
-        "https://www.googleapis.com/auth/tasks",
-        "https://www.googleapis.com/auth/adsense",
-        "https://www.googleapis.com/auth/youtube",
-        "https://www.googleapis.com/auth/drive",
-    ]);
+        if (!$token = $cache->get('access_token')) {
+            if (!$token = $this->tryToGetAnAccessToken($client)) {
+                return $this->markTestSkipped("Test requires access token");
+            }
+            $cache->set('access_token', $token);
+        }
 
-    if ($this->key) {
-      $client->setDeveloperKey($this->key);
+        $client->setAccessToken($token);
+
+        if ($client->isAccessTokenExpired()) {
+            // as long as we have client credentials, even if its expired
+            // our access token will automatically be refreshed
+            $this->checkClientCredentials();
+        }
+
+        return true;
     }
 
-    list($clientId, $clientSecret) = $this->getClientIdAndSecret();
-    $client->setClientId($clientId);
-    $client->setClientSecret($clientSecret);
-    $client->setCache($this->getCache());
+    public function tryToGetAnAccessToken(Google_Client $client) {
+        $this->checkClientCredentials();
 
-    return $client;
-  }
+        $client->setRedirectUri("urn:ietf:wg:oauth:2.0:oob");
+        $client->setConfig('access_type', 'offline');
+        $authUrl = $client->createAuthUrl();
 
-  public function checkToken()
-  {
-    $client = $this->getClient();
-    $cache = $client->getCache();
+        echo "\nPlease enter the auth code:\n";
+        ob_flush();
+        `open '$authUrl'`;
+        $authCode = trim(fgets(STDIN));
 
-    if (!$token = $cache->get('access_token')) {
-      if (!$token = $this->tryToGetAnAccessToken($client)) {
-        return $this->markTestSkipped("Test requires access token");
-      }
-      $cache->set('access_token', $token);
+        if ($accessToken = $client->fetchAccessTokenWithAuthCode($authCode)) {
+            if (isset($accessToken['access_token'])) {
+                return $accessToken;
+            }
+        }
+
+        return false;
     }
 
-    $client->setAccessToken($token);
+    private function getClientIdAndSecret() {
+        $clientId = getenv('GCLOUD_CLIENT_ID') ? getenv('GCLOUD_CLIENT_ID') : null;
+        $clientSecret = getenv('GCLOUD_CLIENT_SECRET') ? getenv('GCLOUD_CLIENT_SECRET') : null;
 
-    if ($client->isAccessTokenExpired()) {
-      // as long as we have client credentials, even if its expired
-      // our access token will automatically be refreshed
-      $this->checkClientCredentials();
+        return array($clientId, $clientSecret);
     }
 
-    return true;
-  }
-
-  public function tryToGetAnAccessToken(Google_Client $client)
-  {
-    $this->checkClientCredentials();
-
-    $client->setRedirectUri("urn:ietf:wg:oauth:2.0:oob");
-    $client->setConfig('access_type', 'offline');
-    $authUrl = $client->createAuthUrl();
-
-    echo "\nPlease enter the auth code:\n";
-    ob_flush();
-    `open '$authUrl'`;
-    $authCode = trim(fgets(STDIN));
-
-    if ($accessToken = $client->fetchAccessTokenWithAuthCode($authCode)) {
-      if (isset($accessToken['access_token'])) {
-        return $accessToken;
-      }
+    public function checkClientCredentials() {
+        list($clientId, $clientSecret) = $this->getClientIdAndSecret();
+        if (!($clientId && $clientSecret)) {
+            $this->markTestSkipped("Test requires GCLOUD_CLIENT_ID and GCLOUD_CLIENT_SECRET to be set");
+        }
     }
 
-    return false;
-  }
+    public function checkServiceAccountCredentials() {
+        if (!$f = getenv('GOOGLE_APPLICATION_CREDENTIALS')) {
+            $skip = "This test requires the GOOGLE_APPLICATION_CREDENTIALS environment variable to be set\n" . "see https://developers.google.com/accounts/docs/application-default-credentials";
+            $this->markTestSkipped($skip);
 
-  private function getClientIdAndSecret()
-  {
-    $clientId = getenv('GCLOUD_CLIENT_ID') ? getenv('GCLOUD_CLIENT_ID') : null;
-    $clientSecret = getenv('GCLOUD_CLIENT_SECRET') ? getenv('GCLOUD_CLIENT_SECRET') : null;
+            return false;
+        }
 
-    return array($clientId, $clientSecret);
-  }
+        if (!file_exists($f)) {
+            $this->markTestSkipped('invalid path for GOOGLE_APPLICATION_CREDENTIALS');
+        }
 
-  public function checkClientCredentials()
-  {
-    list($clientId, $clientSecret) = $this->getClientIdAndSecret();
-    if (!($clientId && $clientSecret)) {
-      $this->markTestSkipped("Test requires GCLOUD_CLIENT_ID and GCLOUD_CLIENT_SECRET to be set");
-    }
-  }
-
-  public function checkServiceAccountCredentials()
-  {
-    if (!$f = getenv('GOOGLE_APPLICATION_CREDENTIALS')) {
-      $skip = "This test requires the GOOGLE_APPLICATION_CREDENTIALS environment variable to be set\n"
-        . "see https://developers.google.com/accounts/docs/application-default-credentials";
-      $this->markTestSkipped($skip);
-
-      return false;
+        return true;
     }
 
-    if (!file_exists($f)) {
-      $this->markTestSkipped('invalid path for GOOGLE_APPLICATION_CREDENTIALS');
+    public function checkKey() {
+        $this->key = $this->loadKey();
+
+        if (!strlen($this->key)) {
+            $this->markTestSkipped("Test requires api key\nYou can create one in your developer console");
+            return false;
+        }
     }
 
-    return true;
-  }
-
-  public function checkKey()
-  {
-    $this->key = $this->loadKey();
-
-    if (!strlen($this->key)) {
-      $this->markTestSkipped("Test requires api key\nYou can create one in your developer console");
-      return false;
-    }
-  }
-
-  public function loadKey()
-  {
-    if (file_exists($f = dirname(__FILE__) . DIRECTORY_SEPARATOR . '.apiKey')) {
-      return file_get_contents($f);
-    }
-  }
-
-  protected function loadExample($example)
-  {
-    // trick app into thinking we are a web server
-    $_SERVER['HTTP_USER_AGENT'] = 'google-api-php-client-tests';
-    $_SERVER['HTTP_HOST'] = 'localhost';
-    $_SERVER['REQUEST_METHOD'] = 'GET';
-
-    // include the file and return an HTML crawler
-    $file = __DIR__ . '/../examples/' . $example;
-    if (is_file($file)) {
-        ob_start();
-        include $file;
-        $html = ob_get_clean();
-
-        return new Crawler($html);
+    public function loadKey() {
+        if (file_exists($f = dirname(__FILE__) . DIRECTORY_SEPARATOR . '.apiKey')) {
+            return file_get_contents($f);
+        }
     }
 
-    return false;
-  }
+    protected function loadExample($example) {
+        // trick app into thinking we are a web server
+        $_SERVER['HTTP_USER_AGENT'] = 'google-api-php-client-tests';
+        $_SERVER['HTTP_HOST'] = 'localhost';
+        $_SERVER['REQUEST_METHOD'] = 'GET';
 
-  protected function isGuzzle6()
-  {
-    $version = ClientInterface::VERSION;
+        // include the file and return an HTML crawler
+        $file = __DIR__ . '/../examples/' . $example;
+        if (is_file($file)) {
+            ob_start();
+            include $file;
+            $html = ob_get_clean();
 
-    return ('6' === $version[0]);
-  }
+            return new Crawler($html);
+        }
 
-  protected function isGuzzle5()
-  {
-    $version = ClientInterface::VERSION;
-
-    return ('5' === $version[0]);
-  }
-
-  public function onlyGuzzle6()
-  {
-    if (!$this->isGuzzle6()) {
-      $this->markTestSkipped('Guzzle 6 only');
+        return false;
     }
-  }
 
-  public function onlyGuzzle5()
-  {
-    if (!$this->isGuzzle5()) {
-      $this->markTestSkipped('Guzzle 5 only');
+    protected function isGuzzle6() {
+        $version = ClientInterface::VERSION;
+
+        return ('6' === $version[0]);
     }
-  }
+
+    protected function isGuzzle5() {
+        $version = ClientInterface::VERSION;
+
+        return ('5' === $version[0]);
+    }
+
+    public function onlyGuzzle6() {
+        if (!$this->isGuzzle6()) {
+            $this->markTestSkipped('Guzzle 6 only');
+        }
+    }
+
+    public function onlyGuzzle5() {
+        if (!$this->isGuzzle5()) {
+            $this->markTestSkipped('Guzzle 5 only');
+        }
+    }
 }
