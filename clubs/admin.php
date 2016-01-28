@@ -1,3 +1,6 @@
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,11 +27,6 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="section-title">Clubs Page Admin</div>
-                <?php
-                $path = $_SERVER['DOCUMENT_ROOT'];
-                $path .= "/inc/google/googleProfile.php";
-                include($path);
-                ?>
                 <div class="row" id="forms">
 
                     <div class="col-xs-12 col-sm-6">
@@ -139,7 +137,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/inc/javascript.php";
 include($path);
 ?>
-<script src="admin.min.js"></script>
+<script src="admin.js"></script>
 
 </body>
 
