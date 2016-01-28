@@ -306,6 +306,13 @@
     text-decoration: none;
 }
 
+.carousel-control > .fa {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+}
+
 /*End Carousel*/
 
 /*Content*/
