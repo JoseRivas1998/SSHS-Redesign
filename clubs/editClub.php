@@ -11,55 +11,55 @@ $userId = -1;
 $getIdSql = "SELECT * FROM users WHERE email = '$userEmail' LIMIT 1";
 
 $usersResult = mysqli_query($conn, $getIdSql);
-if(mysqli_num_rows($usersResult) > 0) {
-  while($usersRow = mysqli_fetch_assoc($usersResult)) {
-    $userId = $usersRow["id"];
-  }
+if (mysqli_num_rows($usersResult) > 0) {
+    while ($usersRow = mysqli_fetch_assoc($usersResult)) {
+        $userId = $usersRow["id"];
+    }
 }
 
-if($userId != -1) {
-  $getPermissionsSql = "SELECT * FROM userPermisions WHERE userId = $userId AND (tableAccess = 'clubs' OR tableAccess = 'full')";
-  $permissionResult = mysqli_query($conn, $getPermissionsSql);
-  if(mysqli_num_rows($permissionResult) > 0) {
-    $clubId = $_POST["clubId"];
-    $clubName = $_POST["name"];
-    $clubSite = $_POST["website"];
-    $clubPresident = $_POST["president"];
-    $clubadvisor = $_POST["advisor"];
-    $clubTime = $_POST["time"];
-    $clubRoom = $_POST["room"];
-    $clubApproved = $_POST["approved"];
-    $updateSql = "UPDATE clubs SET
+if ($userId != -1) {
+    $getPermissionsSql = "SELECT * FROM userPermisions WHERE userId = $userId AND (tableAccess = 'clubs' OR tableAccess = 'full')";
+    $permissionResult = mysqli_query($conn, $getPermissionsSql);
+    if (mysqli_num_rows($permissionResult) > 0) {
+        $clubId = $_POST["clubId"];
+        $clubName = $_POST["name"];
+        $clubSite = $_POST["website"];
+        $clubPresident = $_POST["president"];
+        $clubadvisor = $_POST["advisor"];
+        $clubTime = $_POST["time"];
+        $clubRoom = $_POST["room"];
+        $clubApproved = $_POST["approved"];
+        $updateSql = "UPDATE clubs SET
                   name = '$clubName',
                   approved = $clubApproved,
                   president = '$clubPresident',
                   advisor = '$clubadvisor'";
-    if(empty($clubSite) !== true) {
-      $updateSql .= ", website = '$clubSite'";
+        if (empty($clubSite) !== true) {
+            $updateSql .= ", website = '$clubSite'";
+        } else {
+            $updateSql .= ", website = NULL";
+        }
+        if (empty($clubTime) !== true) {
+            $updateSql .= ", meetingTime = '$clubTime'";
+        } else {
+            $updateSql .= ", meetingTime = NULL";
+        }
+        if (empty($clubRoom) !== true) {
+            $updateSql .= ", meetingRoom = '$clubRoom'";
+        } else {
+            $updateSql .= ", meetingRoom = NULL";
+        }
+        $updateSql .= " WHERE id = $clubId";
+        if (mysqli_query($conn, $updateSql)) {
+            $output = "<div class='alert alert-success'>Club Successfully Edited!</div>";
+        } else {
+            $output = "<div class='alert alert-danger'>There was an error, please try again.<br />$insertSql</div>";
+        }
     } else {
-      $updateSql .= ", website = NULL";
+        $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage this page.</div>";
     }
-    if(empty($clubTime) !== true) {
-      $updateSql .= ", meetingTime = '$clubTime'";
-    } else {
-      $updateSql .= ", meetingTime = NULL";
-    }
-    if(empty($clubRoom) !== true) {
-      $updateSql .= ", meetingRoom = '$clubRoom'";
-    } else {
-      $updateSql .= ", meetingRoom = NULL";
-    }
-    $updateSql .= " WHERE id = $clubId";
-    if(mysqli_query($conn, $updateSql)) {
-      $output = "<div class='alert alert-success'>Club Successfully Edited!</div>";
-    } else {
-      $output = "<div class='alert alert-danger'>There was an error, please try again.<br />$insertSql</div>";
-    }
-  } else {
-    $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage this page.</div>";
-  }
 } else {
-  $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage the website.</div>";
+    $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage the website.</div>";
 }
 
 echo $output;

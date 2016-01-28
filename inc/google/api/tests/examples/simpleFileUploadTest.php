@@ -18,15 +18,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
 class examples_simpleFileUploadTest extends BaseTest
 {
-  public function testSimpleFileUpload()
-  {
-    $crawler = $this->loadExample('simple-file-upload.php');
+    public function testSimpleFileUpload() {
+        $crawler = $this->loadExample('simple-file-upload.php');
 
-    $nodes = $crawler->filter('h1');
-    $this->assertEquals(1, count($nodes));
-    $this->assertEquals('File Upload - Uploading a simple file', $nodes->first()->text());
-  }
+        $nodes = $crawler->filter('h1');
+        $this->assertEquals(1, count($nodes));
+        $this->assertEquals('File Upload - Uploading a simple file', $nodes->first()->text());
+    }
 }

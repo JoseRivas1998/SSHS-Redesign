@@ -18,17 +18,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
 class examples_serviceAccountTest extends BaseTest
 {
-  public function testServiceAccount()
-  {
-    $this->checkServiceAccountCredentials();
+    public function testServiceAccount() {
+        $this->checkServiceAccountCredentials();
 
-    $crawler = $this->loadExample('service-account.php');
+        $crawler = $this->loadExample('service-account.php');
 
-    $nodes = $crawler->filter('br');
-    $this->assertEquals(10, count($nodes));
-    $this->assertContains('The Life of Henry David Thoreau', $crawler->text());
-  }
+        $nodes = $crawler->filter('br');
+        $this->assertEquals(10, count($nodes));
+        $this->assertContains('The Life of Henry David Thoreau', $crawler->text());
+    }
 }
