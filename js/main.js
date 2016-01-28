@@ -1,6 +1,5 @@
 $(document).ready(function () {
     var id = $(location).attr('pathname');
-    console.log(id);
     $(document.getElementById(id)).addClass("active");
 });
 // ADD SLIDEDOWN ANIMATION TO DROPDOWN //
@@ -41,4 +40,15 @@ function dateTimeToDateTimeLocal(dateTime) {
     } else {
         return dateTimeLocal;
     }
+}
+
+function signOut() {
+    $.ajax({
+        type: "POST",
+        url: $(location).attr('href') + "?logout",
+        cache: false,
+        success: function(data) {
+            window.location.href = "/";
+        }
+    });
 }

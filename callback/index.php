@@ -17,7 +17,6 @@ $client->setClientId(getenv("GOOGLE_CLIENT_ID"));
 $client->setClientSecret(getenv("GOOGLE_CLIENT_SECRET"));
 $client->addScope(Google_Service_Oauth2::USERINFO_EMAIL);
 $client->setRedirectUri('http://localhost/callback');
-//TODO: Change this to santasusana domain when in production
 
 $service = new Google_Service_Oauth2($client);
 
@@ -32,9 +31,8 @@ if (isset($_SESSION['token'])) {
 }
 
 if(isset($_SESSION['token'])) {
-    //TODO: Check if they're fucking SSHS
     $user = $service->userinfo->get();
-    if(strpos($user->email, '@simivalleyusd.org')) {
+    if(strpos($user->email, '@simivalleyusd.org') && isAdmin($user->email)) {
         $_SESSION['name'] = $user->name;
         $_SESSION['email'] = $user->email;
         $redirect_url = $_SESSION['redirect_url'] ? $_SESSION['redirect_url'] : $_SERVER['HTTP_HOST'];
@@ -44,4 +42,25 @@ if(isset($_SESSION['token'])) {
         session_destroy();
         header('Location: http://' . $_SERVER["HTTP_HOST"] . '/404');
     }
+}
+
+function isAdmin($email) {
+    $userEmailArray = explode('@', $email);
+    $userEmail = $userEmailArray[0];
+
+    $root = $_SERVER["DOCUMENT_ROOT"];
+
+    include($root . "/inc/dbConnect.php");
+
+    $return = false;
+
+    $getIdSql = "SELECT * FROM users WHERE email = '$userEmail' LIMIT 1";
+
+    $usersResult = mysqli_query($conn, $getIdSql);
+    if (mysqli_num_rows($usersResult) > 0) {
+        $return = true;
+    }
+
+    return $return;
+
 }

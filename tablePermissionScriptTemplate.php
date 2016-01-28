@@ -1,13 +1,15 @@
 <?php
+session_start();
 
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
-include($root . "/inc/google/loadApi.php");
 
 $output;
 
-$userEmail = $_SESSION['email'];
+$userEmail = $_SESSION["email"];
+$userEmailArray = explode('@', $userEmail);
+$userEmail = $userEmailArray[0];
 $userId = -1;
 
 $getIdSql = "SELECT * FROM users WHERE email = '$userEmail' LIMIT 1";

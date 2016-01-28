@@ -1,9 +1,11 @@
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
 
     $path = $_SERVER['DOCUMENT_ROOT'];
     $path .= "/inc/head.php";
@@ -113,7 +115,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/inc/javascript.php";
 include($path);
 ?>
-<script src="admin.min.js"></script>
+<script src="admin.js"></script>
 </body>
 
 </html>

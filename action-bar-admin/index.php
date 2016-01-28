@@ -117,7 +117,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/inc/javascript.php";
 include($path);
 ?>
-<script src="admin.min.js"></script>
+<script src="admin.js"></script>
 </body>
 
 </html>

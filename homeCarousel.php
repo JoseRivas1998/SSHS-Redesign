@@ -39,11 +39,11 @@
                 </div>
 
                 <a href="#homeCarousel" class="carousel-control left home" data-slide="prev">
-                    <span class="icon-prev"></span>
+                    <i class="fa fa-arrow-left"></i>
                 </a>
 
                 <a href="#homeCarousel" class="carousel-control right home" data-slide="next">
-                    <span class="icon-next"></span>
+                    <i class="fa fa-arrow-right"></i>
                 </a>
 
             </div>
