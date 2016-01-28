@@ -25,7 +25,7 @@ echo pageHeader("User Query - Multiple APIs");
  * Ensure you've downloaded your oauth credentials
  ************************************************/
 if (!$oauth_credentials = getOAuthCredentialsFile()) {
-  return missingOAuth2CredentialsWarning();
+    return missingOAuth2CredentialsWarning();
 }
 
 /************************************************
@@ -44,7 +44,7 @@ $service = new Google_Service_Drive($client);
 
 // add "?logout" to the URL to remove a token from the session
 if (isset($_REQUEST['logout'])) {
-  unset($_SESSION['multi-api-token']);
+    unset($_SESSION['multi-api-token']);
 }
 
 /************************************************
@@ -55,67 +55,64 @@ if (isset($_REQUEST['logout'])) {
  * bundle in the session, and redirect to ourself.
  ************************************************/
 if (isset($_GET['code'])) {
-  $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
-  $client->setAccessToken($token);
+    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+    $client->setAccessToken($token);
 
-  // store in the session also
-  $_SESSION['multi-api-token'] = $token;
+    // store in the session also
+    $_SESSION['multi-api-token'] = $token;
 
-  // redirect back to the example
-  header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
+    // redirect back to the example
+    header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
 }
 
 // set the access token as part of the client
 if (!empty($_SESSION['multi-api-token'])) {
-  $client->setAccessToken($_SESSION['multi-api-token']);
-  if ($client->isAccessTokenExpired()) {
-    unset($_SESSION['multi-api-token']);
-  }
+    $client->setAccessToken($_SESSION['multi-api-token']);
+    if ($client->isAccessTokenExpired()) {
+        unset($_SESSION['multi-api-token']);
+    }
 } else {
-  $authUrl = $client->createAuthUrl();
+    $authUrl = $client->createAuthUrl();
 }
 
 /************************************************
-  We are going to create both YouTube and Drive
-  services, and query both.
+ * We are going to create both YouTube and Drive
+ * services, and query both.
  ************************************************/
 $yt_service = new Google_Service_YouTube($client);
 $dr_service = new Google_Service_Drive($client);
 
 /************************************************
-  If we're signed in, retrieve channels from YouTube
-  and a list of files from Drive.
+ * If we're signed in, retrieve channels from YouTube
+ * and a list of files from Drive.
  ************************************************/
 if ($client->getAccessToken()) {
-  $_SESSION['access_token'] = $client->getAccessToken();
+    $_SESSION['access_token'] = $client->getAccessToken();
 
-  $dr_results = $dr_service->files->listFiles(array('maxResults' => 10));
+    $dr_results = $dr_service->files->listFiles(array('maxResults' => 10));
 
-  $yt_channels = $yt_service->channels->listChannels('contentDetails', array("mine" => true));
-  $likePlaylist = $yt_channels[0]->contentDetails->relatedPlaylists->likes;
-  $yt_results = $yt_service->playlistItems->listPlaylistItems(
-      "snippet",
-      array("playlistId" => $likePlaylist)
-  );
+    $yt_channels = $yt_service->channels->listChannels('contentDetails', array("mine" => true));
+    $likePlaylist = $yt_channels[0]->contentDetails->relatedPlaylists->likes;
+    $yt_results = $yt_service->playlistItems->listPlaylistItems("snippet", array("playlistId" => $likePlaylist));
 }
 ?>
 
 <div class="box">
-  <div class="request">
-<?php if (isset($authUrl)): ?>
-  <a class="login" href="<?= $authUrl ?>">Connect Me!</a>
-<?php else: ?>
-  <h3>Results Of Drive List:</h3>
-  <?php foreach ($dr_results as $item): ?>
-    <?= $item->title ?><br />
-  <?php endforeach ?>
+    <div class="request">
+        <?php if (isset($authUrl)): ?>
+            <a class="login" href="<?= $authUrl ?>">Connect Me!</a>
+        <?php else: ?>
+            <h3>Results Of Drive List:</h3>
+            <?php foreach ($dr_results as $item): ?>
+                <?= $item->title ?><br/>
+            <?php endforeach ?>
 
-  <h3>Results Of YouTube Likes:</h3>
-  <?php foreach ($yt_results as $item): ?>
-    <?= $item['snippet']['title'] ?><br />
-  <?php endforeach ?>
-<?php endif ?>
-  </div>
+            <h3>Results Of YouTube Likes:</h3>
+            <?php foreach ($yt_results as $item): ?>
+                <?= $item['snippet']['title'] ?><br/>
+            <?php endforeach ?>
+        <?php endif ?>
+    </div>
 </div>
 
 <?php echo pageFooter(__FILE__) ?>

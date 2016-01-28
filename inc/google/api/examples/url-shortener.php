@@ -24,15 +24,15 @@ echo pageHeader('User Query - URL Shortener');
  * Ensure you've downloaded your oauth credentials
  ************************************************/
 if (!$oauth_credentials = getOAuthCredentialsFile()) {
-  return missingOAuth2CredentialsWarning();
+    return missingOAuth2CredentialsWarning();
 }
 
 /************************************************
-  Make an API request on behalf of a user. In
-  this case we need to have a valid OAuth 2.0
-  token for the user, so we need to send them
-  through a login flow. To do this we need some
-  information from our API console project.
+ * Make an API request on behalf of a user. In
+ * this case we need to have a valid OAuth 2.0
+ * token for the user, so we need to send them
+ * through a login flow. To do this we need some
+ * information from our API console project.
  ************************************************/
 /************************************************
  * NOTICE:
@@ -59,7 +59,7 @@ $service = new Google_Service_Urlshortener($client);
  * local access token in this case
  ************************************************/
 if (isset($_REQUEST['logout'])) {
-  unset($_SESSION['access_token']);
+    unset($_SESSION['access_token']);
 }
 
 /************************************************
@@ -70,63 +70,63 @@ if (isset($_REQUEST['logout'])) {
  * bundle in the session, and redirect to ourself.
  ************************************************/
 if (isset($_GET['code'])) {
-  $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
-  $client->setAccessToken($token);
+    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+    $client->setAccessToken($token);
 
-  // store in the session also
-  $_SESSION['access_token'] = $token;
+    // store in the session also
+    $_SESSION['access_token'] = $token;
 
-  // redirect back to the example
-  header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
+    // redirect back to the example
+    header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
 }
 
 /************************************************
-  If we have an access token, we can make
-  requests, else we generate an authentication URL.
+ * If we have an access token, we can make
+ * requests, else we generate an authentication URL.
  ************************************************/
 if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
-  $client->setAccessToken($_SESSION['access_token']);
+    $client->setAccessToken($_SESSION['access_token']);
 } else {
-  $authUrl = $client->createAuthUrl();
+    $authUrl = $client->createAuthUrl();
 }
 
 /************************************************
-  If we're signed in and have a request to shorten
-  a URL, then we create a new URL object, set the
-  unshortened URL, and call the 'insert' method on
-  the 'url' resource. Note that we re-store the
-  access_token bundle, just in case anything
-  changed during the request - the main thing that
-  might happen here is the access token itself is
-  refreshed if the application has offline access.
+ * If we're signed in and have a request to shorten
+ * a URL, then we create a new URL object, set the
+ * unshortened URL, and call the 'insert' method on
+ * the 'url' resource. Note that we re-store the
+ * access_token bundle, just in case anything
+ * changed during the request - the main thing that
+ * might happen here is the access token itself is
+ * refreshed if the application has offline access.
  ************************************************/
 if ($client->getAccessToken() && isset($_GET['url'])) {
-  $url = new Google_Service_Urlshortener_Url();
-  $url->longUrl = $_GET['url'];
-  $short = $service->url->insert($url);
-  $_SESSION['access_token'] = $client->getAccessToken();
+    $url = new Google_Service_Urlshortener_Url();
+    $url->longUrl = $_GET['url'];
+    $short = $service->url->insert($url);
+    $_SESSION['access_token'] = $client->getAccessToken();
 }
 ?>
 
-<div class="box">
-<?php if (isset($authUrl)): ?>
-  <div class="request">
-    <a class='login' href='<?= $authUrl ?>'>Connect Me!</a>
-  </div>
-<?php elseif (empty($short)): ?>
-  <form id="url" method="GET" action="<?= $_SERVER['PHP_SELF'] ?>">
-    <input name="url" class="url" type="text">
-    <input type="submit" value="Shorten">
-  </form>
-  <a class='logout' href='?logout'>Logout</a>
-<?php else: ?>
-  You created a short link! <br />
-  <a href="<?= $short['id'] ?>"><?= $short['id'] ?></a>
-  <div class="shortened">
-    <pre><?php var_export($short) ?></pre>
-  </div>
-  <a href="<?= $_SERVER['PHP_SELF'] ?>">Create another</a>
-<?php endif ?>
-</div>
+    <div class="box">
+        <?php if (isset($authUrl)): ?>
+            <div class="request">
+                <a class='login' href='<?= $authUrl ?>'>Connect Me!</a>
+            </div>
+        <?php elseif (empty($short)): ?>
+            <form id="url" method="GET" action="<?= $_SERVER['PHP_SELF'] ?>">
+                <input name="url" class="url" type="text">
+                <input type="submit" value="Shorten">
+            </form>
+            <a class='logout' href='?logout'>Logout</a>
+        <?php else: ?>
+            You created a short link! <br/>
+            <a href="<?= $short['id'] ?>"><?= $short['id'] ?></a>
+            <div class="shortened">
+                <pre><?php var_export($short) ?></pre>
+            </div>
+            <a href="<?= $_SERVER['PHP_SELF'] ?>">Create another</a>
+        <?php endif ?>
+    </div>
 <?php
 echo pageFooter(__FILE__);

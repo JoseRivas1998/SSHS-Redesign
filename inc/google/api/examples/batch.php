@@ -21,43 +21,43 @@ include_once "templates/base.php";
 echo pageHeader("Batching Queries");
 
 /************************************************
-  We're going to use the simple access to the
-  books API again as an example, but this time we
-  will batch up two queries into a single call.
+ * We're going to use the simple access to the
+ * books API again as an example, but this time we
+ * will batch up two queries into a single call.
  ************************************************/
 
 /************************************************
-  We create the client and set the simple API
-  access key. If you comment out the call to
-  setDeveloperKey, the request may still succeed
-  using the anonymous quota.
+ * We create the client and set the simple API
+ * access key. If you comment out the call to
+ * setDeveloperKey, the request may still succeed
+ * using the anonymous quota.
  ************************************************/
 $client = new Google_Client();
 $client->setApplicationName("Client_Library_Examples");
 
 // Warn if the API key isn't set.
 if (!$apiKey = getApiKey()) {
-  echo missingApiKeyWarning();
-  exit;
+    echo missingApiKeyWarning();
+    exit;
 }
 $client->setDeveloperKey($apiKey);
 
 $service = new Google_Service_Books($client);
 
 /************************************************
-  To actually make the batch call we need to
-  enable batching on the client - this will apply
-  globally until we set it to false. This causes
-  call to the service methods to return the query
-  rather than immediately executing.
+ * To actually make the batch call we need to
+ * enable batching on the client - this will apply
+ * globally until we set it to false. This causes
+ * call to the service methods to return the query
+ * rather than immediately executing.
  ************************************************/
 $client->setUseBatch(true);
 
 /************************************************
- We then create a batch, and add each query we
- want to execute with keys of our choice - these
- keys will be reflected in the returned array.
-************************************************/
+ * We then create a batch, and add each query we
+ * want to execute with keys of our choice - these
+ * keys will be reflected in the returned array.
+ ************************************************/
 $batch = new Google_Http_Batch($client);
 $optParams = array('filter' => 'free-ebooks');
 $req1 = $service->volumes->listVolumes('Henry David Thoreau', $optParams);
@@ -66,18 +66,18 @@ $req2 = $service->volumes->listVolumes('George Bernard Shaw', $optParams);
 $batch->add($req2, "shaw");
 
 /************************************************
-  Executing the batch will send all requests off
-  at once.
+ * Executing the batch will send all requests off
+ * at once.
  ************************************************/
 $results = $batch->execute();
 
 echo "<h3>Results Of Call 1:</h3>";
 foreach ($results['response-thoreau'] as $item) {
-  echo $item['volumeInfo']['title'], "<br /> \n";
+    echo $item['volumeInfo']['title'], "<br /> \n";
 }
 echo "<h3>Results Of Call 2:</h3>";
 foreach ($results['response-shaw'] as $item) {
-  echo $item['volumeInfo']['title'], "<br /> \n";
+    echo $item['volumeInfo']['title'], "<br /> \n";
 }
 
 echo pageFooter(__FILE__);

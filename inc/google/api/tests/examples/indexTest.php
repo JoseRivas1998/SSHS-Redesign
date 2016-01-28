@@ -18,15 +18,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
 class examples_indexTest extends BaseTest
 {
-  public function testIndex()
-  {
-    $crawler = $this->loadExample('index.php');
+    public function testIndex() {
+        $crawler = $this->loadExample('index.php');
 
-    $nodes = $crawler->filter('li');
-    $this->assertEquals(8, count($nodes));
-    $this->assertEquals('A query using simple API access', $nodes->first()->text());
-  }
+        $nodes = $crawler->filter('li');
+        $this->assertEquals(8, count($nodes));
+        $this->assertEquals('A query using simple API access', $nodes->first()->text());
+    }
 }
