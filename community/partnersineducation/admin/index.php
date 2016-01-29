@@ -52,9 +52,31 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <div class="section-title">Edit Partner In Education</div>
-                        <form role="form" action="javascript:void(0)" id="editForm">
-
+                        <form role="form" method="post" id="editForm" enctype="multipart/form-data">
+                          <div class="form-group">
+                            <label for="partnerList" class="control-label">Select a Partner to Edit</label>
+                            <select name="partnerList" id="partnerList" class="form-control"></select>
+                          </div>
+                            <div class="form-group">
+                                <label for="editPartner" class="control-label">Partner Name<span class="red">*</span></label>
+                                <input type="text" class="form-control" name="editPartner" id="editPartner" placeholder="Partner Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="editWebsite" class="control-label">Website<span class="red">*</span></label>
+                                <input type="text" class="form-control" name="editWebsite" id="editWebsite" placeholder="Partner Website(If Applicable)">
+                            </div>
+                            <div class="form-group">
+                                <label for="editImg" class="control-label">Image<span class="red">*</span></label>
+                                <input type="file" class="form-control" name="editImg" id="editImg" accept="image/*">
+                            </div>
+                            <div class="form-group" id="editCurrentImg"></div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary form-control">
+                            </div>
                         </form>
+                        <div id="editFormOut"></div>
+                        <button class="btn btn-default" id="deletePartner">Delete Partner</button>
+                        <button class="btn btn-default" id="refreshPartnerList">Refresh Partner List</button>
                     </div>
                 </div>
                 <div class="col-xs-12" id="signOutBtn">
