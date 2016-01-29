@@ -4,7 +4,8 @@ if (!window.File || !window.Blob || !window.FileList || !window.FileReader || !w
     throw new Error('Please use Google Chrome to use this page!');
 }
 
-$("#addForm").on("submit", function(event){
+$("#addForm").submit(function(event){
+    $("#newFormOut").html("<div class='alert alert-warning'><i class='fa fa-spinner fa-spin'></i> Sending Data To Server</div>");
     event.preventDefault();
 
     var data = new FormData($('form')[0]);
@@ -16,7 +17,8 @@ $("#addForm").on("submit", function(event){
         contentType: false,
         data: data,
         success: function(response) {
-            console.log(response);
+          $("#newFormOut").html(response);
+          console.log(response);
         }
     });
 

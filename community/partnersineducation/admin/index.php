@@ -36,22 +36,24 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                                 <input type="text" class="form-control" name="newPartner" id="newPartner" placeholder="Partner Name">
                             </div>
                             <div class="form-group">
-                                <label for="newWebsite" class="control-label">Website</label>
+                                <label for="newWebsite" class="control-label">Website<span class="red">*</span></label>
                                 <input type="text" class="form-control" name="newWebsite" id="newWebsite" placeholder="Partner Website(If Applicable)">
                             </div>
                             <div class="form-group">
-                                <label for="newImg" class="control-label">Image</label>
+                                <label for="newImg" class="control-label">Image<span class="red">*</span></label>
                                 <input type="file" class="form-control" name="newImg" id="newImg" accept="image/*">
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary form-control">
                             </div>
                         </form>
+                        <span class="red">* Required</span>
+                        <div id="newFormOut"></div>
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                        <div class="section-title">Add Partner In Education</div>
-                        <form role="form" action="javascript:void(0)" id="addForm">
-                        
+                        <div class="section-title">Edit Partner In Education</div>
+                        <form role="form" action="javascript:void(0)" id="editForm">
+
                         </form>
                     </div>
                 </div>
