@@ -27,15 +27,32 @@ if ($userId != -1) {
     $permissionResult = mysqli_query($conn, $getPermissionsSql);
     $fullEmail = "$userEmail@simivalleyusd.org";
     if (mysqli_num_rows($permissionResult) > 0) {
-        $uploadDirectory = $_SERVER['DOCUMENT_ROOT'] . '/community/partnersineducation/img/';
-        if(move_uploaded_file($_FILES['newImg']['tmp_name'], $uploadDirectory . $_POST['newPartner'] . '.png')) {
-            $name = $_POST['newPartner'];
-            $fileName = $name . '.png';
-            $website = $_POST['newWebsite'];
-            //mysqli_query($conn, "INSERT INTO partnersineducation (partner, imgSRrc, website) VALUES ($name, $fileName, $website);");
-            $output = "Uploaded!";
+        $name = $_POST['newPartner'];
+        $website = $_POST['newWebsite'];
+        if($name) {
+          if($website) {
+            $uploadDirectory = $_SERVER['DOCUMENT_ROOT'] . '/community/partnersineducation/img/uploads/';
+            if (!file_exists($uploadDirectory)) {
+                mkdir($uploadDirectory, 0777, true);
+            }
+            if(move_uploaded_file($_FILES['newImg']['tmp_name'], $uploadDirectory . $_POST['newPartner'] . '.png')) {
+                $fileName = $name . '.png';
+                $insertSql = "INSERT INTO partnersInEducation
+                                          (userCreated, dateLastUpdated, userLastUpdated, partner, imgSrc, website)
+                                    VALUES ('$fullEmail', NOW(), '$fullEmail', '$name','uploads/$fileName', '$website')";
+                if(mysqli_query($conn, $insertSql)) {
+                  $output = "<div class='alert alert-success'>Partner Successfully Added!</div>";
+                } else {
+                  $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+                }
+            } else {
+                $output = "<div class='alert alert-danger'>There was an error uploading your file</div>";
+            }
+          } else {
+            $output = "<div class='alert alert-danger'>Please enter a Website</div>";
+          }
         } else {
-            $output = "ERROR!";
+            $output = "<div class='alert alert-danger'>Please enter a Name</div>";
         }
     } else {
         $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage this page.</div>";

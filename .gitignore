@@ -1,4 +1,5 @@
 /cgi-bin
 .idea/
+/community/partnersineducation/img/uploads
 *.bak
 *.htaccess

@@ -7,8 +7,8 @@
  */
 session_start();
 
-require_once $_SERVER["DOCUMENT_ROOT"] . '\inc\google\api\src\Google\autoload.php';
-require_once $_SERVER["DOCUMENT_ROOT"] . '\inc\google\api\src\Google\Client.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/inc/google/api/src/Google/autoload.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/inc/google/api/src/Google/Client.php';
 
 $client = new Google_Client();
 $client->setAccessType("online");
