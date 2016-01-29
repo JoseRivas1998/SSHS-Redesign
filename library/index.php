@@ -48,7 +48,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="list-group">
-                                <a href="http://destiny.simivalleyusd.org/common/servlet/presenthomeform.do?l2m=Home&tm=Home&l2m=Home"
+                                <a href="http://destiny.simivalleyusd.org/"
                                    class="list-group-item">Destiny Catalog</a>
                                 <a href="http://www.galesites.com/menu/index.php?loc=santa" class="list-group-item">Gale
                                     Databases</a>
