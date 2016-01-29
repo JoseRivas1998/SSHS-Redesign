@@ -27,11 +27,16 @@ if ($userId != -1) {
     $permissionResult = mysqli_query($conn, $getPermissionsSql);
     $fullEmail = "$userEmail@simivalleyusd.org";
     if (mysqli_num_rows($permissionResult) > 0) {
-        $name = $_POST['partnerName'];
-        $file = $_POST['file'];
-        $newName = $root . '/community/partnersineducation/img/' . $name . '.png';
-        rename($file, $newName);
-        $output = $file;
+        $uploadDirectory = $_SERVER['DOCUMENT_ROOT'] . '/community/partnersineducation/img/';
+        if(move_uploaded_file($_FILES['newImg']['tmp_name'], $uploadDirectory . $_POST['newPartner'] . '.png')) {
+            $name = $_POST['newPartner'];
+            $fileName = $name . '.png';
+            $website = $_POST['newWebsite'];
+            //mysqli_query($conn, "INSERT INTO partnersineducation (partner, imgSRrc, website) VALUES ($name, $fileName, $website);");
+            $output = "Uploaded!";
+        } else {
+            $output = "ERROR!";
+        }
     } else {
         $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage this page.</div>";
     }
@@ -42,5 +47,3 @@ if ($userId != -1) {
 echo $output;
 
 mysqli_close($conn);
-
-?>

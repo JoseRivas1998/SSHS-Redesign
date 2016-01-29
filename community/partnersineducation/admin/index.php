@@ -30,9 +30,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                 <div class="row" id="forms">
                     <div class="col-xs-12 col-sm-6">
                         <div class="section-title">Add Partner In Education</div>
-                        <form role="form" action="javascript:void(0)" id="addForm">
+                        <form role="form" method="post" id="addForm" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label for="newPartner" class="control-label">Parter Name<span class="red">*</span></label>
+                                <label for="newPartner" class="control-label">Partner Name<span class="red">*</span></label>
                                 <input type="text" class="form-control" name="newPartner" id="newPartner" placeholder="Partner Name">
                             </div>
                             <div class="form-group">
@@ -41,7 +41,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                             </div>
                             <div class="form-group">
                                 <label for="newImg" class="control-label">Image</label>
-                                <input type="file" class="form-control" name="newImg" id="newImg">
+                                <input type="file" class="form-control" name="newImg" id="newImg" accept="image/*">
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary form-control">
