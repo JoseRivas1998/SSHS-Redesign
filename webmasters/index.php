@@ -67,7 +67,6 @@
     ?>
 </header>
 
-<<<<<<< HEAD
 <section id="content-wrapper">
     <div class="container" id="content-container">
         <div class="row">
@@ -435,7 +434,6 @@ include($path);
 
 			});
   </script>
->>>>>>> origin/master
 </body>
 
 </html>
