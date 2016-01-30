@@ -34,23 +34,31 @@ if ($userId != -1) {
         $clubTime = $_POST["time"];
         $clubRoom = $_POST["room"];
         $clubApproved = $_POST["approved"];
+
+        $clubName = mysqli_real_escape_string($conn, $clubName);
+        $clubPresident = mysqli_real_escape_string($conn, $clubPresident);
+        $clubadvisor = mysqli_real_escape_string($conn, $clubadvisor);
         $updateSql = "UPDATE clubs SET
                   name = '$clubName',
                   approved = $clubApproved,
                   president = '$clubPresident',
                   advisor = '$clubadvisor'";
         if (empty($clubSite) !== true) {
-            $updateSql .= ", website = '$clubSite'";
+          $clubSite = mysqli_real_escape_string($conn, $clubSite);
+          $clubSite = htmlspecialchars($clubSite, ENT_QUOTES);
+          $updateSql .= ", website = '$clubSite'";
         } else {
             $updateSql .= ", website = NULL";
         }
         if (empty($clubTime) !== true) {
-            $updateSql .= ", meetingTime = '$clubTime'";
+          $clubTime = mysqli_real_escape_string($conn, $clubTime);
+          $updateSql .= ", meetingTime = '$clubTime'";
         } else {
-            $updateSql .= ", meetingTime = NULL";
+          $updateSql .= ", meetingTime = NULL";
         }
         if (empty($clubRoom) !== true) {
-            $updateSql .= ", meetingRoom = '$clubRoom'";
+          $clubRoom = mysqli_real_escape_string($conn, $clubRoom);
+          $updateSql .= ", meetingRoom = '$clubRoom'";
         } else {
             $updateSql .= ", meetingRoom = NULL";
         }
@@ -58,7 +66,7 @@ if ($userId != -1) {
         if (mysqli_query($conn, $updateSql)) {
             $output = "<div class='alert alert-success'>Club Successfully Edited!</div>";
         } else {
-            $output = "<div class='alert alert-danger'>There was an error, please try again.<br />$insertSql</div>";
+            $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
         }
     } else {
         $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage this page.</div>";

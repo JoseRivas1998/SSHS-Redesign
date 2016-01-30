@@ -35,6 +35,11 @@ if ($userId != -1) {
       if($editText) {
         if($editHref) {
           if($editIcon) {
+            $editText = mysqli_real_escape_string($conn, $editText);
+            $editHref = mysqli_real_escape_string($conn, $editHref);
+            $editHref = htmlspecialchars($editHref, ENT_QUOTES);
+            $editIcon = mysqli_real_escape_string($conn, $editIcon);
+            $editSection = mysqli_real_escape_string($conn, $editSection);
             $updateSql = "UPDATE homePage SET
                           dateLastUpdated = NOW(),
                           userLastUpdated = '$fullEmail',
@@ -46,6 +51,7 @@ if ($userId != -1) {
             if(mysqli_query($conn, $updateSql)) {
               $output = "<div class='alert alert-success'>Home Page Link Updated Successfully!</div>";
             } else {
+              $error = mysqli_error($conn);
               $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
             }
           } else {

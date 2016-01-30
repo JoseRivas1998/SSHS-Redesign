@@ -83,7 +83,7 @@ $("#editForm").submit(function (event) {
         success: function (data) {
             $("#editFormOut").html(data);
         }
-    }); 
+    });
 });
 $(document).ready(function () {
     $("#clubList").load("loadClubList.php", function () {
@@ -97,33 +97,36 @@ $("#refreshClub").on('click', function () {
     });
 });
 
-$("#deleteClub").on('click', function () { 
-    $("#editFormOut").html("<div class='alert alert-warning'><i class='fa fa-spinner fa-spin'></i> Sending Data To Server</div>")
-    var form = $("#editForm");
-    if ($("#clubList").val() < 1) {
-        clubId = 1;
+$("#deleteClub").on('click', function () {
+  if(confirm("Delete Club?")){
+      $("#editFormOut").html("<div class='alert alert-warning'><i class='fa fa-spinner fa-spin'></i> Sending Data To Server</div>")
+      var form = $("#editForm");
+      if ($("#clubList").val() < 1) {
+          clubId = 1;
+      } else {
+          clubId = $("#clubList").val();
+      }
+      var approvedInt;
+      if (document.getElementById("editApproved").checked) {
+          approvedInt = 1;
+      } else {
+          approvedInt = 0;
+      }
+      $.ajax({
+          url: 'deleteClub.php',
+          type: 'POST',
+          data: {
+              "clubId": clubId
+          },
+          cache: false,
+          success: function (data) {
+              $("#editFormOut").html(data);
+              $("#clubList").load("loadClubList.php", function () {
+                  onListChange();
+              });
+          }
+      });
     } else {
-        clubId = $("#clubList").val();
+      $("#editFormOut").html("<div class='alert alert-danger'>Deletion Cancelled</div>")
     }
-    var approvedInt;
-    if (document.getElementById("editApproved").checked) {
-        approvedInt = 1;
-    } else {
-        approvedInt = 0;
-    }
-    $.ajax({
-        url: 'deleteClub.php',
-        type: 'POST',
-        data: {
-            "clubId": clubId,
-            "userEmail": profile.getEmail().substring(0, profile.getEmail().indexOf("@"))
-        },
-        cache: false,
-        success: function (data) {
-            $("#editFormOut").html(data);
-            $("#clubList").load("loadClubList.php", function () {
-                onListChange();
-            });
-        }
-    });
 });
