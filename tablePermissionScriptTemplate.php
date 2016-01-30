@@ -23,7 +23,7 @@ if (mysqli_num_rows($usersResult) > 0) {
 
 
 if ($userId != -1) {
-    $getPermissionsSql = "SELECT * FROM userPermisions WHERE userId = $userId AND (tableAccess = 'homePage' OR tableAccess = 'full')";
+    $getPermissionsSql = "SELECT * FROM userPermisions WHERE userId = $userId AND (tableAccess = 'TABLE' OR tableAccess = 'full')";
     $permissionResult = mysqli_query($conn, $getPermissionsSql);
     $fullEmail = "$userEmail@simivalleyusd.org";
     if (mysqli_num_rows($permissionResult) > 0) {
