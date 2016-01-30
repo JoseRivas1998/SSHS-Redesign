@@ -3,7 +3,7 @@
 function getHomeLinks($section) {
   include ($_SERVER["DOCUMENT_ROOT"] . "/inc/dbConnect.php");
 
-  $sql = "SELECT * FROM homePage WHERE section = '$section' ORDER BY dateLastUpdated";
+  $sql = "SELECT * FROM homePage WHERE section = '$section' ORDER BY dateLastUpdated desc";
 
   $result = mysqli_query($conn, $sql);
 
