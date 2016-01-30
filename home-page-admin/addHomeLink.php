@@ -34,6 +34,11 @@ if ($userId != -1) {
         if($newText) {
           if($newHref) {
             if($newIcon) {
+              $newText = mysqli_real_escape_string($conn, $newText);
+              $newHref = mysqli_real_escape_string($conn, $newHref);
+              $newHref = htmlspecialchars($newHref, ENT_QUOTES);
+              $newIcon = mysqli_real_escape_string($conn, $newIcon);
+              $newSection = mysqli_real_escape_string($conn, $newSection);
               $insertSql = "INSERT INTO homePage (userCreated, dateLastUpdated, userLastUpdated, linkText, linkHref, icon, section)
                                           VALUES ('$fullEmail', NOW(), '$fullEmail', '$newText', '$newHref', '$newIcon', '$newSection')";
               if(mysqli_query($conn, $insertSql)) {

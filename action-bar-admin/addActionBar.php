@@ -32,12 +32,15 @@ if ($userId != -1) {
         if ($barText) {
             if ($publishDate) {
                 if ($showUntilDate) {
+                    $barText = mysqli_real_escape_string($conn, $barText);
                     $insertSql = "INSERT INTO actionBar (userCreated, userUpdated, dateUpdated, barText, publishDate, showUntil";
                     if ($barLink) {
                         $insertSql .= ", link";
                     }
                     $insertSql .= ") VALUES('$fullEmail', '$fullEmail', NOW(), '$barText', '$publishDate', '$showUntilDate'";
                     if ($barLink) {
+                        $barLink = mysqli_real_escape_string($conn, $barLink);
+                        $barLink = htmlspecialchars($barLink, ENT_QUOTES);
                         $insertSql .= ", '$barLink'";
                     }
                     $insertSql .= ")";

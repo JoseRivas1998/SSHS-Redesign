@@ -34,13 +34,17 @@ if ($userId != -1) {
             if ($newLastName) {
                 if ($newEmail && filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
                     if ($newRole) {
-                        $insertSql = "INSERT INTO supportStaff (userCreated, dateLastUpdated, userLastUpdated, firstName, lastName, email, role)
-                          VALUES ('$fullEmail', NOW(), '$fullEmail', '$newFirstName', '$newLastName', '$newEmail', '$newRole')";
-                        if (mysqli_query($conn, $insertSql)) {
-                            $output = "<div class='alert alert-success'>Support Staff Member Added!</div>";
-                        } else {
-                            $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
-                        }
+                      $newFirstName = mysqli_real_escape_string($conn, $newFirstName);
+                      $newLastName = mysqli_real_escape_string($conn, $newLastName);
+                      $newEmail = mysqli_real_escape_string($conn, $newEmail);
+                      $newRole = mysqli_real_escape_string($conn, $newRole);
+                      $insertSql = "INSERT INTO supportStaff (userCreated, dateLastUpdated, userLastUpdated, firstName, lastName, email, role)
+                        VALUES ('$fullEmail', NOW(), '$fullEmail', '$newFirstName', '$newLastName', '$newEmail', '$newRole')";
+                      if (mysqli_query($conn, $insertSql)) {
+                          $output = "<div class='alert alert-success'>Support Staff Member Added!</div>";
+                      } else {
+                          $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+                      }
                     } else {
                         $output = "<div class='alert alert-danger'>Enter a Position</div>";
                     }

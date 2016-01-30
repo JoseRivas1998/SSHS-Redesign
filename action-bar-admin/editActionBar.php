@@ -35,15 +35,18 @@ if ($userId != -1) {
         if ($barText) {
             if ($publishDate) {
                 if ($showUntilDate) {
+                    $barText = mysqli_real_escape_string($conn, $barText);
                     $editSql = "UPDATE actionBar SET
-          dateUpdated = NOW(),
-          userUpdated = '$fullEmail',
-          barText = '$barText',
-          publishDate = '$publishDate',
-          showUntil = '$showUntilDate'";
+                    dateUpdated = NOW(),
+                    userUpdated = '$fullEmail',
+                    barText = '$barText',
+                    publishDate = '$publishDate',
+                    showUntil = '$showUntilDate'";
                     if (empty($barLink)) {
                         $editSql .= ", link = NULL";
                     } else {
+                        $barLink = mysqli_real_escape_string($conn, $barLink);
+                        $barLink = htmlspecialchars($barLink, ENT_QUOTES);
                         $editSql .= ", link = '$barLink'";
                     }
                     $editSql .= " WHERE id = $barId";

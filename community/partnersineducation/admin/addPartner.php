@@ -37,6 +37,10 @@ if ($userId != -1) {
             }
             if(move_uploaded_file($_FILES['newImg']['tmp_name'], $uploadDirectory . $_POST['newPartner'] . '.png')) {
                 $fileName = $name . '.png';
+                $name = mysqli_real_escape_string($conn, $name);
+                $fileName = mysqli_real_escape_string($conn, $fileName);
+                $fileName = htmlspecialchars($fileName, ENT_QUOTES);
+                $website = mysqli_real_escape_string($conn, $website);
                 $insertSql = "INSERT INTO partnersInEducation
                                           (userCreated, dateLastUpdated, userLastUpdated, partner, imgSrc, website)
                                     VALUES ('$fullEmail', NOW(), '$fullEmail', '$name','uploads/$fileName', '$website')";

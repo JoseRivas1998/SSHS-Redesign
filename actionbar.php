@@ -9,9 +9,6 @@ if (mysqli_num_rows($result) > 0) {
         $text = $row["barText"];
         $link = $row["link"];
         $displayLink = is_null($link) !== true;
-        $topColorHex = $row["topColorHex"];
-        $centerColorHex = $row["centerColorHex"];
-        $bottomColorHex = $row["bottomColorHex"];
         echo "<div class='action-bar'>";
         echo "<div class='container'>";
         echo "<div class='row'>";

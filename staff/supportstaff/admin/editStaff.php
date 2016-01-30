@@ -35,19 +35,23 @@ if ($userId != -1) {
             if ($editLastName) {
                 if ($editEmail && filter_var($editEmail, FILTER_VALIDATE_EMAIL)) {
                     if ($editRole) {
-                        $editSql = "UPDATE supportStaff SET
-            dateLastUpdated = NOW(),
-            userLastUpdated = '$fullEmail',
-            firstName = '$editFirstName',
-            lastName = '$editLastName',
-            email = '$editEmail',
-            role = '$editRole'
-            WHERE id = $staffId";
-                        if (mysqli_query($conn, $editSql)) {
-                            $output = "<div class='alert alert-success'>Staff Member Edited Successfully!</div>";
-                        } else {
-                            $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
-                        }
+                      $editFirstName = mysqli_real_escape_string($conn, $editFirstName);
+                      $editLastName = mysqli_real_escape_string($conn, $editLastName);
+                      $editEmail = mysqli_real_escape_string($conn, $editEmail);
+                      $editRole = mysqli_real_escape_string($conn, $editRole);
+                      $editSql = "UPDATE supportStaff SET
+                      dateLastUpdated = NOW(),
+                      userLastUpdated = '$fullEmail',
+                      firstName = '$editFirstName',
+                      lastName = '$editLastName',
+                      email = '$editEmail',
+                      role = '$editRole'
+                      WHERE id = $staffId";
+                      if (mysqli_query($conn, $editSql)) {
+                          $output = "<div class='alert alert-success'>Staff Member Edited Successfully!</div>";
+                      } else {
+                          $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+                      }
                     } else {
                         $output = "<div class='alert alert-danger'>Enter a Position</div>";
                     }

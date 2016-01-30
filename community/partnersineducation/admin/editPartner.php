@@ -32,6 +32,9 @@ if ($userId != -1) {
         $website = $_POST["editWebsite"];
         if($name) {
           if($website) {
+            $fileName = $name . '.png';
+            $name = mysqli_real_escape_string($conn, $name);
+            $website = mysqli_real_escape_string($conn, $website);
             $editSql = "UPDATE partnersInEducation SET
                         dateLastUpdated = NOW(),
                         userLastUpdated = '$fullEmail',
@@ -43,6 +46,8 @@ if ($userId != -1) {
             }
             if(move_uploaded_file($_FILES['editImg']['tmp_name'], $uploadDirectory . $_POST['editPartner'] . '.png')) {
               $fileName = $name . '.png';
+              $fileName = mysqli_real_escape_string($conn, $fileName);
+              $fileName = htmlspecialchars($fileName, ENT_QUOTES);
               $editSql .= ", imgSrc = 'uploads/$fileName'";
             } else {
               $editSql .= ", imgSrc = NULL";

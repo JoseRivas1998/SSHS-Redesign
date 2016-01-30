@@ -35,32 +35,39 @@ if ($userId != -1) {
         if ($name) {
             if ($president) {
                 if ($advisor) {
-                    $insertSql = "INSERT INTO clubs (userCreated, name, president, advisor";
-                    if ($website) {
-                        $insertSql .= ", website";
-                    }
-                    if ($time) {
-                        $insertSql .= ", meetingTime";
-                    }
-                    if ($room) {
-                        $insertSql .= ", meetingRoom";
-                    }
-                    $insertSql .= ") VALUES('$userEmail@simivalleyusd.org', '$name', '$president', '$advisor'";
-                    if ($website) {
-                        $insertSql .= ", '$website'";
-                    }
-                    if ($time) {
-                        $insertSql .= ", '$time'";
-                    }
-                    if ($room) {
-                        $insertSql .= ", '$room'";
-                    }
-                    $insertSql .= ")";
-                    if (mysqli_query($conn, $insertSql)) {
-                        $output = "<div class='alert alert-success'>Club Successfully Added!</div>";
-                    } else {
-                        $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
-                    }
+                  $name = mysqli_real_escape_string($conn, $name);
+                  $president = mysqli_real_escape_string($conn, $president);
+                  $advisor = mysqli_real_escape_string($conn, $advisor);
+                  $insertSql = "INSERT INTO clubs (userCreated, name, president, advisor";
+                  if ($website) {
+                      $insertSql .= ", website";
+                  }
+                  if ($time) {
+                      $insertSql .= ", meetingTime";
+                  }
+                  if ($room) {
+                      $insertSql .= ", meetingRoom";
+                  }
+                  $insertSql .= ") VALUES('$userEmail@simivalleyusd.org', '$name', '$president', '$advisor'";
+                  if ($website) {
+                    $website = mysqli_real_escape_string($conn, $website);
+                    $website = htmlspecialchars($website, ENT_QUOTES);
+                    $insertSql .= ", '$website'";
+                  }
+                  if ($time) {
+                    $time = mysqli_real_escape_string($conn, $time);
+                    $insertSql .= ", '$time'";
+                  }
+                  if ($room) {
+                    $room = mysqli_real_escape_string($conn, $room);
+                    $insertSql .= ", '$room'";
+                  }
+                  $insertSql .= ")";
+                  if (mysqli_query($conn, $insertSql)) {
+                      $output = "<div class='alert alert-success'>Club Successfully Added!</div>";
+                  } else {
+                      $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+                  }
                 } else {
                     $output = "<div class='alert alert-danger'>Enter a club advisor.</div>";
                 }
