@@ -16,7 +16,7 @@ $client->setApplicationName("SSHS - Admin Login");
 $client->setClientId(getenv("GOOGLE_CLIENT_ID"));
 $client->setClientSecret(getenv("GOOGLE_CLIENT_SECRET"));
 $client->addScope(Google_Service_Oauth2::USERINFO_EMAIL);
-$client->setRedirectUri('http://localhost/callback');
+$client->setRedirectUri('http://'. $_SERVER["HTTP_HOST"] . '/callback');
 
 $service = new Google_Service_Oauth2($client);
 
