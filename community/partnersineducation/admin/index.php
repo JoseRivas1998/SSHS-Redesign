@@ -41,7 +41,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                             </div>
                             <div class="form-group">
                                 <label for="newImg" class="control-label">Image<span class="red">*</span></label>
-                                <input type="file" class="form-control" name="newImg" id="newImg" accept="image/*">
+                                <input type="file" class="form-control" name="newImg" id="newImg" accept="image/png">
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary form-control">
