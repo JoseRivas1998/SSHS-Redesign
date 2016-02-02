@@ -116,6 +116,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                           </div>
                       </form>
                       <div id="editFormOut"></div>
+                      <button class="btn btn-default" id="deleteAdmin">Delete Administrator</button>
+                      <button class="btn btn-default" id="refreshList">Refresh Administrator List</button>
                   </div>
                 </div>
                 <div class="col-xs-12">
