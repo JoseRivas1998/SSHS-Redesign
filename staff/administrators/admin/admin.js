@@ -10,6 +10,37 @@ $("#newForm").submit(function(event) {
     data: data,
     success: function(data) {
       $("#newFormOut").html(data);
+      loadAdminList();
     }
   });
 });
+
+function loadAdminList() {
+  $("#adminList").load("loadAdminList.php", onListChange);
+}
+
+function onListChange() {
+  $.ajax({
+    type: "POST",
+    dataType: "json",
+    url: "adminInfoToForm.php",
+    data: {
+      "adminId": $("#adminList").val()
+    },
+    cache: false,
+    success: function(data) {
+      $("#editFirstName").val(data["resFirstName"]);
+      $("#editLastName").val(data["resLastName"]);
+      $("#editEmail").val(data["resEmail"]);
+      $("#editRole").val(data["resRole"]);
+      $("#editLink").val(data["resLink"]);
+      $("#editLinkText").val(data["resLinkText"]);
+      $("#editOrderNum").val(data["resOrderNum"]);
+      $("#curImg").attr("src", data["resImgSrc"]);
+    }
+  });
+}
+
+$("#adminList").on("change", onListChange);
+
+$(document).ready(loadAdminList);
