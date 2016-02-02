@@ -72,7 +72,48 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                   <div class="col-xs-12 col-sm-6">
                     <div class="section-title">Edit an Existing Administrator</div>
                       <form role="form" method="post" id="editForm" enctype="multipart/form-data">
-                        <!-- (div.form-group*7>label.control-label+input.form-control)+div.form-group>input.form-control.btn.btn-primary -->
+                        <div class="form-group">
+                          <label for="adminList" class="control-label">Select an Admin to Edit</label>
+                          <select name="adminList" id="adminList" class="form-control"></select>
+                        </div>
+                          <div class="form-group">
+                            <label for="editFirstName" class="control-label">First Name<span class="red">*</span></label>
+                            <input type="text" class="form-control" id="editFirstName" name="editFirstName" placeholder="First Name">
+                          </div>
+                          <div class="form-group">
+                            <label for="editLastName" class="control-label">Last Name<span class="red">*</span></label>
+                            <input type="text" class="form-control" id="editLastName" name="editLastName" placeholder="Last Name">
+                          </div>
+                          <div class="form-group">
+                            <label for="editEmail" class="control-label">Email<span class="red">*</span></label>
+                            <input type="email" class="form-control" id="editEmail" name="editEmail" placeholder="example@simivalleyusd.org">
+                          </div>
+                          <div class="form-group">
+                            <label for="editImg" class="control-label">Image</label>
+                            <input type="file" class="form-control" id="editImg" name="editImg" accept="image/*">
+                          </div>
+                          <div class="form-group">
+                            <label for="editRole" class="control-label">Position<span class="red">*</span></label>
+                            <input type="text" class="form-control" id="editRole" name="editRole" placeholder="Position">
+                          </div>
+                          <div class="form-group">
+                            <label for="editLink" class="control-label">Website URL</label>
+                            <input type="text" class="form-control" id="editLink" name="editLink" placeholder="http://website.com">
+                          </div>
+                          <div class="form-group">
+                            <label for="editLinkText" class="control-label">Website Link Text</label>
+                            <input type="text" class="form-control" id="editLinkText" name="editLinkText" placeholder="website">
+                          </div>
+                          <div class="form-group">
+                            <label for="editOrderNum" class="control-label">Order Number<span class="red">**</span></label>
+                            <input type="number" class="form-control" id="editOrderNum" name="editOrderNum" value="1">
+                          </div>
+                          <div class="form-group">
+                            <img alt="Current Image" id="curImg" class="img-responsive">
+                          </div>
+                          <div class="form-group">
+                            <input type="submit" class="form-control btn btn-primary" value="Send">
+                          </div>
                       </form>
                       <div id="editFormOut"></div>
                   </div>

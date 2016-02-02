@@ -53,6 +53,54 @@ if ($userId != -1) {
                   } else {
                     $continue = true;
                   }
+                  if($continue) {
+                    $insertSql = "INSERT INTO administrators (
+                                              dateCreated,
+                                              userCreated,
+                                              dateLastUpdated,
+                                              userLastUpdated,
+                                              firstName,
+                                              lastName,
+                                              email,
+                                              role,
+                                              sortingNumber";
+                    if(!$noImg) {
+                      $insertSql .= ", imgPath";
+                    }
+                    if($newLink) {
+                      $insertSql .= ", link1";
+                    }
+                    if($newLinkText) {
+                      $insertSql .= ", link1Text";
+                    }
+                    $insertSql .= ") VALUES (
+                                            NOW(),
+                                            '$fullEmail',
+                                            NOW(),
+                                            '$fullEmail',
+                                            '$newFirstName',
+                                            '$newLastName',
+                                            '$newEmail',
+                                            '$newRole',
+                                            $newOrderNum";
+                    if(!$noImg) {
+                      $insertSql .= ", 'uploads/$newFirstName-$newLastName.$ext'";
+                    }
+                    if($newLink) {
+                      $insertSql .= ", '$newLink'";
+                    }
+                    if($newLinkText) {
+                      $insertSql .= ", '$newLinkText'";
+                    }
+                    $insertSql .= ")";
+                    if(mysqli_query($conn, $insertSql)) {
+                      $output = "<div class='alert alert-success'>Administrator added successfully!</div>";
+                    } else {
+                      $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+                    }
+                  } else {
+                    $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+                  }
                 } else {
                   $output = "<div class='alert alert-danger'>Enter an Order Number greater than 0</div>";
                 }
