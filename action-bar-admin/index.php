@@ -29,7 +29,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php';
             <div class="col-xs-12">
                 <div class="section-title">Action Bar Banner Admin</div>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-7">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
                         <img src="example.png" alt="Example Action Bar" class="img-responsive">
                     </div>
                 </div>

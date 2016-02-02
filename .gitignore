@@ -1,4 +1,10 @@
 /cgi-bin
 .idea/
+
+# User Upload Folders
+/community/partnersineducation/img/uploads
+/img/content/carousel/uploads
+/staff/administrators/img/uploads/
+
 *.bak
 *.htaccess

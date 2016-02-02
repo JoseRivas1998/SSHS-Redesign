@@ -4,7 +4,7 @@ $incPath = $_SERVER['DOCUMENT_ROOT'];
 $incPath .= "/inc/dbConnect.php";
 include($incPath);
 
-$sql = "SELECT * FROM partnersInEducation ORDER BY orderNum";
+$sql = "SELECT * FROM partnersInEducation ORDER BY partner";
 
 $result = mysqli_query($conn, $sql);
 

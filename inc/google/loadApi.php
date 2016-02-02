@@ -9,8 +9,8 @@
 session_start();
 
 if(!isset($_SESSION['token'])){
-    require_once __DIR__ . '\api\src\Google\autoload.php';
-    require_once __DIR__ . '\api\src\Google\Client.php';
+    require_once __DIR__ . '/api/src/Google/autoload.php';
+    require_once __DIR__ . '/api/src/Google/Client.php';
 
     //Yes this can be spoofed however they'd need knowledge of how to edit requests (unlikely)
     $_SESSION['redirect_url'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -36,4 +36,3 @@ if (isset($_GET['logout'])) {
     session_destroy();
     header('Location: http://' . $_SERVER["HTTP_HOST"]);
 }
-
