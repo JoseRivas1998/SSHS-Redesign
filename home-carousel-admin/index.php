@@ -36,7 +36,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                                 <input type="file" class="form-control" name="newImg" id="newImg" accept="image/png">
                             </div>
                             <div class="form-group">
-                                <input type="Submit" class="form-control btn btn-primary" value="Send">
+                                <input type="submit" class="form-control btn btn-primary" value="Send">
                             </div>
                         </form>
                         <div id="newFormOut"></div>
@@ -56,7 +56,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                             <img alt="Current Image" id="curImg" class="img-responsive">
                           </div>
                           <div class="form-group">
-                              <input type="Submit" class="form-control btn btn-primary" value="Send">
+                              <input type="submit" class="form-control btn btn-primary" value="Send">
                           </div>
                         </form>
                         <div id="editFormOut"></div>
