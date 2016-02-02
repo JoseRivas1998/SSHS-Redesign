@@ -40,7 +40,7 @@ if ($userId != -1) {
                       fileSrc = '$fileName'
                       WHERE id = $cId";
           if(mysqli_query($conn, $editSql)) {
-              $output = "<div class='alert alert-success'>Image Added!</div>";
+              $output = "<div class='alert alert-success'>Image Editted!</div>";
           } else {
               $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
           }
