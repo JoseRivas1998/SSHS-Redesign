@@ -44,3 +44,19 @@ function onListChange() {
 $("#adminList").on("change", onListChange);
 
 $(document).ready(loadAdminList);
+
+$("#editForm").submit(function(event) {
+  event.preventDefault();
+  $("#editFormOut").html("<div class='alert alert-warning'><i class='fa fa-spinner fa-spin'></i> Sending Data To Server</div>");
+  var data = new FormData($('form')[1]);
+  $.ajax({
+    type: "POST",
+    url: "editAdmin.php",
+    processData: false,
+    contentType: false,
+    data: data,
+    success: function(data) {
+      $("#editFormOut").html(data);
+    }
+  });
+});
