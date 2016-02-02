@@ -17,7 +17,11 @@ if(mysqli_num_rows($result) > 0) {
     $output["resEmail"] = $row["email"];
     $output["resRole"] = $row["role"];
     $output["resOrderNum"] = (int) $row["sortingNumber"];
-    $output["resImgSrc"] = "../img/" . $row["imgPath"];
+    if($row["imgPath"]) {
+      $output["resImgSrc"] = "../img/" . $row["imgPath"];
+    } else {
+      $output["resImgSrc"] = "../img/pending_staff.png";
+    }
     if($row["link1"]) {
       $output["resLink"] = $row["link1"];
     } else {
