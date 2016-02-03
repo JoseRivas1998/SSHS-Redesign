@@ -53,7 +53,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                       </div>
                       <div class="form-group">
                         <label for="newInfoThumb" class="control-label">Additional Info Thumbnail(small)</label>
-                        <input type="text" class="form-control" id="newInfoThumb" name="newInfoThumb" accept="image/png">
+                        <input type="file" class="form-control" id="newInfoThumb" name="newInfoThumb" accept="image/png">
                       </div>
                       <div class="form-group">
                         <label for="newInfoLarge" class="control-label">Additional Info PDF(large)</label>
