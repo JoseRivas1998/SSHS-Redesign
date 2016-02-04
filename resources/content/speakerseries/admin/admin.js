@@ -17,3 +17,34 @@ $("#addForm").submit(function(event) {
     $("#newFormOut").html("<div class='alert alert-danger'>You must upload a poster thumbnail and pdf.</div>");
   }
 });
+
+function loadList() {
+  $("#seriesList").load("loadSeriesList.php", function() {
+    onListChange();
+  });
+}
+
+function onListChange() {
+  $.ajax({
+    type: "POST",
+    url: "seriesInfoToForm.php",
+    dataType: "json",
+    data: {
+      "seriesId": $("#seriesList").val()
+    },
+    cache: false,
+    success: function(data) {
+      $("#editName").val(data["resTitle"]);
+      $("#curPosterLarge").attr("href", data["resPosterLarge"]);
+      $("#curPosterThumb").attr("src", data["resPosterThumb"]);
+      $("#editDate").val(data["resDate"]);
+      $("#editLocation").val(data["resLocation"]);
+      $("#curInfoLarge").attr("href", data["resInfoLarge"]);
+      $("#curInfoThumb").attr("src", data["resInfoThumb"]);
+    }
+  });
+}
+
+$(document).ready(loadList);
+
+$("#seriesList").on("change", onListChange);
