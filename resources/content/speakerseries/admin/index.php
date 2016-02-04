@@ -100,8 +100,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                         <input type="file" class="form-control" id="editInfoThumb" name="editInfoThumb" accept="image/png">
                       </div>
                       <div class="form-group">
-                        <label for="eidtInfoLarge" class="control-label">Additional Info PDF(large)</label>
-                        <input type="file" class="form-control" id="eidtInfoLarge" name="eidtInfoLarge" accept="application/pdf">
+                        <label for="editInfoLarge" class="control-label">Additional Info PDF(large)</label>
+                        <input type="file" class="form-control" id="editInfoLarge" name="editInfoLarge" accept="application/pdf">
                       </div>
                       <div class="form-group">
                         <a id="curInfoLarge" target="_blank"><img alt="Current Info" id="curInfoThumb" class="img-responsive"></a>
@@ -111,6 +111,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                       </div>
                     </form>
                     <div id="editFormOut"></div>
+                    <button class="btn btn-default" id="deleteSeries">Delete Speaker Series</button>
+                    <button class="btn btn-default" id="refreshList">Refresh List</button>
                   </div>
                 </div>
                 <div class="col-xs-12" id="signOutBtn">
