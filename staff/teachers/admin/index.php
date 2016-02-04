@@ -32,15 +32,15 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                       <div class="section-title">Add New Teacher</div>
                       <form role="form" method="post" id="addForm" enctype="multipart/form-data">
                         <div class="form-group">
-                          <label for="newFirstName" class="control-label">First Name</label>
+                          <label for="newFirstName" class="control-label">First Name<span class="red">*</span></label>
                           <input type="text" class="form-control" id="newFirstName" name="newFirstName" placeholder="First Name">
                         </div>
                         <div class="form-group">
-                          <label for="newLastName" class="control-label"></label>
+                          <label for="newLastName" class="control-label">Last Name<span class="red">*</span></label>
                           <input type="text" class="form-control" id="newLastName" name="newLastName" placeholder="Last name">
                         </div>
                         <div class="form-group">
-                          <label for="newEmail" class="control-label">Email</label>
+                          <label for="newEmail" class="control-label">Email<span class="red">*</span></label>
                           <input type="email" class="form-control" id="newEmail" name="newEmail" placeholder="last.first@simivalleyusd.org">
                         </div>
                         <div class="form-group">
@@ -50,10 +50,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                         </div>
                         <div class="form-group">
                           <label for="newImg" class="control-label">Image</label>
-                          <input type="file" class="form-control" id="newImg" name="newImg" accept="image/png">
+                          <input type="file" class="form-control" id="newImg" name="newImg" accept="image/*">
                         </div>
                         <div class="form-group">
-                          <label for="newClass1" class="control-label">Class 1</label>
+                          <label for="newClass1" class="control-label">Class 1<span class="red">*</span></label>
                           <input type="text" class="form-control" id="newClass1" name="newClass1" placeholder="Class 1">
                         </div>
                         <div class="form-group">
@@ -81,7 +81,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                           <input type="text" class="form-control" id="newClass7" name="newClass7" placeholder="Class 7">
                         </div>
                         <div class="form-group">
-                          <label for="newAcad" class="control-label">Select an Academy</label>
+                          <label for="newAcad" class="control-label">Select an Academy<span class="red">*</span></label>
                           <select name="newAcad" id="newAcad" class="form-control">
                             <option value="English" selected>English</option>
                             <option value="Math">Math</option>
@@ -123,10 +123,14 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                           <input type="submit" class="form-control btn btn-primary" value="Send">
                         </div>
                       </form>
+                      <div id="newFormOut"></div>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                       <div class="section-title">Edit Existing Teacher</div>
                     </div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="red">*Required</div>
                 </div>
                 <div class="col-xs-12" id="signOutBtn">
                     <button class="btn btn-default" onclick="signOut();">Sign Out</button>
@@ -141,6 +145,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/inc/javascript.php";
 include($path);
 ?>
+<script src="admin.js"></script>
 </body>
 
 </html>
