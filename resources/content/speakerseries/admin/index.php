@@ -66,10 +66,51 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                     <div id="newFormOut"></div>
                   </div>
                   <div class="col-xs-12 col-sm-6">
-                    <div class="section-title"></div>
-                    <form role="form" method="post" id="addForm" enctype="multipart/form-data">
-
+                    <div class="section-title">Edit Existing Speaker Series</div>
+                    <form role="form" method="post" id="editForm" enctype="multipart/form-data">
+                      <div class="form-group">
+                        <label for="seriesList" class="control-label">Select a Speaker Series</label>
+                        <select name="seriesList" id="seriesList" class="form-control"></select>
+                      </div>
+                      <div class="form-group">
+                        <label for="editName" class="control-label">Title<span class="red">*</span></label>
+                        <input type="text" class="form-control" id="editName" name="editName" placeholder="Title">
+                      </div>
+                      <div class="form-group">
+                        <label for="editPosterThumb" class="control-label">Poster Image File(small)<span class="red">*</span></label>
+                        <input type="file" class="form-control" id="editPosterThumb" name="editPosterThumb" accept="image/png">
+                      </div>
+                      <div class="form-group">
+                        <label for="editPosterLarge" class="control-label">Poster PDF(large)<span class="red">*</span></label>
+                        <input type="file" class="form-control" id="editPosterLarge" name="editPosterLarge" accept="application/pdf">
+                      </div>
+                      <div class="form-group">
+                        <a href="" id="curPosterLarge" target="_blank"><img src="" alt="Current Poster" id="curPosterThumb" class="img-responsive"></a>
+                      </div>
+                      <div class="form-group">
+                        <label for="editDate" class="control-label">Show Date<span class="red">*</span></label>
+                        <input type="datetime-local" class="form-control" id="editDate" name="editDate">
+                      </div>
+                      <div class="form-group">
+                        <label for="editLocation" class="control-label">Location<span class="red">*</span></label>
+                        <input type="text" class="form-control" id="editLocation" name="editLocation" placeholder="Location">
+                      </div>
+                      <div class="form-group">
+                        <label for="editInfoThumb" class="control-label">Additional Info Thumbnail(small)</label>
+                        <input type="file" class="form-control" id="editInfoThumb" name="editInfoThumb" accept="image/png">
+                      </div>
+                      <div class="form-group">
+                        <label for="eidtInfoLarge" class="control-label">Additional Info PDF(large)</label>
+                        <input type="file" class="form-control" id="eidtInfoLarge" name="eidtInfoLarge" accept="application/pdf">
+                      </div>
+                      <div class="form-group">
+                        <a id="curInfoLarge" target="_blank"><img alt="Current Info" id="curInfoThumb" class="img-responsive"></a>
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" class="form-control btn btn-primary" value="Send">
+                      </div>
                     </form>
+                    <div id="editFormOut"></div>
                   </div>
                 </div>
                 <div class="col-xs-12" id="signOutBtn">
