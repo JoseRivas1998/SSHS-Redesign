@@ -29,7 +29,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                 <div class="section-title">Teachers Page Admin</div>
                 <div class="row" id="forms">
                     <div class="col-xs-12 col-sm-6">
-                      <div class="section-title">Add New Teacher</div>
+                      <div class="section-title">Add a New Teacher</div>
                       <form role="form" method="post" id="addForm" enctype="multipart/form-data">
                         <div class="form-group">
                           <label for="newFirstName" class="control-label">First Name<span class="red">*</span></label>
