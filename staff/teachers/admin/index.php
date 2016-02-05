@@ -145,9 +145,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                             <input type="email" class="form-control" id="editEmail" name="editEmail" placeholder="last.first@simivalleyusd.org">
                           </div>
                           <div class="form-group">
-                            <label for="newFChair" class="checkbox-inline"><input type="checkbox" id="editFChair" name="newFChair" value="">Founding Teacher</label>
-                            <label for="newDChair" class="checkbox-inline"><input type="checkbox" id="editDChair" name="newDChair" value="">Department Chair</label>
-                            <label for="newAChair" class="checkbox-inline"><input type="checkbox" id="editAChair" name="newAChair" value="">Academy Chair</label>
+                            <label for="editFChair" class="checkbox-inline"><input type="checkbox" id="editFChair" name="editFChair" value="">Founding Teacher</label>
+                            <label for="editDChair" class="checkbox-inline"><input type="checkbox" id="editDChair" name="editDChair" value="">Department Chair</label>
+                            <label for="editAChair" class="checkbox-inline"><input type="checkbox" id="editAChair" name="editAChair" value="">Academy Chair</label>
                           </div>
                           <div class="form-group">
                             <label for="editImg" class="control-label">Image</label>
@@ -231,6 +231,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                           </div>
                         </form>
                         <div id="editFormOut"></div>
+                        <button class="btn btn-default" id="deleteTeacher">Delete Teacher</button>
+                        <button class="btn btn-default" id="refreshList">Refresh Teacher List</button>
                     </div>
                 </div>
                 <div class="col-xs-12">
