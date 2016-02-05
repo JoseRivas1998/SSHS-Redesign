@@ -127,6 +127,110 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                     </div>
                     <div class="col-xs-12 col-sm-6">
                       <div class="section-title">Edit Existing Teacher</div>
+                      <form role="form" method="post" id="editForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                          <label for="teacherList" class="control-label">Select a Teacher to Edit</label>
+                          <select name="teacherList" id="teacherList" class="form-control"></select>
+                        </div>
+                          <div class="form-group">
+                            <label for="editFirstName" class="control-label">First Name<span class="red">*</span></label>
+                            <input type="text" class="form-control" id="editFirstName" name="editFirstName" placeholder="First Name">
+                          </div>
+                          <div class="form-group">
+                            <label for="editLastName" class="control-label">Last Name<span class="red">*</span></label>
+                            <input type="text" class="form-control" id="editLastName" name="editLastName" placeholder="Last name">
+                          </div>
+                          <div class="form-group">
+                            <label for="editEmail" class="control-label">Email<span class="red">*</span></label>
+                            <input type="email" class="form-control" id="editEmail" name="editEmail" placeholder="last.first@simivalleyusd.org">
+                          </div>
+                          <div class="form-group">
+                            <label for="newFChair" class="checkbox-inline"><input type="checkbox" id="editFChair" name="newFChair" value="">Founding Teacher</label>
+                            <label for="newDChair" class="checkbox-inline"><input type="checkbox" id="editDChair" name="newDChair" value="">Department Chair</label>
+                            <label for="newAChair" class="checkbox-inline"><input type="checkbox" id="editAChair" name="newAChair" value="">Academy Chair</label>
+                          </div>
+                          <div class="form-group">
+                            <label for="editImg" class="control-label">Image</label>
+                            <input type="file" class="form-control" id="editImg" name="editImg" accept="image/*">
+                          </div>
+                          <div class="checkbox">
+                            <label for="removeImg"><input type="checkbox" id="removeImg" name="removeImg">Remove Current Image</label>
+                          </div>
+                          <div class="form-group">
+                            <img alt="Current Image" id="curImg" class="img-responsive">
+                          </div>
+                          <div class="form-group">
+                            <label for="editClass1" class="control-label">Class 1<span class="red">*</span></label>
+                            <input type="text" class="form-control" id="editClass1" name="editClass1" placeholder="Class 1">
+                          </div>
+                          <div class="form-group">
+                            <label for="editClass2" class="control-label">Class 2</label>
+                            <input type="text" class="form-control" id="editClass2" name="editClass2" placeholder="Class 2">
+                          </div>
+                          <div class="form-group">
+                            <label for="editClass3" class="control-label">Class 3</label>
+                            <input type="text" class="form-control" id="editClass3" name="editClass3" placeholder="Class 3">
+                          </div>
+                          <div class="form-group">
+                            <label for="editClass4" class="control-label">Class 4</label>
+                            <input type="text" class="form-control" id="editClass4" name="editClass4" placeholder="Class 4">
+                          </div>
+                          <div class="form-group">
+                            <label for="editClass5" class="control-label">Class 5</label>
+                            <input type="text" class="form-control" id="editClass5" name="editClass5" placeholder="Class 5">
+                          </div>
+                          <div class="form-group">
+                            <label for="editClass6" class="control-label">Class 6</label>
+                            <input type="text" class="form-control" id="editClass6" name="editClass6" placeholder="Class 6">
+                          </div>
+                          <div class="form-group">
+                            <label for="editClass7" class="control-label">Class 7</label>
+                            <input type="text" class="form-control" id="editClass7" name="editClass7" placeholder="Class 7">
+                          </div>
+                          <div class="form-group">
+                            <label for="editAcad" class="control-label">Select an Academy<span class="red">*</span></label>
+                            <select name="editAcad" id="editAcad" class="form-control">
+                              <option value="English" selected>English</option>
+                              <option value="Math">Math</option>
+                              <option value="Performing Arts">Performing Arts</option>
+                              <option value="Physical Education">Physical Education</option>
+                              <option value="Science">Science</option>
+                              <option value="Social Studies">Social Studies</option>
+                              <option value="Special Education">Special Education</option>
+                              <option value="Technology">Technology</option>
+                              <option value="Visual Arts">Visual Arts</option>
+                              <option value="World Languages">World Languages</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="editlink1Text" class="control-label">Link 1 Text</label>
+                            <input type="text" class="form-control" id="editlink1Text" name="editlink1Text" placeholder="Link 1 Text">
+                          </div>
+                          <div class="form-group">
+                            <label for="editlink1href" class="control-label">Link 1 URL</label>
+                            <input type="text" class="form-control" id="editlink1href" name="editlink1href" placeholder="Link 1 URL">
+                          </div>
+                          <div class="form-group">
+                            <label for="editlink2Text" class="control-label">Link 2 Text</label>
+                            <input type="text" class="form-control" id="editlink2Text" name="editlink2Text" placeholder="Link 2 Text">
+                          </div>
+                          <div class="form-group">
+                            <label for="editlink2href" class="control-label">Link 2 URL</label>
+                            <input type="text" class="form-control" id="editlink2href" name="editlink2href" placeholder="Link 2 URL">
+                          </div>
+                          <div class="form-group">
+                            <label for="editlinkText" class="control-label">Link 3 Text</label>
+                            <input type="text" class="form-control" id="editlink3Text" name="editlink3Text" placeholder="Link 3 Text">
+                          </div>
+                          <div class="form-group">
+                            <label for="editlink3href" class="control-label">Link 3 URL</label>
+                            <input type="text" class="form-control" id="editlink3href" name="editlink3href" placeholder="Link 3 URL">
+                          </div>
+                          <div class="form-group">
+                            <input type="submit" class="form-control btn btn-primary" value="Send">
+                          </div>
+                        </form>
+                        <div id="editFormOut"></div>
                     </div>
                 </div>
                 <div class="col-xs-12">
