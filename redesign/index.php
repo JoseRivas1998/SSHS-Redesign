@@ -101,7 +101,9 @@
                                                                target="_blank">r&eacute;sum&eacute;</a> is also
                     available online.
                 </p>
-                <img src="/webmasters/joseR.jpg" class="img-responsive">
+                <p>
+                  Special Thanks to <a href="http://nickparksdev.com/" target="_blank">Nick Parks</a> for helping with Google Backend Authentication for admin pages.
+                </p>
             </div>
         </div>
     </div>
