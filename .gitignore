@@ -7,6 +7,7 @@
 /staff/administrators/img/uploads/
 /resources/content/speakerseries/uploads/
 /staff/teachers/img/uploads/
+resources/content/performing/uploads/
 
 *.bak
 *.htaccess
