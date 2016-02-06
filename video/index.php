@@ -94,7 +94,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/inc/javascript.php";
 include($path);
 ?>
-<script src="index.js"></script>
+<script src="video.js"></script>
 </body>
 
 </html>
