@@ -85,11 +85,12 @@
                     up. Bellow are some example icons.
                 </p>
                 <p>
-                    <i class="fa fa-twitter fa-5x"></i>
-                    <i class="fa fa-instagram fa-5x"></i>
-                    <i class="fa fa-rebel fa-5x"></i>
-                    <i class="fa fa-empire fa-5x"></i>
-                    <i class="fa fa-facebook fa-5x"></i>
+                  <i class="fa fa-flag fa-5x"></i>
+                  <i class="fa fa-twitter fa-5x"></i>
+                  <i class="fa fa-instagram fa-5x"></i>
+                  <i class="fa fa-rebel fa-5x"></i>
+                  <i class="fa fa-empire fa-5x"></i>
+                  <i class="fa fa-facebook fa-5x"></i>
                 </p>
                 <p>
                     The redesign was created by Jos&eacute; de Jesus Rodriguez-Rivas, a student in Santa Susana's
