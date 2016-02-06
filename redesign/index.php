@@ -92,7 +92,7 @@
                     <i class="fa fa-facebook fa-5x"></i>
                 </p>
                 <p>
-                    The redesign was made possible by Jos&eacute; de Jesus Rodriguez-Rivas, a student in Santa Susana's
+                    The redesign was created by Jos&eacute; de Jesus Rodriguez-Rivas, a student in Santa Susana's
                     Class of 2017. Jos&eacute; has a passion for Computer Programming, with a special interest in Video
                     Game Development. He has run many of his own websites since his freshman year at Santa Susana. He
                     loves making games for everyone to enjoy. His studio is called <a
@@ -101,6 +101,7 @@
                                                                target="_blank">r&eacute;sum&eacute;</a> is also
                     available online.
                 </p>
+                <img src="/webmasters/joseR.jpg" class="img-responsive">
             </div>
         </div>
     </div>
