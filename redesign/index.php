@@ -85,14 +85,15 @@
                     up. Bellow are some example icons.
                 </p>
                 <p>
-                    <i class="fa fa-twitter fa-5x"></i>
-                    <i class="fa fa-instagram fa-5x"></i>
-                    <i class="fa fa-rebel fa-5x"></i>
-                    <i class="fa fa-empire fa-5x"></i>
-                    <i class="fa fa-facebook fa-5x"></i>
+                  <i class="fa fa-flag fa-5x"></i>
+                  <i class="fa fa-twitter fa-5x"></i>
+                  <i class="fa fa-instagram fa-5x"></i>
+                  <i class="fa fa-rebel fa-5x"></i>
+                  <i class="fa fa-empire fa-5x"></i>
+                  <i class="fa fa-facebook fa-5x"></i>
                 </p>
                 <p>
-                    The redesign was made possible by Jos&eacute; de Jesus Rodriguez-Rivas, a student in Santa Susana's
+                    The redesign was created by Jos&eacute; de Jesus Rodriguez-Rivas, a student in Santa Susana's
                     Class of 2017. Jos&eacute; has a passion for Computer Programming, with a special interest in Video
                     Game Development. He has run many of his own websites since his freshman year at Santa Susana. He
                     loves making games for everyone to enjoy. His studio is called <a
@@ -100,6 +101,9 @@
                     his website and check out his work. His <a href="https://tinycountrygames.com/resume.php"
                                                                target="_blank">r&eacute;sum&eacute;</a> is also
                     available online.
+                </p>
+                <p>
+                  Special Thanks to <a href="http://nickparksdev.com/" target="_blank">Nick Parks</a> for helping with Google Backend Authentication for admin pages.
                 </p>
             </div>
         </div>
