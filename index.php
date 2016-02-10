@@ -52,6 +52,9 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
+        #quickList {
+          padding-top: 20px;
+        }
     </style>
 </head>
 

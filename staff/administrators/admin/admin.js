@@ -60,3 +60,24 @@ $("#editForm").submit(function(event) {
     }
   });
 });
+
+$("#refreshList").on("click", loadAdminList);
+
+$("#deleteAdmin").on("click", function() {
+  if(confirm("Delete the Administrator?")) {
+    $("#editFormOut").html("<div class='alert alert-warning'><i class='fa fa-spinner fa-spin'></i> Sending Data To Server</div>");
+    $.ajax({
+      type: "POST",
+      url: "deleteAdmin.php",
+      data: {
+        "adminId": $("#adminList").val()
+      },
+      cache: false,
+      success: function(data) {
+        $("#editFormOut").html(data);
+      }
+    });
+  } else {
+    $("#editFormOut").html("<div class='alert alert-danger'>You cancelled deletion.</div>");
+  }
+});

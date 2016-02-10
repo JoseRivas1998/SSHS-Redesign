@@ -82,7 +82,7 @@ if ($userId != -1) {
                     if(mysqli_query($conn, $updateSql)) {
                       $output = "<div class='alert alert-success'>Admin Successfully Editted</div>";
                     } else {
-                      $output = "<div class='alert alert-danger'>There was an error, please try again." . mysqli_error($conn) . "</div>";
+                      $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
                     }
                   } else {
                     $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";

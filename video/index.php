@@ -65,13 +65,25 @@
                             Montage</a>
                     </div>
                 </div>
-
-                <div class="embed-responsive embed-responsive-16by9" id="pl">
-                    <iframe class="embed-responsive-item"
-                            src="https://www.youtube.com/embed/videoseries?list=PLY442tuwWhoGNAcJY0Sxuv-jwcXurHBTL"
-                            frameborder="0" allowfullscreen></iframe>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="section-title">Select School Year</div>
+                    <ul class="nav nav-tabs nav-justified" id="navTabs">
+                      <li role="presentation" class="active" id="1516l"><a id="1516a" href="javascript:void(0)">2015-16</a></li>
+                      <li role="presentation" id="1415l"><a id="1415a" href="javascript:void(0)">2014-15</a></li>
+                      <li role="presentation" id="1314l"><a id="1314a" href="javascript:void(0)">2013-14</a></li>
+                      <li role="presentation" id="1213l"><a id="1213a" href="javascript:void(0)">2012-13</a></li>
+                      <li role="presentation" id="1112l"><a id="1112a" href="javascript:void(0)">2011-12</a></li>
+                      <li role="presentation" id="1011l"><a id="1011a" href="javascript:void(0)">2010-11</a></li>
+                      <li role="presentation" id="0809l"><a id="0809a" href="javascript:void(0)">2008-09</a></li>
+                      <li role="presentation" id="0708l"><a id="0708a" href="javascript:void(0)">2007-08</a></li>
+                    </ul>
+                  </div>
                 </div>
 
+                <div class="embed-responsive embed-responsive-16by9" id="pl">
+                    <iframe class="embed-responsive-item" id="newsPL" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </div>
@@ -82,6 +94,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/inc/javascript.php";
 include($path);
 ?>
+<script src="video.js"></script>
 </body>
 
 </html>
