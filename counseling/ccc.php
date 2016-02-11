@@ -27,10 +27,7 @@
 <section id="content-wrapper">
     <div class="container" id="content-container">
         <div class="row">
-            <?php
-            include('left-nav.php');
-            ?>
-            <div class="col-xs-12 col-sm-9">
+            <div class="col-xs-12">
                 <div class="section-title">College and Career Center (CCC)</div>
                 <div class='paragraph-title'><a href='mailto:jennifer.wigdor@simivalleyusd.org'>Jennifer Wigdor</a>
                 </div>
