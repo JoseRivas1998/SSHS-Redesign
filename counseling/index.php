@@ -1,3 +1,8 @@
+<?php
+header("Location: http://santasucounseling.weebly.com/");
+
+exit;
+?>
 <!DOCTYPE html>
 <html lang="en">
 

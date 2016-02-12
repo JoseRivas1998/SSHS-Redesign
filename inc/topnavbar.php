@@ -27,7 +27,7 @@
                         <li id="/students/studentinfo.php"><a href="/students/studentinfo.php">Student Info</a></li>
                         <li id="/library/"><a href="/library/">Library</a></li>
                         <li id="/students/seniorsonly.php"><a href="/students/seniorsonly.php">Seniors Only</a></li>
-                        <li id="/counseling/"><a href="/counseling/">Counseling</a></li>
+                        <li id="/counseling/"><a href="http://santasucounseling.weebly.com/" target="_blank">Counseling</a></li>
                         <li id="/counseling/ccc.php"><a href="/counseling/ccc.php">College and Career Center (CCC)</a>
                         </li>
                         <li id="/students/leadership.php"><a href="/students/leadership.php">Leadership</a></li>
