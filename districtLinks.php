@@ -1,12 +1,13 @@
-<div class="col-xs-12 col-sm-4">
-    <div class="panel panel-default">
-        <div class="panel-heading"><i class="fa fa-link"></i> District Links</div>
-        <div class="panel-body panel-row-2">
-            <div class="list-group">
-              <?php
-                getHomeLinks('district');
-              ?>
-            </div>
-        </div>
+<div class="col-xs-12">
+  <div class="row homeLink">
+    <div class="col-xs-5">
+      <i class="fa fa-link fa-5x"></i>
     </div>
+    <div class="col-xs-7 homeLinkTitle">
+      District Links
+    </div>
+  </div>
 </div>
+<?php
+  getNewHomeLinks("district");
+?>
