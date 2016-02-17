@@ -39,9 +39,8 @@
 								<!--first pic-->
 								<img src="" class="img-responsive">
 							</div>
-							<div class="col-xs-12 col-sm-6" id="box";>
+							<div class="col-xs-12 col-sm-6" id="box">
 								<!--first info-->
-								test
 							</div>
 							
 						</div>
