@@ -136,19 +136,19 @@ if ($userId != -1) {
                               if($newClass7) {
                                 $updateSql .= ", class7 = '$newClass7'";
                               } else {
-                                $updateSql .= "class7 = NULL";
+                                $updateSql .= ", class7 = NULL";
                               }
                             } else {
-                              $updateSql .= "class6 = NULL, class7 = NULL";
+                              $updateSql .= ", class6 = NULL, class7 = NULL";
                             }
                           } else {
-                            $updateSql .= "class5 = NULL, class6 = NULL, class7 = NULL";
+                            $updateSql .= ", class5 = NULL, class6 = NULL, class7 = NULL";
                           }
                         } else {
-                          $updateSql .= "class4 = NULL, class5 = NULL, class6 = NULL, class7 = NULL";
+                          $updateSql .= ", class4 = NULL, class5 = NULL, class6 = NULL, class7 = NULL";
                         }
                       } else {
-                        $updateSql .= "class3 = NULL, class4 = NULL, class5 = NULL, class6 = NULL, class7 = NULL";
+                        $updateSql .= ", class3 = NULL, class4 = NULL, class5 = NULL, class6 = NULL, class7 = NULL";
                       }
                     } else {
                       $updateSql .= ", class2 = NULL, class3 = NULL, class4 = NULL, class5 = NULL, class6 = NULL, class7 = NULL";
