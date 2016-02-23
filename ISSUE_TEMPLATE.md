@@ -1,7 +1,7 @@
 ## Internal or External Request
-Please check one
-- [ ] External
-- [ ] Internal
+Delete this and the option that does not apply
+External
+Internal
 
 ## If External, enter who submitted the request
 If internal, delete this and the heading of this section.
