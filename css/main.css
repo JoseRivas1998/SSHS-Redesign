@@ -240,18 +240,9 @@
 
 /*Carousel*/
 
-#embedCarousel {
-    padding-bottom: 48.25%;
-}
-
 #homeCarousel {
-    padding-top: 20px;
     width: 100%;
     height: 100%;
-}
-
-#homeCarousel > a.carousel-control.home {
-    margin-top: 20px;
 }
 
 .carousel-img {
