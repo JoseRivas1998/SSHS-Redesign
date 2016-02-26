@@ -93,7 +93,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                       </div>
                     </form>
                     <div id="editFormOut"></div>
-                    <button class="btn btn-default" id="delteLink">Delelte Home Page Link</button>
+                    <button class="btn btn-default" id="delteLink">Delete Home Page Link</button>
                     <button class="btn btn-default" id="refreshLinkList">Refresh Link List</button>
                   </div>
                   <div class="col-xs-12">
