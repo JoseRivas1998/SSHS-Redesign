@@ -43,8 +43,7 @@
           border-radius: 4px;
       }
       #calendarFrame {
-        width: 1px;
-        min-width: 100%;
+        width: 100%;
         height: 600px;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
