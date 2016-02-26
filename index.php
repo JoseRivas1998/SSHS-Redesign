@@ -46,7 +46,7 @@
         width: 50%;
         height: 600px;
         min-width: 100%;
-        max-width: 100%
+        max-width: 100%;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
       }
