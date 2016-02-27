@@ -134,7 +134,11 @@ include($path);
     $("#homeCarouselRow").load("homeCarousel.php", function() {
       setInterval(function() {
         var cWidth = $("#homeCarousel").width();
-        $("#homeCarousel").height(cWidth / 3);
+        var scale = 1 / 3;
+        if(cWidth > 1024) {
+          scale *= 1024 / cWidth;
+        }
+        $("#homeCarousel").height(cWidth * scale);
       }, 50);
     });
   });
