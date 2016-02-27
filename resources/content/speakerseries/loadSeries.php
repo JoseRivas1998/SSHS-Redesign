@@ -79,7 +79,7 @@ function loadSeries($connection, $sql, $formatDate) {
 
             echo "$showDate<br />";
 
-            echo "$location<br />";
+            echo "<strong>$location</strong><br />";
 
             if ($displayInfo) {
                 echo "<a href='$infoLarge' target='_blank'><img class='img-responsive' src='$infoThumb' alt='Speaker Series: $title'></a>";
