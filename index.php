@@ -43,7 +43,6 @@
           border-radius: 4px;
       }
       #calendarFrame {
-        width: 50%;
         height: 600px;
         min-width: 100%;
         max-width: 100%;
@@ -51,7 +50,9 @@
         -webkit-overflow-scrolling: touch;
       }
 
-      #calendarDiv {
+      #calendarDiv, #google_translate_element {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
       }
 
       #performingBtn > img {
@@ -135,7 +136,7 @@ include($path);
         var cWidth = $("#homeCarousel").width();
         $("#homeCarousel").height(cWidth / 3);
       }, 50);
-    })
+    });
   });
 
 </script>
