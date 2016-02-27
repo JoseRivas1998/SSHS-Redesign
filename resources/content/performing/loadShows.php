@@ -127,7 +127,7 @@ function loadShows($connection, $sql, $show1sql, $show2sql, $show3sql, $show4sql
                 echo "<li>$ticket4</li>";
             }
             echo "</ul>";
-            echo "$location<br />";
+            echo "<strong>$location</strong><br />";
             echo "</div>";
             echo "</div>";
             echo "</div>";
