@@ -115,6 +115,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                     <button class="btn btn-default" id="refreshList">Refresh List</button>
                   </div>
                 </div>
+                <?php
+                  include($_SERVER["DOCUMENT_ROOT"] . "/resources/content/pdfInstructions.php");
+                ?>
                 <div class="col-xs-12" id="signOutBtn">
                     <button class="btn btn-default" onclick="signOut();">Sign Out</button>
                 </div>
