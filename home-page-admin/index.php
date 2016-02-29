@@ -104,7 +104,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                       *If the url is under "http://santasusana.org", please remove everything up to ".org" For example, "http://santasusana.org/staff/teachers" should be "staff/teachers"
                     </p>
                     <p class="red">
-                      **Please check if your icon renders before sending, a reference can be found <a href="https://fortawesome.github.io/Font-Awesome/icons/" target="_blank">here</a>.
+                      **Please check if your icon renders before sending, a reference can be found <a href="https://fortawesome.github.io/Font-Awesome/icons/" target="_blank">here</a>. For example: the icon <i class="fa fa-user"></i> would be "user". <strong>Do not include the "fa-" in this form, the website automatically adds that in when loading the link from the database.</strong>
                     </p>
                   </div>
                 </div>
