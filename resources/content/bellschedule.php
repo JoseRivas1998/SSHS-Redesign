@@ -54,6 +54,16 @@
                 text-align: center;
             }
         }
+        #finalsText {
+          font-size: 3em;
+        }
+        #finals {
+          text-align: center;
+          color: #333;
+        }
+        #finals > .col-xs-12 {
+          padding-bottom: 15px;
+        }
     </style>
 </head>
 
@@ -186,6 +196,11 @@
                             </div>
                         </div>
                     </div>
+
+                    <a href="/resources/downloads/Finals%202015-2016%20Schedules.pdf" target="_blank" class="row" id="finals">
+                      <div class="col-xs-12"><i class="fa fa-bell-o fa-3x"></i> <span id="finalsText">Finals Week Schedule 2015-2016</span></div>
+                    </a>
+
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <div class="row">
