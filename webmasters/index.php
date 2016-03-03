@@ -15,38 +15,17 @@
 				.fa-exclamation-circle {
 					color: rgb(255, 0, 0);
 				}
-        @media (max-width: 768px) {
-            #JackApelbaum {
-                background: url(jackA.png) 0 0 no-repeat;
-                background-size: 100% 200%;
-            }
+        #JackApelbaum {
+            background: url(jackA.png) 0 0 no-repeat;
+            background-size: 100% 200%;
+        }
 
-            #joseRivas {
-                background: url(joseR.png) 0 0 no-repeat;
-                background-size: 100% 200%;
-            }
+        #joseRivas {
+            background: url(joseR.png) 0 0 no-repeat;
+            background-size: 100% 200%;
         }
 
         @media (min-width: 769px) {
-            #JackApelbaum {
-                background: url(jackA.png) 0 100% no-repeat;
-                background-size: 100% 200%;
-            }
-
-            #JackApelbaum:hover {
-                background: url(jackA.png) 0 0 no-repeat;
-                background-size: 100% 200%;
-            }
-
-            #joseRivas {
-                background: url(joseR.png) 0 100% no-repeat;
-                background-size: 100% 200%;
-            }
-
-            #joseRivas:hover {
-                background: url(joseR.png) 0 0 no-repeat;
-                background-size: 100% 200%;
-            }
 
             .smallTitle {
                 font-size: 13px;
@@ -244,6 +223,9 @@
 						$("#resEmail").html(data["resEmail"]);
 						$("#resSubject").html(data["resSubject"]);
 						$("#resBody").html(data["resBody"]);
+            if(data["sent"]) {
+              $("#emailForm").slideUp();
+            }
 					}
 				});
 

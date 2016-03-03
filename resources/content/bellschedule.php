@@ -54,6 +54,16 @@
                 text-align: center;
             }
         }
+        #finalsText {
+          font-size: 3em;
+        }
+        #finals {
+          text-align: center;
+          color: #333;
+        }
+        #finals > .col-xs-12 {
+          padding-bottom: 15px;
+        }
     </style>
 </head>
 
@@ -186,6 +196,11 @@
                             </div>
                         </div>
                     </div>
+
+                    <a href="/resources/downloads/Finals%202015-2016%20Schedules.pdf" target="_blank" class="row" id="finals">
+                      <div class="col-xs-12"><i class="fa fa-bell-o fa-3x"></i> <span id="finalsText">Finals Week Schedule 2015-2016</span></div>
+                    </a>
+
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <div class="row">
@@ -204,23 +219,25 @@
                                     <div class="col-xs-6 period">Period 2</div>
                                     <div class="col-xs-6 period time">8:00-8:37</div>
                                     <div class="col-xs-6">Passing</div>
-                                    <div class="col-xs-6 time">8:37-8:41</div>
+                                    <div class="col-xs-6 time">8:37-8:42</div>
                                     <div class="col-xs-6 period">Period 3</div>
-                                    <div class="col-xs-6 period time">8:41-9:18</div>
+                                    <div class="col-xs-6 period time">8:42-9:19</div>
                                     <div class="col-xs-6">Passing</div>
-                                    <div class="col-xs-6 time">9:18-9:22</div>
+                                    <div class="col-xs-6 time">9:19-9:24</div>
                                     <div class="col-xs-6 period">Period 4</div>
-                                    <div class="col-xs-6 period time">9:22-9:59</div>
+                                    <div class="col-xs-6 period time">9:24-10:01</div>
                                     <div class="col-xs-6">Break</div>
-                                    <div class="col-xs-6 time">9:59-10:27</div>
+                                    <div class="col-xs-6 time">10:01-10:24</div>
+                                    <div class="col-xs-6">Passing</div>
+                                    <div class="col-xs-6 time">10:24-10:29</div>
                                     <div class="col-xs-6 period">Period 5</div>
-                                    <div class="col-xs-6 period time">10:27-11:08</div>
+                                    <div class="col-xs-6 period time">10:29-11:06</div>
                                     <div class="col-xs-6">Passing</div>
-                                    <div class="col-xs-6 time">11:08-11:12</div>
+                                    <div class="col-xs-6 time">11:06-11:11</div>
                                     <div class="col-xs-6 period">Period 6</div>
-                                    <div class="col-xs-6 period time">11:12-11:49</div>
+                                    <div class="col-xs-6 period time">11:11-11:48</div>
                                     <div class="col-xs-6">Passing</div>
-                                    <div class="col-xs-6 time">11:49-11:53</div>
+                                    <div class="col-xs-6 time">11:48-11:53</div>
                                     <div class="col-xs-6 period">Period 7</div>
                                     <div class="col-xs-6 period time">11:53-12:30</div>
                                     <div class="col-xs-6">Passing</div>

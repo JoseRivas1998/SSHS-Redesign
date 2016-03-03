@@ -166,6 +166,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                     <span class="red">*Required</span>
                   </div>
                 </div>
+                <?php
+                  include($_SERVER["DOCUMENT_ROOT"] . "/resources/content/pdfInstructions.php");
+                ?>
                 <div class="col-xs-12" id="signOutBtn">
                     <button class="btn btn-default" onclick="signOut();">Sign Out</button>
                 </div>

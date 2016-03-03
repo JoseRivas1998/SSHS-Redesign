@@ -43,8 +43,16 @@
           border-radius: 4px;
       }
       #calendarFrame {
-        width: 100%;
         height: 600px;
+        min-width: 100%;
+        max-width: 100%;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      #calendarDiv, #google_translate_element {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
       }
 
       #performingBtn > img {
@@ -126,9 +134,13 @@ include($path);
     $("#homeCarouselRow").load("homeCarousel.php", function() {
       setInterval(function() {
         var cWidth = $("#homeCarousel").width();
-        $("#homeCarousel").height(cWidth / 3);
+        var scale = 1 / 3;
+        if(cWidth > 1024) {
+          scale *= 1024 / cWidth;
+        }
+        $("#homeCarousel").height(cWidth * scale);
       }, 50);
-    })
+    });
   });
 
 </script>

@@ -22,6 +22,18 @@
         .center {
             text-align: center;
         }
+        #widget {
+          width: 100%;
+        }
+        #w10babec1f1b388b90a789021b7b85632 {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 auto 0 auto;
+        }
+        #w10babec1f1b388b90a789021b7b85632LT_Content {
+          overflow: auto;
+          -webkit-overflow-scrolling: touch;
+        }
     </style>
 </head>
 
