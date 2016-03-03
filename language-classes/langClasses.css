@@ -3,3 +3,9 @@
 	border-radius: 5px;
 	padding: 5px 5px 5px 5px;
 }
+@media (max-width: 767px){
+	#box {
+		border: 1px teal solid;
+		border-radius: 5px;
+	}
+}
