@@ -281,6 +281,14 @@
     display: inline-block;
 }
 
+.carousel-control > .fa.fa-arrow-right {
+    right: 50%;
+}
+
+.carousel-control > .fa.fa-arrow-left {
+    left: 50%;
+}
+
 /*End Carousel*/
 
 /*Content*/
