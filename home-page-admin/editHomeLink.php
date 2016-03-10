@@ -33,32 +33,36 @@ if ($userId != -1) {
       $editSection = $_POST["editSection"];
       $linkId = $_POST["linkId"];
       if($editText) {
-        if($editHref) {
-          if($editIcon) {
-            $editText = mysqli_real_escape_string($conn, $editText);
-            $editHref = mysqli_real_escape_string($conn, $editHref);
-            $editHref = htmlspecialchars($editHref, ENT_QUOTES);
-            $editIcon = mysqli_real_escape_string($conn, $editIcon);
-            $editSection = mysqli_real_escape_string($conn, $editSection);
-            $updateSql = "UPDATE homePage SET
-                          dateLastUpdated = NOW(),
-                          userLastUpdated = '$fullEmail',
-                          linkText = '$editText',
-                          linkHref = '$editHref',
-                          icon = '$editIcon',
-                          section = '$editSection'
-                          WHERE id = $linkId";
-            if(mysqli_query($conn, $updateSql)) {
-              $output = "<div class='alert alert-success'>Home Page Link Updated Successfully!</div>";
+        if(strlen($editText) <= 40) {
+          if($editHref) {
+            if($editIcon) {
+              $editText = mysqli_real_escape_string($conn, $editText);
+              $editHref = mysqli_real_escape_string($conn, $editHref);
+              $editHref = htmlspecialchars($editHref, ENT_QUOTES);
+              $editIcon = mysqli_real_escape_string($conn, $editIcon);
+              $editSection = mysqli_real_escape_string($conn, $editSection);
+              $updateSql = "UPDATE homePage SET
+                            dateLastUpdated = NOW(),
+                            userLastUpdated = '$fullEmail',
+                            linkText = '$editText',
+                            linkHref = '$editHref',
+                            icon = '$editIcon',
+                            section = '$editSection'
+                            WHERE id = $linkId";
+              if(mysqli_query($conn, $updateSql)) {
+                $output = "<div class='alert alert-success'>Home Page Link Updated Successfully!</div>";
+              } else {
+                $error = mysqli_error($conn);
+                $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+              }
             } else {
-              $error = mysqli_error($conn);
-              $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+              $output = "<div class='alert alert-danger'>Please Enter a Font Awesome Icon Code</div>";
             }
           } else {
-            $output = "<div class='alert alert-danger'>Please Enter a Font Awesome Icon Code</div>";
+            $output = "<div class='alert alert-danger'>Please Enter a Link URL</div>";
           }
         } else {
-          $output = "<div class='alert alert-danger'>Please Enter a Link URL</div>";
+          $output = "<div class='alert alert-danger'>Link can not be more than 40 characters.</div>";
         }
       } else {
         $output = "<div class='alert alert-danger'>Please Enter a Link Text</div>";

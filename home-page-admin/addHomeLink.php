@@ -32,25 +32,29 @@ if ($userId != -1) {
         $newIcon = $_POST["newIcon"];
         $newSection = $_POST["newSection"];
         if($newText) {
-          if($newHref) {
-            if($newIcon) {
-              $newText = mysqli_real_escape_string($conn, $newText);
-              $newHref = mysqli_real_escape_string($conn, $newHref);
-              $newHref = htmlspecialchars($newHref, ENT_QUOTES);
-              $newIcon = mysqli_real_escape_string($conn, $newIcon);
-              $newSection = mysqli_real_escape_string($conn, $newSection);
-              $insertSql = "INSERT INTO homePage (userCreated, dateLastUpdated, userLastUpdated, linkText, linkHref, icon, section)
-                                          VALUES ('$fullEmail', NOW(), '$fullEmail', '$newText', '$newHref', '$newIcon', '$newSection')";
-              if(mysqli_query($conn, $insertSql)) {
-                $output = "<div class='alert alert-success'>Link Added Successfully!</div>";
+          if(strlen($newText) <= 40) {
+            if($newHref) {
+              if($newIcon) {
+                $newText = mysqli_real_escape_string($conn, $newText);
+                $newHref = mysqli_real_escape_string($conn, $newHref);
+                $newHref = htmlspecialchars($newHref, ENT_QUOTES);
+                $newIcon = mysqli_real_escape_string($conn, $newIcon);
+                $newSection = mysqli_real_escape_string($conn, $newSection);
+                $insertSql = "INSERT INTO homePage (userCreated, dateLastUpdated, userLastUpdated, linkText, linkHref, icon, section)
+                                            VALUES ('$fullEmail', NOW(), '$fullEmail', '$newText', '$newHref', '$newIcon', '$newSection')";
+                if(mysqli_query($conn, $insertSql)) {
+                  $output = "<div class='alert alert-success'>Link Added Successfully!</div>";
+                } else {
+                  $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+                }
               } else {
-                $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
+                $output = "<div class='alert alert-danger'>Please Enter a Font Awesome Icon Code</div>";
               }
             } else {
-              $output = "<div class='alert alert-danger'>Please Enter a Font Awesome Icon Code</div>";
+              $output = "<div class='alert alert-danger'>Please Enter a Link URL</div>";
             }
           } else {
-            $output = "<div class='alert alert-danger'>Please Enter a Link URL</div>";
+            $output = "<div class='alert alert-danger'>Link can not be more than 40 characters.</div>";
           }
         } else {
           $output = "<div class='alert alert-danger'>Please Enter a Link Text</div>";
