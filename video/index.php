@@ -10,19 +10,20 @@
     <title>KSSH News | Santa Susana High School</title>
     <style>
 
-        #montage {
+        .topLink {
             list-style-type: none;
             text-align: center;
             padding-top: 10px;
             padding-bottom: 10px;
             padding-left: 0;
+            margin-bottom: 10px;
         }
 
-        #montage {
+        .topLink {
             display: inline-block;
         }
 
-        #montage {
+        .topLink {
             padding: 10px 10px 10px 10px;
             background-color: rgb(18, 138, 165);
             color: white;
@@ -32,13 +33,13 @@
             transition: all .25s;
         }
 
-        #montage:hover {
+        .topLink:hover, .topLink:focus {
             background-color: rgb(11, 89, 107);
             text-decoration: none;
+            color: white;
         }
 
         #montageRow {
-            padding-bottom: 10px;
             text-align: center;
         }
     </style>
@@ -61,8 +62,11 @@
 
                 <div class="row" id="montageRow">
                     <div class="col-xs-12">
-                        <a id="montage" href="http://safarisshs.simivalleyusd.org/SAFARI/montage/schoolnews.html">Safari
+                        <a class="topLink" href="http://safarisshs.simivalleyusd.org/SAFARI/montage/schoolnews.html">Safari
                             Montage</a>
+                    </div>
+                    <div class="col-xs-12">
+                      <a href="https://www.youtube.com/channel/UC5XXgEwZGCbKc6LqMMzd9EA" target="_blank" class="topLink"><i class="fa fa-youtube"></i> KSSH YouTube Chanel</a>
                     </div>
                 </div>
                 <div class="row">
