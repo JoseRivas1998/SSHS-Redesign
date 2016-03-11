@@ -143,6 +143,16 @@ include($path);
     });
   });
 
+  function toggleId(id, iconId) {
+    $(id).toggle();
+    $(iconId).removeClass("fa-rotate-180");
+    if($(id).is(":visible")) {
+      $(iconId).removeClass("fa-rotate-180");
+    } else {
+      $(iconId).addClass("fa-rotate-180");
+    }
+  }
+
 </script>
 </body>
 
