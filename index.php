@@ -75,6 +75,12 @@
       #footRow2 {
         padding-top: 5px;
       }
+
+      .fa-toggle-up {
+        -webkit-transition: transform .25s;
+        transition: transform .25s;
+      }
+
     </style>
 </head>
 
