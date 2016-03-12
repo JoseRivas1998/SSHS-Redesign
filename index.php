@@ -137,6 +137,26 @@ include($path);
   $(document).ready(function() {
     $('#actionBarFromDB').load('actionbar.php');
     $('#nextShow').load('loadNextShow.php');
+    $.ajax({
+      type: "POST",
+      dataType: "json",
+      url: "home-section-admin/loadSectionToggled.php",
+      cache: false,
+      success: function(data) {
+        if(data["quick"] == 0) {
+          toggleId("#quickLinks", "#quickLinksIcon")
+        }
+        if(data["district"] == 0) {
+          toggleId("#district","#districtIcon");
+        }
+        if(data["aboutUs"] == 0) {
+          toggleId("#aboutUs", "#aboutUsIcon");
+        }
+        if(data["whatsNew"] == 0) {
+          toggleId("#whatsNew", "#whatsNewIcon");
+        }
+      }
+    });
     $("#homeCarouselRow").load("homeCarousel.php", function() {
       setInterval(function() {
         var cWidth = $("#homeCarousel").width();
