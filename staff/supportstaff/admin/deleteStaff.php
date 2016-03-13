@@ -5,6 +5,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -31,6 +32,7 @@ if ($userId != -1) {
     if (mysqli_num_rows($permissionResult) > 0) {
         $deleteSql = "DELETE FROM supportStaff WHERE id = $staffId";
         if (mysqli_query($conn, $deleteSql)) {
+          logChange($userEmail, $deleteSql, "Support Staff", "supportStaff");
             $output = "<div class='alert alert-success'>Support Staff Member Deleted</div>";
         } else {
             $output = "<div class='alert alert-danger'>There was an error</div>";

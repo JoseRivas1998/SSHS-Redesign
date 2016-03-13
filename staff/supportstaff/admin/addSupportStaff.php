@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 $output;
 
 $userEmail = $_SESSION["email"];
@@ -41,6 +42,7 @@ if ($userId != -1) {
                       $insertSql = "INSERT INTO supportStaff (userCreated, dateLastUpdated, userLastUpdated, firstName, lastName, email, role)
                         VALUES ('$fullEmail', NOW(), '$fullEmail', '$newFirstName', '$newLastName', '$newEmail', '$newRole')";
                       if (mysqli_query($conn, $insertSql)) {
+                        logChange($userEmail, $insertSql, "Support Staff", "supportStaff");
                           $output = "<div class='alert alert-success'>Support Staff Member Added!</div>";
                       } else {
                           $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";

@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -48,6 +49,7 @@ if ($userId != -1) {
                       role = '$editRole'
                       WHERE id = $staffId";
                       if (mysqli_query($conn, $editSql)) {
+                        logChange($userEmail, $editSql, "Support Staff", "supportStaff");
                           $output = "<div class='alert alert-success'>Staff Member Edited Successfully!</div>";
                       } else {
                           $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
