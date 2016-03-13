@@ -19,6 +19,7 @@ function logChange($email, $sql, $adminPage, $tableEdited) {
   $date = date(DATE_RFC2822);
   $mailBody = "$userName edited the table '$tableEdited' on $date\nThe sql was as follows:\n$sql";
   mail($to, $subject, $mailBody, $from);
+  file_put_contents($_SERVER["DOCUMENT_ROOT"] . "/adminLog.txt", "\n[$date]\t$userName\t$tableEdited\t$sql", FILE_APPEND);
   mysqli_close($conn1);
 }
 ?>
