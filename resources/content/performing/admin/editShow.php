@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 include("format.php");
 
@@ -149,6 +150,7 @@ if ($userId != -1) {
               }
               $updateSql .= " WHERE id = $showId";
               if(mysqli_query($conn, $updateSql)) {
+                logChange($userEmail, $updateSql, "Performances", "performances");
                 $output = "<div class='alert alert-success'>Show editted successfully!</div>";
               } else {
                 $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";

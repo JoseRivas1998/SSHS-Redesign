@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -94,6 +95,7 @@ if ($userId != -1) {
                     }
                     $insertSql .= ")";
                     if(mysqli_query($conn, $insertSql)) {
+                      logChange($userEmail, $insertSql, "Administrators", "administrators");
                       $output = "<div class='alert alert-success'>Administrator added successfully!</div>";
                     } else {
                       $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";

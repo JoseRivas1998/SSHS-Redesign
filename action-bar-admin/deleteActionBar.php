@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -30,6 +31,7 @@ if ($userId != -1) {
     if (mysqli_num_rows($permissionResult) > 0) {
         $deleteSql = "DELETE FROM actionBar WHERE id = $barId";
         if (mysqli_query($conn, $deleteSql)) {
+          logChange($userEmail, $deleteSql, "Action Bar", "actionBar");
             $output = "<div class='alert alert-success'>Action Bar Deleted</div>";
         } else {
             $output = "<div class='alert alert-danger'>There was an error</div>";

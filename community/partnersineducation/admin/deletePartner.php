@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -30,6 +31,7 @@ if ($userId != -1) {
         $partnerId = $_POST["partnerId"];
         $deleteSql = "DELETE FROM partnersInEducation WHERE id = $partnerId";
         if(mysqli_query($conn, $deleteSql)) {
+          logChange($userEmail, $deleteSql, "Partners in Education", "partnersInEducation");
           $output = "<div class='alert alert-success'>Partner Deleted Successfully!</div>";
         } else {
           $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
