@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -35,6 +36,7 @@ if ($userId != -1) {
               UPDATE homeSections SET dateLastUpdated = NOW(), userLastUpdated = '$fullEmail', toggled = $aboutUs WHERE id = 3;
               UPDATE homeSections SET dateLastUpdated = NOW(), userLastUpdated = '$fullEmail', toggled = $whatsNew WHERE id = 4;";
       if(mysqli_multi_query($conn, $sql)) {
+        logChange($userEmail, $sql, "Home Sections", "homeSections");
         $output = "<div class='alert alert-success'>Home Sections Saved Successfully!</div>";
       } else {
         $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
