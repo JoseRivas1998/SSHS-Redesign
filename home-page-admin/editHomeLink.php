@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -50,6 +51,7 @@ if ($userId != -1) {
                             section = '$editSection'
                             WHERE id = $linkId";
               if(mysqli_query($conn, $updateSql)) {
+                logChange($userEmail, $updateSql, "Home Page", "homePage");
                 $output = "<div class='alert alert-success'>Home Page Link Updated Successfully!</div>";
               } else {
                 $error = mysqli_error($conn);

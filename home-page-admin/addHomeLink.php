@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -43,6 +44,7 @@ if ($userId != -1) {
                 $insertSql = "INSERT INTO homePage (userCreated, dateLastUpdated, userLastUpdated, linkText, linkHref, icon, section)
                                             VALUES ('$fullEmail', NOW(), '$fullEmail', '$newText', '$newHref', '$newIcon', '$newSection')";
                 if(mysqli_query($conn, $insertSql)) {
+                  logChange($userEmail, $insertSql, "Home Page", "homePage");
                   $output = "<div class='alert alert-success'>Link Added Successfully!</div>";
                 } else {
                   $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";

@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -30,6 +31,7 @@ if ($userId != -1) {
       $linkId = $_POST["linkId"];
       $deleteSql = "DELETE FROM homePage WHERE id = $linkId";
       if(mysqli_query($conn, $deleteSql)) {
+        logChange($userEmail, $deleteSql, "Home Page", "homePage");
         $output = "<div class='alert alert-success'>Home Page Link Delete Successfully</div>";
       } else {
         $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
