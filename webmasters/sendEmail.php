@@ -53,6 +53,16 @@ if($validBody) {
   $output["resBody"] = "<i class='fa fa-exclamation-circle'></i>";
 }
 
+if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+    $ip=$_SERVER['HTTP_CLIENT_IP'];
+  }
+  elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+    $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
+  }
+  else{
+    $ip=$_SERVER['REMOTE_ADDR'];
+  }
+
 if($validName && $validEmail && $validSubject && $validBody) {
   $to = "JoseRivas823@gmail.com,darius.clarke@simivalleyusd.org";
   $from = "Webmasters Contact Form";
@@ -64,7 +74,7 @@ if($validName && $validEmail && $validSubject && $validBody) {
     $output["result"] = "<div class='alert alert-danger'>There was an error, please try again.</div>";
   }
 } else {
-  $output["result"] = "<div class='alert alert-danger'>Please complete the form.</div>";
+  $output["result"] = "<div class='alert alert-danger'>Please complete the form.$ip</div>";
 }
 
 echo json_encode($output);
