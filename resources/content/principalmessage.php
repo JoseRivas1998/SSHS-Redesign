@@ -33,60 +33,30 @@
     <div class="container" id="content-container">
         <div class="row">
             <div class="col-xs-12">
-                <div class="section-title">Principal Wendy Mayea, 2015</div>
-                Welcome, Santa Susana High School Parents!
 
-                <p>
-                    As we begin 2016, I am thrilled that you have joined, or are considering joining, our Santa Susana
-                    Family. I hope you experience many of our winter and spring activities, starting with Open House.
-                    Networking with other high school parents and supporting our programs through your volunteerism and
-                    participation, ensures your positive influence in your child’s education.
-                </p>
+<?php
 
-                <p>
-                    Santa Susana High School teachers and support staff focus on helping your child succeed at high
-                    school and in preparing for life after high school. We are here to nurture and support every
-                    student. At the same time, great schools need engaged parents.
-                </p>
+$root = $_SERVER["DOCUMENT_ROOT"];
 
-                <ul>
-                    <li>Encourage your student to take full advantage of the opportunities at Santa Susana High
-                        School.
-                    </li>
-                    <li>Support your child’s participation in clubs and classes with extracurricular activities.</li>
-                    <li>See that your child is fully engaged in a “major” or “course of study” where experiences beyond
-                        the classroom are used to build a resume, qualify for college and scholarships, and gain great
-                        letters of recommendation.
-                    </li>
-                    <li>Utilize the range of resources in our Counseling and Career Center for information on summer
-                        school and summer programs, college preparation, and career planning.
-                    </li>
-                    <li>Use Aeries to facilitate regular conversation with your child about his/her academic success.
-                    </li>
-                    <li>Talk to your child about consistently asking relevant questions in class, utilizing after class
-                        teacher help, attending tutoring after school when needed, and giving and getting help from
-                        other classmates.
-                    </li>
-                    <li>E-mail teachers to follow up.</li>
-                    <li>Volunteer for PTSA or SSPAB. Serve as a PAC Docent.</li>
-                </ul>
+include($root . "/inc/dbConnect.php");
 
-                <p>
-                    Let your child know that we will always be there to provide an education where students thrive, to
-                    help them meet challenges, and to celebrate the remarkable contributions they are making.
-                </p>
+$sql = "SELECT * FROM principalMessage WHERE publishDate < CURRENT_DATE() ORDER BY publishDate DESC LIMIT 1";
 
-                <p>
-                    Thank you for your work as parents in helping your child discover his/her purpose, pursue his/her
-                    unique strengths, and contribute remarkable talents. I am so proud to work with you and to have your
-                    child as a Santa Susana High School Troubadour.
-                </p>
+$result = mysqli_query($conn, $sql);
 
-                <p>Sincerely,</p>
+if(mysqli_num_rows($result) > 0) {
+  while ($row = mysqli_fetch_assoc($result)) {
+    echo "<div class='section-title'>Principal " . $row["principalName"] . ", " . substr($row["publishDate"], 0, 4) . "</div>";
+    echo $row["publishDate"];
+    echo $row["message"];
+    echo "<p>Sincerely,</p>";
+    echo "<p><i>" . $row["principalName"] . "</i></p>";
+  }
+}
 
-                <p>
-                    <i>Wendy Mayea</i>
-                </p>
+mysqli_close($conn);
+
+?>
                 <p id="principal">
                     Principal
                 </p>
