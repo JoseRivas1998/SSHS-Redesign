@@ -28,7 +28,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
             <div class="col-xs-12">
                 <div class="section-title">Principal Message Admin</div>
                 <div class="row" id="forms">
-                  <div class="col-xs-12 col-sm-6">
+                  <div class="col-xs-12">
                     <div class="section-title">Add New Message</div>
                     <form role="form" method="post" id="newForm" enctype="multipart/form-data">
                       <div class="form-group">
@@ -44,7 +44,26 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                     </form>
                     <div id="newFormOut"></div>
                   </div>
-
+                  <div class="col-xs-12">
+                    <div class="section-title">Edit Message</div>
+                    <form role="form" method="post" id="editForm" enctype="multipart/form-data">
+                      <div class="form-group">
+                          <label for="editMessageList" class="control-label">Select Message To Edit</label>
+                          <select name="editMessageList" id="editMessageList" class="form-control"></select>
+                      </div>
+                      <div class="form-group">
+                        <label for="editPublishDate" class="control-label">Publish Date</label>
+                        <input type="date" class="form-control" id="editPublishDate" name="editPublishDate">
+                      </div>
+                      <div class="form-group">
+                        <textarea name="editMessage" id="editMessage"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" class="form-control btn btn-primary" value="Send">
+                      </div>
+                    </form>
+                    <div id="editFormOut"></div>
+                  </div>
                 </div>
                 <div class="col-xs-12" id="signOutBtn">
                     <button class="btn btn-default" onclick="signOut();">Sign Out</button>
