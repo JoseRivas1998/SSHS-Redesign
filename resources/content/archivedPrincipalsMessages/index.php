@@ -8,6 +8,16 @@
     include($path);
     ?>
     <title>Archived Principal's Messages | Santa Susana High School</title>
+    <style>
+        p {
+            padding-top: 10px;
+            text-indent: 25px;
+        }
+
+        #principal {
+            padding-top: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -64,7 +74,17 @@ include($path);
 ?>
 <script>
   function loadMessage(id) {
-    alert(id);
+    $.ajax({
+      type: "GET",
+      url: "loadMessage.php",
+      data: {
+        "id": id
+      },
+      cache: false,
+      success: function(data) {
+        $("#messageBody").html(data);
+      }
+    });
   }
 </script>
 </body>
