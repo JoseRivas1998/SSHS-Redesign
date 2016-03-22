@@ -56,7 +56,6 @@
                         <a href="/clubs/" class="list-group-item">Clubs</a>
                         <a href="http://webstores.activenetwork.com/school-software/santa_susana_high_sc/"
                            target="_blank" class="list-group-item">Student Store</a>
-                        <a href="/students/apsummer/" class="list-group-item">AP/Honors Summer Work</a>
                         <a href="/resources/downloads/verbaladvantage.pdf" class="list-group-item" target="_blank">Verbal
                             Advantage</a>
                         <a href="http://sshsauditions.weebly.com/" class="list-group-item" target="_blank">Performing
