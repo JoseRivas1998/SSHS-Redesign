@@ -42,6 +42,26 @@ function dateTimeToDateTimeLocal(dateTime) {
     }
 }
 
+function tinyMceInit(selector, css, onInit) {
+  tinymce.init({
+    selector: selector,
+    setup: function (editor) {
+        editor.on('change', function () {
+            editor.save();
+        });
+        editor.on('init', function() {
+          onInit();
+        });
+    },
+    plugins: "link, image, code, wordcount, media, autoresize, autolink, charmap, fullscreen, fontawesome",
+    toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | charmap | link | image media | fullscreen | fontawesome",
+    relative_urls: false,
+    autoresize_bottom_margin: 10,
+    autoresize_min_height: 450,
+    content_css: css
+  });
+}
+
 function signOut() {
     $.ajax({
         type: "GET",
