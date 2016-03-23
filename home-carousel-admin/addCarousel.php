@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -36,6 +37,7 @@ if ($userId != -1) {
             $insertSql = "INSERT INTO homeCarousel (userCreated, dateLastUpdated, userLastUpdated, fileSrc)
                             VALUES('$fullEmail', NOW(), '$fullEmail', '$fileName')";
             if(mysqli_query($conn, $insertSql)) {
+              logChange($userEmail, $insertSql, "Home Carousel", "homeCarousel");
                 $output = "<div class='alert alert-success'>Image Added!</div>";
             } else {
                 $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";

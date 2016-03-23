@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -40,6 +41,7 @@ if ($userId != -1) {
                       fileSrc = '$fileName'
                       WHERE id = $cId";
           if(mysqli_query($conn, $editSql)) {
+            logChange($userEmail, $editSql, "Home Carousel", "homeCarousel");
               $output = "<div class='alert alert-success'>Image Editted!</div>";
           } else {
               $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";

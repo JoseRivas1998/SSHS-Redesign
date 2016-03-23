@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -30,6 +31,7 @@ if ($userId != -1) {
         $adminId = $_POST["adminId"];
         $deleteSql = "DELETE FROM administrators WHERE id = $adminId";
         if(mysqli_query($conn, $deleteSql)) {
+          logChange($userEmail, $deleteSql, "Administrators", "administrators");
           $output = "<div class='alert alert-success'>Administrator deleted successfully!</div>";
         } else {
           $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";

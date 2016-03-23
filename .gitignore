@@ -9,5 +9,7 @@
 /staff/teachers/img/uploads/
 resources/content/performing/uploads/
 
+adminLog.txt
+
 *.bak
 *.htaccess

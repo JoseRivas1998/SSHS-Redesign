@@ -4,6 +4,7 @@ session_start();
 $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
+include($root . "/inc/adminLogger.php");
 
 $output;
 
@@ -45,6 +46,7 @@ if ($userId != -1) {
                     }
                     $insertSql .= ")";
                     if (mysqli_query($conn, $insertSql)) {
+                      logChange($userEmail, $insertSql, "Action Bar", "actionBar");
                         $output = "<div class='alert alert-success'>Action Bar Successfully Added!</div>";
                     } else {
                         $output = "<div class='alert alert-danger'>There was an error, please try again.</div>";
