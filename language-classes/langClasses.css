@@ -1,10 +1,10 @@
-#box {
+#classAd{
+	margin:5px 5px 5px 5px;
 	border: 2px teal solid;
 	border-radius: 5px;
-	padding: 5px 5px 5px 5px;
 }
 @media (max-width: 767px){
-	#box {
+	#classAd{
 		border: 1px teal solid;
 		border-radius: 5px;
 	}
