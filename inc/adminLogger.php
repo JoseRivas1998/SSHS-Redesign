@@ -20,6 +20,12 @@ function logChange($email, $sql, $adminPage, $tableEdited) {
   $mailBody = "$userName edited the table '$tableEdited' on $date\nThe sql was as follows:\n$sql";
   mail($to, $subject, $mailBody, $from);
   file_put_contents($_SERVER["DOCUMENT_ROOT"] . "/adminLog.txt", "\n[$date]\t$userName\t$tableEdited\t$sql", FILE_APPEND);
+  $logUser = mysqli_real_escape_string($conn1, $userName);
+  $logTable = mysqli_real_escape_string($conn1, $tableEdited);
+  $logAdmin = mysqli_real_escape_string($conn1, $adminPage);
+  $logSqlEntered = mysqli_real_escape_string($conn1, $sql);
+  $logSql = "INSERT INTO log (user, tableEdited, adminPage, sqlEntered) VALUES ('$logUser', '$logTable', '$logAdmin', '$logSqlEntered')";
+  mysqli_query($conn1, $logSql);
   mysqli_close($conn1);
 }
 ?>
