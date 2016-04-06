@@ -113,6 +113,8 @@
   <div class="container" id="emergency">
     <div class="row">
       <div class="col-xs-12">
+        <div class="emergency-title">ALERT UPDATE FOR SSHS PARENTS:</div>
+        <p>The police have confirmed that students will be released at 3 p.m. today from Santa Susana High School. Please remember to thank our officers for taking such great care of our school today and every day!</p>
         <div class="emergency-title">PARENT ALERT UPDATE FOR SANTA SUSANA HIGH SCHOOL<br/>APRIL 6, 2016 1:15 P.M.</div>
         <p>This email was just sent to the parents at SSHS. Everyone is still sheltered and safe at the school while police continue their investigation:</p>
         <p>Dear Parents:</p>
