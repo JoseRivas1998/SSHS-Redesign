@@ -80,7 +80,18 @@
         -webkit-transition: transform .25s;
         transition: transform .25s;
       }
-
+      #emergency {
+        border: 2px teal solid;
+        border-radius: 5px;
+        background-color: rgb(239, 239, 239);
+        padding-bottom: 20px;
+      }
+      #emergency-title {
+        font-size: 2em;
+        text-align: center;
+        font-weight: bold;
+        color: #ff0000;
+      }
     </style>
 </head>
 
@@ -98,6 +109,49 @@
 <section id="content-wrapper">
   <div class="container-fluid" id="carousel-container">
     <div class="row" id="homeCarouselRow"></div>
+  </div>
+  <div class="container" id="emergency">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="emergency-title">PARENT ALERT FOR SANTA SUSANA HIGH SCHOOL<br/>APRIL 6, 2016, 12:15 P.M.</div>
+        <p>
+          Dear Parents:
+        </p>
+        <p>
+          About 40 minutes ago, Santa Susana High School was placed on lock down by the Simi Valley Police Department. ALL STUDENTS AND STAFF ARE SAFE AND SHELTERED. The police are continuing their investigation and this is the information we’ve been given so far:
+        </p>
+        <p>
+          “We have third hand information regarding threats that we have yet to confirm but we are playing it safe. We will investigate and search the school. Staff has locked down the school per policy as a precaution. Parents should not respond as they won’t be allowed on campus.”
+        </p>
+        <p>
+          We do NOT have any more information at this time, but we will release information as soon as we are able to.
+        </p>
+        <p>
+          There are a few things to know as we go through this process:
+        </p>
+        <ol>
+          <li>
+            Students and staff are not allowed to use cell phone during a lock down. As soon as they are cleared to, your students will be able to text you.
+          </li>
+          <li>
+            PLEASE DO NOT GO TO THE SCHOOL! The students will not be released, and the extra confusion and traffic around the school can create more problems and delay the lock down from ending.
+          </li>
+          <li>
+            As soon as we have more information we will be sending it out through our channels: website, all-calls, Facebook, Twitter, district app.
+          </li>
+          <li>
+            There are many reasons why a lock down would be issued, but the main point is that the police need staff and students sheltered so they can ensure their safety.
+          </li>
+        </ol>
+        <p>
+          Thank you for your patience.
+        </p>
+        <p>
+          Dr. Jason Peplinski<br/>
+          Superintendent
+        </p>
+      </div>
+    </div>
   </div>
   <div class="container">
       <div class="row">
