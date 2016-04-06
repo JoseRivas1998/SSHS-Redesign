@@ -80,7 +80,7 @@
         -webkit-transition: transform .25s;
         transition: transform .25s;
       }
-      .emergency {
+      #emergency {
         border: 2px teal solid;
         border-radius: 5px;
         background-color: rgb(239, 239, 239);
@@ -110,7 +110,7 @@
   <div class="container-fluid" id="carousel-container">
     <div class="row" id="homeCarouselRow"></div>
   </div>
-  <div class="container emergency">
+  <div class="container" id="emergency">
     <div class="row">
       <div class="col-xs-12">
         <div class="emergency-title">PARENT ALERT UPDATE FOR SANTA SUSANA HIGH SCHOOL<br/>APRIL 6, 2016 1:15 P.M.</div>
