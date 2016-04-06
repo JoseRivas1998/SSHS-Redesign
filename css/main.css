@@ -415,3 +415,7 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 .nav-tabs > li > a {
   cursor: hover;
 }
+
+blockquote {
+  border-left: 5px solid #ddd;
+}
