@@ -120,9 +120,9 @@
         <p>
           About 40 minutes ago, Santa Susana High School was placed on lock down by the Simi Valley Police Department. ALL STUDENTS AND STAFF ARE SAFE AND SHELTERED. The police are continuing their investigation and this is the information we’ve been given so far:
         </p>
-        <p>
+        <blockquote>
           “We have third hand information regarding threats that we have yet to confirm but we are playing it safe. We will investigate and search the school. Staff has locked down the school per policy as a precaution. Parents should not respond as they won’t be allowed on campus.”
-        </p>
+        </blockquote>
         <p>
           We do NOT have any more information at this time, but we will release information as soon as we are able to.
         </p>
