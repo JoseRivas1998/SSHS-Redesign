@@ -5,7 +5,7 @@
       <a href="https://www.google.com/maps/place/Santa+Susana+High+School/@34.2784136,-118.7283149,17z/data=!3m1!4b1!4m2!3m1!1s0x80e82906add4bf01:0xe30d6dfa0c322294" target="_blank">
         3570 E. Cochran Street, Simi Valley, CA 93063
       </a><br/>
-      (805) 520 - 6800 Phone | (805)579-6385 Fax
+      (805) 520-6800 Phone | (805) 579-6385 Fax
     </div>
     <div class="col-xs-12 col-sm-6" id="sshsFoot">
       Santa Susana High School
