@@ -1,5 +1,5 @@
 <div class="col-xs-12">
-  <div id="homeCarousel" class="carousel slide">
+  <div id="homeCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <?php
           include ($_SERVER["DOCUMENT_ROOT"] . "/inc/dbConnect.php");
