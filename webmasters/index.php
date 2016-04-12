@@ -156,6 +156,7 @@
         </div>
 				<div class="col-xs-12">
 					<div class="section-title">Contact the Webmasters</div>
+          <strong>IF YOUR EMAIL IS NOT VALID, YOUR REQUEST WILL BE IGNORED</strong>
 					<form action="javascript:void(0)" role="form" id="emailForm">
 						<div class="form-group">
 							<label for="fullName" class="control-label">Full Name <span id="resName"></span></label>
