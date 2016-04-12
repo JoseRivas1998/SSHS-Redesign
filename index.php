@@ -110,21 +110,6 @@
   <div class="container-fluid" id="carousel-container">
     <div class="row" id="homeCarouselRow"></div>
   </div>
-  <div class="container" id="emergency">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="emergency-title">FOLLOW UP TO WEDNESDAY'S LOCKDOWN AT<br/>SANTA SUSANA HIGH SCHOOL</div>
-        <p>On Thursday, April 7, Simi Valley Police Department detectives arrested a Santa Susana High School student and subsequently booked the student into Ventura County Juvenile Hall on suspicion of making terrorist threats.</p>
-        <p>The student’s alleged threats were the cause of a four-hour lockdown at Santa Susana High School on Wednesday, April 6. Law enforcement personnel from several agencies and led by the Simi Valley Police Department extensively investigated and determined the threats not to be credible. Students and staff were safely released around 3 p.m. that day.</p>
-        <p>Dr. Jason Peplinski, SVUSD superintendent, said he was grateful to everyone who assisted in the investigation that day.</p>
-        <p>“On behalf of the staff and students at Santa Susana High School and the Simi Valley Unified School District, I wish to extend my gratitude to all of the personnel and agencies involved in taking care of our school during this incident,” he said. “The Simi Valley Police Department performed their duties with the highest level of professionalism and excellence, taking seriously the potential threat to our students, staff and community. Many additional agencies generously shared their resources to aid in the investigation that day and the level of commitment shown for our safety was exemplary.”</p>
-        <p>“I also wish to thank our staff at Santa Susana High School,” Dr. Peplinski continued. “Every single SSHS staff member present that day performed his or her duties calmly and with great concern for the students. We’ve heard stories of teachers taking selfless care of their students during and after the incident with no concern for their own needs. I am honored to work with such an incredible group of people, and to know that our students always come first.”</p>
-        <p>The SVUSD is creating informational materials about updated emergency procedures, which will be made public within the next few days. These include general lockdown procedures and what parents, staff and students can expect in the event of a lockdown emergency at one of our school sites or offices.</p>
-        <p>Over the last few months, the SVUSD has outfitted every district classroom with a lockdown kit, which includes basic First Aid and sanitation supplies. Every campus has received trauma-level First Aid kits and emergency supplies are being updated and replaced as needed.</p>
-        <p>If you or your family were directly involved in Wednesday's event, we wish to thank you for your tolerance and patience as we worked to keep your loved ones safe in the face of a difficult investigation. </p>
-      </div>
-    </div>
-  </div>
   <div class="container">
       <div class="row">
         <div class="col-xs-12">
