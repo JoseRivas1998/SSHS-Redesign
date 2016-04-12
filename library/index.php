@@ -85,7 +85,7 @@
                                    onclick="loadFile('findyourcollege.html');">Find Your College</a>
                                 <a href="downloads/owlwebquest2013.pdf" class="list-group-item">OWL Webquest</a>
                                 <a href="downloads/styleguide.pdf" class="list-group-item">Style Guide</a>
-                                <a href="javascript:void(0)" class="list-group-item">Research Help</a>
+                                <a href="javascript:void(0)" class="list-group-item" onclick="loadFile('seniorprojecthelp.html')">Research Help</a>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                             <div class="list-group">
                                 <a href="downloads/librarystandards.pdf" class="list-group-item">Library Standards</a>
                                 <a href="javascript:void(0)" class="list-group-item"
-                                   onclick="loadFile('libraryInfo.html');">Library Information</a>
+                                   onclick="loadFile('libraryinfo.html');">Library Information</a>
                                 <a href="javascript:void(0)" class="list-group-item"
                                    onclick="loadFile('librarianscorner.html');">Librarian's Corner</a>
                                 <a href="javascript:void(0)" class="list-group-item"
