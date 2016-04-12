@@ -171,7 +171,7 @@ include($path);
     $("#homeCarouselRow").load("homeCarousel.php", function() {
       setInterval(function() {
         var cWidth = $("#homeCarousel").width();
-        var scale = 1 / 3;
+        var scale = .375;
         if(cWidth > 1024) {
           scale *= 1024 / cWidth;
         }
