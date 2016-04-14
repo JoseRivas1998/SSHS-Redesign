@@ -1,5 +1,5 @@
 var tinyMceCss = [
-  "/css/font-awesome-4.5.0/css/font-awesome.min.css",
+  "/css/font-awesome-4.6.1/css/font-awesome.min.css",
   "tinymce.css"
 ];
 tinyMceInit("#newMessage", tinyMceCss, function() {});
