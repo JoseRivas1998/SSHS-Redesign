@@ -36,7 +36,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "<img src='img/$imgPath' alt='$firstName $lastName' class='img-responsive'>";
         echo "</div>";
         echo "<div class='col-xs-6' id='profile'>";
-        echo "<a href='mailto:$email' target='_blank' id='email'>$email</a><br />";
+        echo "<a href='mailto:$email' onclick='return popup(this, \"Email $firstName $lastName\")' id='email'>$email</a><br />";
         echo "$role<br />";
         if ($displayLink) {
             echo "<a href='$link1'>$link1Text</a>";
