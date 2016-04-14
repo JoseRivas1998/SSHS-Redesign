@@ -72,3 +72,17 @@ function signOut() {
         }
     });
 }
+
+function popup(linkHref, windowName) {
+  if(!window.focus) return true;
+  var href;
+  if(typeof(linkHref == "string")) {
+    href = linkHref;
+  } else {
+    href = linkHref.href;
+  }
+  var left = (screen.width/2)-(500/2);
+  var top = (screen.height/2)-(500/2);
+  window.open(href, windowName, "width=500,height=500,scrollbars=yes,top=" + top + ",left=" + left);
+  return false;
+}
