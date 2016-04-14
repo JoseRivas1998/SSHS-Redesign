@@ -172,8 +172,8 @@ include($path);
       setInterval(function() {
         var cWidth = $("#homeCarousel").width();
         var scale = .375;
-        if(cWidth > 1024) {
-          scale *= 1024 / cWidth;
+        if(cWidth > 1280) {
+          scale *= 1280 / cWidth;
         }
         $("#homeCarousel").height(cWidth * scale);
       }, 50);
