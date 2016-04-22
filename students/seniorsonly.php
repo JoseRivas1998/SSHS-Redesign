@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="list-group">
-                      <a href="/resources/downloads/Certification.Application.pdf" class="list-group-item" target="_blank">Certification Application</a>
+                      <a href="/resources/downloads/Certification.Application.rev3.pdf" class="list-group-item" target="_blank">Certification Application</a>
                         <a href="/resources/downloads/2015_seniornewsletter.pdf" class="list-group-item">Class of 2015
                             Senior Newsletter</a>
                         <a href="/senior-project/" class="list-group-item">Senior Project</a>
