@@ -88,7 +88,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "<img src='img/$profile' alt='$firstName $lastName' class='img-responsive'>";
         echo "</div>";
         echo "<div class='col-xs-7' id='profile'>";
-        echo "<a href='mailto:$email' target='_blank' id='email'>$email</a><br />";
+        echo "<a href='mailto:$email' onclick='return popup(this, \"Email $firstName $lastName\")' id='email'>$email</a><br />";
         echo "<ul class='classes'>";
         echo "<li>$class1";
         if ($displayClass2) {

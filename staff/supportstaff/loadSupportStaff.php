@@ -21,11 +21,11 @@ if (mysqli_num_rows($result) > 0) {
         echo "<div class='row'>";
 
         echo "$openDiv";
-        echo "<a href='mailto:$email' target='_blank'>$lastName, $firstName</a>";
+        echo "<a href='mailto:$email' onclick='return popup(this, \"Email $firstName $lastName\")'>$lastName, $firstName</a>";
         echo "$closeDiv";
 
         echo "$openDiv";
-        echo "<a href='mailto:$email' target='_blank' class='supportEmail'>$email</a>";
+        echo "<a href='mailto:$email' onclick='return popup(this, \"Email $firstName $lastName\")' class='supportEmail'>$email</a>";
         echo "$closeDiv";
 
         echo "$openDiv";
