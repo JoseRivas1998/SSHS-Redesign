@@ -171,11 +171,9 @@ include($path);
     $("#homeCarouselRow").load("homeCarousel.php", function() {
       setInterval(function() {
         var cWidth = $("#homeCarousel").width();
-        var scale = .375;
-        if(cWidth > 1280) {
-          scale *= 1280 / cWidth;
-        }
-        $("#homeCarousel").height(cWidth * scale);
+        var scale = 720.0 / 1920.0;
+        var height = cWidth * scale;
+        $("#homeCarousel").height(height);
       }, 50);
     });
   });
