@@ -9,6 +9,9 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $poster = $row["posterPath"];
         $title = $row["title"];
+        if(empty($poster) || is_null($poster)) {
+          $poster = "na.png";
+        }
         echo "<span id='performingBtn'>";
         echo "<img src='resources/content/performing/$poster' alt='Coming Soon'class='img-responsive'>";
         echo "<p>";
