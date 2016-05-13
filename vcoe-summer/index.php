@@ -36,7 +36,7 @@
                 <strong>Did you miss out on signing up for the SVUSD Summer School or want additional FUN summer experiences?</strong> <span style="text-decoration:underline">No problem!</span> You can  earn high school elective credit through the FREE Career Summer Camps held at Simi Valley High School  from July 5 - July 29. The camps are held mostly in the afternoons so you can enroll in summer school AND Career Summer Camps. Click <a href="http://www.vcoe.org/Career-Education-Center/Summer-Camps" target="_blank">here</a> to see a full list of all camps, locations and times.  Transportation is NOT provided.  To sign up for a camp, fill out the attached application (or download from <a href="http://www.vcoe.org/Career-Education-Center/Summer-Camps" target="_blank">here</a>) and bring to the main office as soon as possible.  The camps are on a first come first serve basis.
               </p>
               <p>
-                For more information contact Zorko Jezina at <a href="mailto:zorko.jezina@simivalleyusd.org" onclick="return popup(this, 'Email Zorko Jezina')">zorko.jezina@simivalleyusd.org</a>
+                For more information contact Bradley Torti at <a href="mailto:bradley.torti@simivalleyusd.org" onclick="return popup(this, 'Email Bradley Torti')">bradley.torti@simivalleyusd.org</a>
               </p>
               <p>
                 <strong>Career Summer Camps offered at Simi Valley HS:</strong>
