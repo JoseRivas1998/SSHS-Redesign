@@ -55,6 +55,9 @@
         #quickList {
           padding-top: 20px;
         }
+        #homeCarousel {
+          margin-top: 20px;
+        }
     </style>
 </head>
 
