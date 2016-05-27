@@ -18,6 +18,9 @@
         #indicade-carousel {
           height: 100%;
         }
+        #banner {
+          padding-top: 15px;
+        }
     </style>
 </head>
 
@@ -38,7 +41,7 @@
             ?>
             <div class="col-xs-12 col-sm-9">
               <div class="col-xs-12 col-sm-9">
-                <div class="section-title">Santa Susana Game Development Club</div>
+                <img src="./images/layout/banner.png" alt="Santa Susana Game Development Club" class="img-responsive" id="banner">
                 <p>Welcome to the web page for Santa Susana High School's Game Development Club! Game Dev Club is a club where students are taught how to develop video games using computer programming. The goal of the club is to not only create games, but to also simulate the actual working environment in Game Development, teaching the members about collaboration and the Game Developing Process.</p>
                 <div class="col-sm-6 col-xs-12">
                     <div class="embed-responsive embed-responsive-4by3">
