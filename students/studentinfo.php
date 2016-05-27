@@ -52,6 +52,7 @@
                 </div>
                 <div class="col-xs-6">
                     <div class="list-group">
+                      <a href="./apsummer" class="list-group-item">AP / Honors Summer Work</a>
                         <a href="http://www.cte.santasusana.org/" class="list-group-item">CTE Information</a>
                         <a href="/clubs/" class="list-group-item">Clubs</a>
                         <a href="http://webstores.activenetwork.com/school-software/santa_susana_high_sc/"
