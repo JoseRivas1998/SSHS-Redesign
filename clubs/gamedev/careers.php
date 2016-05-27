@@ -60,14 +60,14 @@
               <div class="col-sm-4 col-xs-12">
                   <h1>Game Companies in Southern California</h1>
                   <p>Theses are just few of many.</p>
-                  <a href="http://atlus.com/" target="_blank"><img src="http://atlus.com/wp-content/uploads/2014/12/Atlus_Logo_Thin_Stroke_277x108.png" alt="Atlus" class="img-responsive" /></a>
-                  <a href="http://us.blizzard.com/en-us/" target="_blank"><img src="http://www.gunnars.com/wp-content/uploads/2015/02/logo-blizzard.png" alt="Blizzard" class="img-responsive gamec" /></a>
-                  <a href="http://careers.ea.com/" target="_blank"><img src="http://img3.wikia.nocookie.net/__cb20110326074736/battlefieldheroes/images/d/db/EA.png" alt="EA" class="img-responsive gamec" id="ea"/></a>
-                  <a href="http://www.dice.se/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/DICE_logo.svg/200px-DICE_logo.svg.png" alt="EA Dice" class="img-responsive gamec" /></a>
-                  <a href="http://www.infinityward.com/" target="_blank"><img src="http://img4.wikia.nocookie.net/__cb20141224183104/logopedia/images/c/ce/6522_infinity-ward-prev.png" alt="Infinity Ward" class="img-responsive gamec" id="half" /></a>
-                  <a href="http://sms.playstation.com/" target="_blank"><img src="http://img1.wikia.nocookie.net/__cb20130719183823/logopedia/images/6/69/Santa_Monica_Studio.png" alt="Santa Monica Studios" class="img-responsive gamec" id="half" /></a>
-                  <a href="http://wayforward.com/" target="_blank"><img src="http://wayforward.com/wp-content/themes/wayforward/images/header-wf-logo-3.png" alt="Wayforward" class="img-responsive gamec" /></a>
-                  <a href="http://www.treyarch.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Treyarch_Logo.jpg" alt="Treyarch" class="img-responsive gamec" /></a>
+                  <a href="http://atlus.com/" target="_blank"><img src="./images/content/gameCompanies/Atlus_Logo_Thin_Stroke_277x108.png" alt="Atlus" class="img-responsive" /></a>
+                  <a href="http://us.blizzard.com/en-us/" target="_blank"><img src="./images/content/gameCompanies/logo-blizzard.png" alt="Blizzard" class="img-responsive gamec" /></a>
+                  <a href="http://careers.ea.com/" target="_blank"><img src="./images/content/gameCompanies/EA.png" alt="EA" class="img-responsive gamec" id="ea"/></a>
+                  <a href="http://www.dice.se/" target="_blank"><img src="./images/content/gameCompanies/200px-DICE_logo.svg.png" alt="EA Dice" class="img-responsive gamec" /></a>
+                  <a href="http://www.infinityward.com/" target="_blank"><img src="./images/content/gameCompanies/6522_infinity-ward-prev.png" alt="Infinity Ward" class="img-responsive gamec" id="half" /></a>
+                  <a href="http://sms.playstation.com/" target="_blank"><img src="./images/content/gameCompanies/Santa_Monica_Studio.png" alt="Santa Monica Studios" class="img-responsive gamec" id="half" /></a>
+                  <a href="http://wayforward.com/" target="_blank"><img src="./images/content/gameCompanies/header-wf-logo-3.png" alt="Wayforward" class="img-responsive gamec" /></a>
+                  <a href="http://www.treyarch.com/" target="_blank"><img src="./images/content/gameCompanies/Treyarch_Logo.jpg" alt="Treyarch" class="img-responsive gamec" /></a>
               </div>
             </div>
         </div>
