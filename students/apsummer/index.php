@@ -8,6 +8,15 @@
     include($path);
     ?>
     <title>AP / Honors Summer Work | Santa Susana High School</title>
+    <style>
+      .assignment {
+        text-align: center;
+      }
+      .assignment > a > .img-responsive {
+        max-width: 50%;
+        margin: 0 auto;
+      }
+    </style>
 </head>
 
 <body>
@@ -29,16 +38,19 @@
               <div class="section-title">AP / Honors Summer Work</div>
               <div class="row">
                 <div class="col-xs-12 col-sm-6">
+
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <div class="panel-title">Mr. Reinstein - AP Calculus AB</div>
                     </div>
-                    <div class="panel-body">
-                      <div class="list-group">
-                        <a href="./AP.CALCULUS.AB.summer.assignment.docx" class="list-group-item">Summer Assignment</a>
-                      </div>
+                    <div class="panel-body assignment" >
+                      <a href="./AP.CALCULUS.AB.summer.assignment.docx">
+                        <img src="./AP.CALCULUS.AB.summer.assignment.png" alt="AP Calculus AB" class="img-responsive">
+                        Summer Assignment
+                      </a>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
