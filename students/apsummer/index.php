@@ -37,21 +37,13 @@
             <div class="col-xs-12 col-sm-9">
               <div class="section-title">AP / Honors Summer Work</div>
               <div class="row">
-                <div class="col-xs-12 col-sm-6">
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <div class="panel-title">Mr. Reinstein - AP Calculus AB</div>
-                    </div>
-                    <div class="panel-body assignment" >
-                      <a href="./AP.CALCULUS.AB.summer.assignment.docx">
-                        <img src="./AP.CALCULUS.AB.summer.assignment.png" alt="AP Calculus AB" class="img-responsive">
-                        Summer Assignment
-                      </a>
-                    </div>
-                  </div>
-
-                </div>
+                <?php
+                include('calcab.php');
+                include('eng12.php');
+                ?>
+              </div>
+              <div class="row">
+                <?php include('apush.php') ?>
               </div>
             </div>
         </div>
