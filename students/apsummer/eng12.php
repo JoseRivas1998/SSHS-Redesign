@@ -1,4 +1,4 @@
-<div class="col xs-12 col-sm-6">
+<div class="col-xs-12 col-sm-6">
   <div class="panel panel-default">
     <div class="panel-heading">
       <div class="panel-title">Mrs. Bradley &amp; Mr. White - AP English 12</div>
