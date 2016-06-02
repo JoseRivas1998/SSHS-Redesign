@@ -43,7 +43,10 @@
                 ?>
               </div>
               <div class="row">
-                <?php include('apush.php') ?>
+                <?php
+                include('apush.php');
+                include('apchem.php')
+                ?>
               </div>
             </div>
         </div>
