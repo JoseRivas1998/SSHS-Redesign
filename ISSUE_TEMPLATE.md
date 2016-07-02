@@ -9,6 +9,10 @@ If internal, delete this and the heading of this section.
 ## Describe the request
 #### If external, it would be best to simply paste the request below
 
+##Completion Checklist
+Issue cannot be closed until everything is checked off
+- [ ]
+
 ## Proposed Due Date
 
 ## Relevant Screenshots
