@@ -12,6 +12,20 @@
         .img-responsive {
             margin: auto;
         }
+        #board > .panel-heading > .panel-title {
+          text-align: center;
+        }
+        #board > .panel-body > .row > .boardpos {
+          text-align: center;
+        }
+        #board > .panel-body > .row > .boardpos:nth-child(1) {
+          font-weight: bold;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+          #board > .panel-body > .row > .boardpos > a {
+            font-size: 10px;
+          }
+        }
     </style>
 </head>
 
@@ -34,14 +48,98 @@
             ?>
             <div class="col-xs-12 col-sm-9">
                 <div class="section-title">PTSA</div>
-                <h3>The current 2015-2016 PTSA Officers are as follows -</h3>
-                <strong>President:</strong> Laurie Hoffman<br>
-                <strong>1st Vice President/Programs:</strong> Kayla Hoffman<br>
-                <strong>2nd Vice President/Ways and Means:</strong> Debby Lieber<br>
-                <strong>Secretary:</strong> Erin Garrett<br>
-                <strong>Treasurer:</strong> Caren Langley<br>
-                <strong>Auditor:</strong> Jim Schlaffer<br>
-                <strong>Historian:</strong> Natasha Schlaffer<br><br>
+                <div class="panel panel-default" id="board">
+                  <div class="panel-heading">
+                    <div class="panel-title">2016-2017 Elected Officers</div>
+                  </div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">Position</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Name</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Email</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">President</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Gail Sarkisian</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">
+                        <a href="mailto:gailsarkisian.gs@gmail.com" onclick="return popup(this, &quot;Email Gail Sarkisian&quot;)">gailsarkisian.gs@gmail.com</a>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">1st VP of Programs</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Leslie Orozco</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">
+                        <a href="mailto:lesley1941@hotmail.com" onclick="return popup(this, &quot;Email Leslie Orozco&quot;)">lesley1941@hotmail.com</a>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">2nd VP - Ways and Means</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Deborah Lieber</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">
+                        <a href="mailto:dalieber@aol.com" onclick="return popup(this, &quot;Email Deborah Lieber&quot;)">dalieber@aol.com</a>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">3rd VP - Membership</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Jennifer Lang</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">
+                        <a href="mailto:jennifer.lang@simivalleyusd.org" onclick="return popup(this, &quot;Email Jennifer Lang&quot;)">jennifer.lang@simivalleyusd.org</a>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">Treasurer</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Debbie Stern</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">
+                        <a href="mailto:debzmobile@gmail.com" onclick="return popup(this, &quot;Email Debbie Stern&quot;)">debzmobile@gmail.com</a>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">Secretary</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Erin Garrett</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">
+                        <a href="mailto:erin.garrett94@gmail.com" onclick="return popup(this, &quot;Email Erin Garrett&quot;)">erin.garrett94@gmail.com</a>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">Auditor</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Caren Langley</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">
+                        <a href="mailto:carenbear@aol.com" onclick="return popup(this, &quot;Email Caren Langley&quot;)">carenbear@aol.com</a>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">Historian</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Steven Sarkisian</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">
+                        <a href="mailto:stevensark02@gmail.com" onclick="return popup(this, &quot;Email Steven Sarkisian&quot;)">stevensark02@gmail.com</a>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">Parliamentarian</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Valerie Brennan</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">
+                        <a href="mailto:vbrennan@emsofl.com" onclick="return popup(this, &quot;Email Valerie Brennan&quot;)">vbrennan@emsofl.com</a>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4 boardpos">Webmaster</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">Gabriel Sarkisian</div>
+                      <div class="col-xs-12 col-sm-4 boardpos">
+                        <a href="mailto:gabrielvideo@sbcglobal.net" onclick="return popup(this, &quot;Email Gabriel Sarkisian&quot;)">gabrielvideo@sbcglobal.net</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <p>
                     We invite you to join <strong>P</strong>arent <strong>T</strong>eacher <strong>S</strong>tudent
                     <strong>A</strong>ssociation (PTSA) to help support programs, events, and activities that the PTSA
