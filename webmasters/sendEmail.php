@@ -54,7 +54,7 @@ if($validBody) {
 }
 
 if($validName && $validEmail && $validSubject && $validBody) {
-  $to = "JoseRivas823@gmail.com,darius.clarke@simivalleyusd.org";
+  $to = "JoseRivas823@gmail.com";
   $from = "Webmasters Contact Form";
   $mailBody = "From: $name\nEmail: $email\nMessage Body:\n$body";
   if(mail($to, $subject, $mailBody, $from)) {
