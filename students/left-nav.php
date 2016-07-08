@@ -5,12 +5,10 @@
         </div>
         <div class="panel-body">
             <div class="list-group">
-                <a href="/students/studentinfo.php" class="list-group-item">Student Info</a>
-                <a href="/library/" class="list-group-item">Library</a>
-                <a href="/students/seniorsonly.php" class="list-group-item">Seniors Only</a>
-                <a href="http://santasucounseling.weebly.com/" class="list-group-item" target="_blank">Counseling</a>
-                <a href="/students/leadership.php" class="list-group-item">Leadership</a>
-                <a href="/resources/downloads/SVUSDDiscipline.pdf" class="list-group-item">Discipline Policy</a>
+              <?php
+                include_once($_SERVER['DOCUMENT_ROOT'] . '/inc/sideNav.php');
+                loadSideNav('students');
+              ?>
             </div>
         </div>
     </div>

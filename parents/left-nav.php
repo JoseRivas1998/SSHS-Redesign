@@ -5,11 +5,10 @@
         </div>
         <div class="panel-body">
             <div class="list-group">
-                <a href="parentinfo.php" class="list-group-item">Parent Info</a>
-                <a href="choosesshs.php" class="list-group-item">Choose SSHS</a>
-                <a href="documents.php" class="list-group-item">Documents</a>
-                <a href="http://troubex.santasusana.org/" class="list-group-item" target="_blank">Troubadour Express</a>
-                <a href="/resources/downloads/SVUSDDiscipline.pdf" class="list-group-item">Discipline Policy</a>
+              <?php
+                include_once($_SERVER['DOCUMENT_ROOT'] . '/inc/sideNav.php');
+                loadSideNav('parents');
+              ?>
             </div>
         </div>
     </div>

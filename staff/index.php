@@ -38,10 +38,10 @@
                     </div>
                     <div class="panel-body">
                         <div class="list-group">
-                            <a href="teachers/" class="list-group-item">Teachers</a>
-                            <a href="administrators/" class="list-group-item">Administrators</a>
-                            <a href="supportstaff" class="list-group-item">Support Staff</a>
-                            <a href="linksforteachers/" class="list-group-item">Links for Teachers</a>
+                          <?php
+                            include_once($_SERVER['DOCUMENT_ROOT'] . '/inc/sideNav.php');
+                            loadSideNav('staff');
+                          ?>
                         </div>
                     </div>
                 </div>

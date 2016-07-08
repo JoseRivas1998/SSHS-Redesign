@@ -5,10 +5,10 @@
         </div>
         <div class="panel-body">
             <div class="list-group">
-                <a href="/community/ptsa/" class="list-group-item">PTSA</a>
-                <a href="http://www.sspab.org/" class="list-group-item">Boosters</a>
-                <a href="/community/partnersineducation/" class="list-group-item">Partners in Education</a>
-                <a href="/community/communityresources/" class="list-group-item">Community Resources</a>
+              <?php
+                include_once($_SERVER['DOCUMENT_ROOT'] . '/inc/sideNav.php');
+                loadSideNav('community');
+              ?>
             </div>
         </div>
     </div>
