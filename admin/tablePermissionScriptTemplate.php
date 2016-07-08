@@ -30,10 +30,10 @@ if ($userId != -1) {
     if (mysqli_num_rows($permissionResult) > 0) {
         //code to edit table goes here
     } else {
-        $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage this page.</div>";
+        $output = "<div class='alert alert-danger fade in'><i class='close fa fa-times' data-dismiss='alert' aria-label='close'></i>Sorry, your email does not have permission to manage this page.</div>";
     }
 } else {
-    $output = "<div class='alert alert-danger'>Sorry, your email does not have permission to manage the website.</div>";
+    $output = "<div class='alert alert-danger fade in'><i class='close fa fa-times' data-dismiss='alert' aria-label='close'></i>Sorry, your email does not have permission to manage the website.</div>";
 }
 
 echo $output;
