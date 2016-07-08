@@ -24,7 +24,7 @@
         <a href="https://www.facebook.com/Santa-Susana-High-School-97847230255" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
       </div>
       <div class="col-xs-4">
-        <a href="adminIndex.php">Staff Login</a>
+        <a href="admin/">Staff Login</a>
       </div>
       <div class="col-xs-6">
         <div id="google_translate_element"></div>
