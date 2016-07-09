@@ -45,6 +45,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                           <a href="/community/partnersineducation/admin/" class="list-group-item">Partners in Education Admin</a>
                           <a href="/resources/content/principalMessageAdmin/" class="list-group-item">Principal Message Admin</a>
                           <a href="./full-page-admin/add-page/" class="list-group-item">Add a Page</a>
+                          <a href="./full-page-admin/edit-page/" class="list-group-item">Edit a Page</a>
                         </div>
                       </div>
                       <div class="col-xs-12 col-sm-6">

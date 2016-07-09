@@ -5,6 +5,7 @@ $root = $_SERVER["DOCUMENT_ROOT"];
 
 include($root . "/inc/dbConnect.php");
 include($root . "/inc/adminLogger.php");
+include_once('backupPage.php');
 
 $output;
 
@@ -35,22 +36,27 @@ if ($userId != -1) {
             $title = mysqli_real_escape_string($conn, $_POST['title']);
             $path = mysqli_real_escape_string($conn, '/' . $_POST['path']);
             $content = mysqli_real_escape_string($conn, $_POST['content']);
-            $sql = "INSERT INTO fullPages (userCreated, dateLastUpdated, userLastUpdated, title, `path`, content";
-            if($addnav) {
-              $sql .= ", sidenav";
-            }
-            $sql .= ") VALUES ('$fullEmail', NOW(), '$fullEmail', '$title', '$path', '$content'";
-            if($addnav) {
-              $category = $_POST['category'];
-              $sql .= ", '$category'";
-            }
-            $sql .= ")";
-            if(mysqli_query($conn, $sql)) {
-              logChange($userEmail, $sql, "Add Full Page", "fullPages");
-              $url = "http://" . $_SERVER['HTTP_HOST'] . "/" . $_POST['path'];
-              $output = "<div class='alert alert-success fade in'><i class='close fa fa-times' data-dismiss='alert' aria-label='close'></i>Page Successfully Added!<br/><a href=\"$url\" target=\"_blank\">$url</a></div>";
+            $id = $_POST['pageList'];
+            if(backupPage($conn, $id)) {
+              $sql = "UPDATE fullPages SET
+                      title = '$title',
+                      `path` = '$path',
+                      content = '$content'";
+              if($addnav) {
+                $sql .= ", sidenav = '" . $_POST['category']. "'";
+              } else {
+                $sql .= ", sidenav = NULL";
+              }
+              $sql .= " WHERE id = $id";
+              if(mysqli_query($conn, $sql)) {
+                logChange($userEmail, $sql, "Edit Full Page", "fullPages");
+                $url = "http://" . $_SERVER['HTTP_HOST'] . "/" . $_POST['path'];
+                $output = "<div class='alert alert-success fade in'><i class='close fa fa-times' data-dismiss='alert' aria-label='close'></i>Changes Saved<br/><a href=\"$url\" target=\"_blank\">$url</a></div>";
+              } else {
+                $output = "<div class='alert alert-danger fade in'><i class='close fa fa-times' data-dismiss='alert' aria-label='close'></i>There was an error, please try again</div>";
+              }
             } else {
-              $output = "<div class='alert alert-danger fade in'><i class='close fa fa-times' data-dismiss='alert' aria-label='close'></i>There was an error, please try again.</div>";
+              $output = "<div class='alert alert-danger fade in'><i class='close fa fa-times' data-dismiss='alert' aria-label='close'></i>There was an error, please try again</div>";
             }
           } else {
             $output = "<div class='alert alert-danger fade in'><i class='close fa fa-times' data-dismiss='alert' aria-label='close'></i>Please Enter Page Content</div>";
