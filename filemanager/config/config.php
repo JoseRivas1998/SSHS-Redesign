@@ -225,7 +225,7 @@ $config = array(
 	//Permissions configuration
 	//******************
 	'delete_files'                            => true,
-	'create_folders'                          => true,
+	'create_folders'                          => false,
 	'delete_folders'                          => true,
 	'upload_files'                            => true,
 	'rename_files'                            => true,
