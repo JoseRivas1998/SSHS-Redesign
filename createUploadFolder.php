@@ -3,7 +3,7 @@
 deleteDir("content");
 echo "Done";
 
-public static function deleteDir($dirPath) {
+function deleteDir($dirPath) {
     if (! is_dir($dirPath)) {
         throw new InvalidArgumentException("$dirPath must be a directory");
     }
