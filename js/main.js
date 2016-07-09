@@ -54,12 +54,15 @@ function tinyMceInit(selector, css, onInit) {
         });
     },
     extended_valid_elements:'script[language|type|src]',
-    plugins: "link, image, code, wordcount, media, autoresize, autolink, charmap, fullscreen, fontawesome",
-    toolbar: "undo redo | styleselect | fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | charmap | link | image media | fullscreen | fontawesome",
+    plugins: "link, image, code, wordcount, media, autoresize, autolink, charmap, fullscreen, fontawesome, responsivefilemanager ",
+    toolbar: "undo redo | styleselect | fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | charmap | link | responsivefilemanager | image media | fullscreen | fontawesome",
     relative_urls: false,
     autoresize_bottom_margin: 10,
     autoresize_min_height: 450,
-    content_css: css
+    content_css: css,
+    external_filemanager_path:"/filemanager/",
+    filemanager_title:"Responsive Filemanager" ,
+    external_plugins: { "filemanager" : "/filemanager/plugin.min.js"}
   });
 }
 
