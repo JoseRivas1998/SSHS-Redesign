@@ -54,7 +54,7 @@ function tinyMceInit(selector, css, onInit) {
         });
     },
     plugins: "link, image, code, wordcount, media, autoresize, autolink, charmap, fullscreen, fontawesome",
-    toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | charmap | link | image media | fullscreen | fontawesome",
+    toolbar: "undo redo | styleselect | fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | charmap | link | image media | fullscreen | fontawesome",
     relative_urls: false,
     autoresize_bottom_margin: 10,
     autoresize_min_height: 450,
