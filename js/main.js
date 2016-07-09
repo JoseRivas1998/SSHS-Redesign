@@ -53,6 +53,7 @@ function tinyMceInit(selector, css, onInit) {
           onInit();
         });
     },
+    extended_valid_elements:'script[language|type|src]',
     plugins: "link, image, code, wordcount, media, autoresize, autolink, charmap, fullscreen, fontawesome",
     toolbar: "undo redo | styleselect | fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | charmap | link | image media | fullscreen | fontawesome",
     relative_urls: false,
