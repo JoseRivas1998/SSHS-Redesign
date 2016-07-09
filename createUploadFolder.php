@@ -1,6 +1,7 @@
 <?php
 
 deleteDir("content");
+echo "Done";
 
 public static function deleteDir($dirPath) {
     if (! is_dir($dirPath)) {
