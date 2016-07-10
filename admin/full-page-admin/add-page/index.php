@@ -63,7 +63,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/google/loadApi.php');
                         </div>
                       </div>
                       <div class="form-group">
-                        <input type="submit" class="form-control btn btn-primary" value="Add Page">
+                        <button class="form-control btn btn-warning" type="button" id="preview" title="Make Sure Popups are not blocked!"><i class="fa fa-eye fa-fw pull-left"></i>Preview</button>
+                      </div>
+                      <div class="form-group">
+                        <button class="form-control btn btn-primary" type="submit"><i class="fa fa-save fa-fw pull-left"></i>Add Page</button>
                       </div>
                     </form>
                     <div id="formOut"></div>
@@ -82,6 +85,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/inc/javascript.php";
 include($path);
 ?>
+<script src="../previewbtn.js"></script>
 <script src="admin.js"></script>
 </body>
 
