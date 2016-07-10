@@ -1,11 +1,24 @@
 <?php
 $root = $_SERVER["DOCUMENT_ROOT"];
 
-$title = $_POST['title'];
-$content = $_POST['content'];
-$sidenav = isset($_POST['category']);
-if($sidenav) {
-  $category = $_POST['category'];
+$title = "403 Forbidden";
+$content = "<p>You do not have access to this page</p>";
+$sidenav = false;
+
+if(isset($_POST['title'])) {
+  $title = $_POST['title'];
+  $content = $_POST['content'];
+  $sidenav = isset($_POST['category']);
+  if($sidenav) {
+    $category = $_POST['category'];
+  }
+} else {
+  $sapi_type = php_sapi_name();
+  if (substr($sapi_type, 0, 3) == 'cgi') {
+    header("Status: 403 Forbidden");
+  } else {
+    header("HTTP/1.1 403 Forbidden");
+  }
 }
 
 $categories = array();
@@ -25,6 +38,34 @@ $categories['community'] = "$root/community/left-nav.php";
     include($path);
     ?>
     <title><?php echo $title ?> | Santa Susana High School</title>
+    <style>
+      body {
+        padding-bottom: 50px;
+      }
+      footer {
+        position: fixed;
+        bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.75);;
+        width: 100%;
+      }
+      footer > .container-fluid {
+        color: white;
+        text-align: center;
+        font-size: 2em;
+      }
+      #prevTxt {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      footer > .container-fluid > a {
+        color: #fff;
+      }
+      footer > .container-fluid > a:hover, footer > .container-fluid > a:focus, footer > .container-fluid > a:active {
+        color: #ddd;
+      }
+    </style>
 </head>
 
 <body>
@@ -54,11 +95,24 @@ $categories['community'] = "$root/community/left-nav.php";
     </div>
 </section>
 
+<footer>
+  <div class="container-fluid">
+    Preview
+    <a href="#" class="pull-right" id="closebtn" title="Close Window"><i class="fa fa-times fa-2x"></i></a>
+  </div>
+</footer>
+
 <?php
 $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/inc/javascript.php";
 include($path);
 ?>
+<script>
+  $("#closebtn").click(function(event) {
+    event.preventDefault();
+    window.close();
+  });
+</script>
 </body>
 
 </html>
