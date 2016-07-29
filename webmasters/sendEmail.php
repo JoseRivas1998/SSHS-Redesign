@@ -29,6 +29,19 @@ if(empty($body) !== true && is_null($body) !== true) {
   $validBody = true;
 }
 
+if($validBody && $validSubject) {
+  $jsonString = file_get_contents('banned-words.json');
+  $jsonObj = json_decode($jsonString);
+  $bannedWordsArr = $jsonObj->{"banned_words"};
+  $bannedWords = implode("|", $bannedWordsArr);
+  if(preg_match("/($bannedWords)/i", $subject)) {
+    $validSubject = false;
+  }
+  if(preg_match("/($bannedWords)/i", $body)) {
+    $validBody = false;
+  }
+}
+
 if($validName) {
   $output["resName"] = "<i class='fa fa-check'></i>";
 } else {
