@@ -16,7 +16,7 @@ $client->setApplicationName("SSHS - Admin Login");
 $client->setClientId(getenv("GOOGLE_CLIENT_ID"));
 $client->setClientSecret(getenv("GOOGLE_CLIENT_SECRET"));
 $client->addScope(Google_Service_Oauth2::USERINFO_EMAIL);
-$client->setRedirectUri('http://'. $_SERVER["HTTP_HOST"] . '/callback');
+$client->setRedirectUri('https://'. $_SERVER["HTTP_HOST"] . '/callback');
 
 $service = new Google_Service_Oauth2($client);
 
@@ -40,7 +40,7 @@ if(isset($_SESSION['token'])) {
         header('Location: ' . $redirect_url);
     } else {
         session_destroy();
-        header('Location: http://' . $_SERVER["HTTP_HOST"] . '/404');
+        header('Location: https://' . $_SERVER["HTTP_HOST"] . '/404');
     }
 }
 
