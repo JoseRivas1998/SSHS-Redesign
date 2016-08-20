@@ -13,7 +13,7 @@ if(!isset($_SESSION['token'])){
     require_once __DIR__ . '/api/src/Google/Client.php';
 
     //Yes this can be spoofed however they'd need knowledge of how to edit requests (unlikely)
-    $_SESSION['redirect_url'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $_SESSION['redirect_url'] = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
     $client = new Google_Client();
     $client->setAccessType("online");
